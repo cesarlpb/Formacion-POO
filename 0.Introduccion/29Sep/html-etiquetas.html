@@ -8,29 +8,67 @@
     <!-- Importamos hoja de estilos con ruta relativa -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Importamos Fuente Noto Sans de Google Fonts (fonts.google.com) -->
+    <!-- Importamos Fuente "Noto Sans" de Google Fonts (fonts.google.com) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+
+    <!-- Importamos Fuente "Inter Tight" de Google Fonts (fonts.google.com) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet">
     
-    <title>Probando Etiquetas</title>
+    <!-- Iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /*
+        p{}
+        body{}
+        ...
+        
+        id -> #
+        #navbar{}
+
+        class -> .
+        .navbar{}
+        */
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+    </style>
+    <title>Probando Etiquetas HTML 5</title>
 </head>
 <body>
-    <h1>Etiquetas HTML</h1>
-        <h2>Texto con h* y p</h2>
+    <h1>Principales Etiquetas HTML</h1>
+        <h2 id="contenidos">Contenidos</h2>
+        <ul>
+            <li><a href="#texto">Texto con h* y p</a></li>
+            <li><a href="#enlaces">Enlaces</a></li>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#poema">Poema</a></li>
+            <li><a href="#formato-textos">Formato de Textos</a></li>
+            <li><a href="#citas">Citas</a></li>
+        </ul>
+        <h2 id="texto">Texto con h* y p</h2>
             <p>Texto. <br><br>Texto 2. <br> Texto 3.</p>
             <p>Otro párrafo</p>
             <p>Otro más.</p>
+            <a href="#contenidos">Volver a Contenidos</a>
     
-        <h2>Enlaces</h2>
+        <h2 id="enlaces">Enlaces</h2>
         <ul>
             <li><a href="https://www.google.com">Google en misma pestaña</a></li>
             <li><a href="https://www.google.com" target="_blank">Google en otra pestaña</a></li>
             <li><a href="index.html">Abre index en misma pestaña</a></li>
             <li><a href="index.html" target="_blank">Abre index en otra pestaña</a></li>
         </ul>
+        <a href="#contenidos">Volver a Contenidos</a>
                 
-    <h2>Imágenes</h3>
+    <h2 id="imagenes">Imágenes</h3>
         <p title="Lenguaje de marcado de hipertexto">HTML 5</p>
         <p title='John "ShotGun" Nelson'>Párrafo 1</p>
         <p title="John 'ShotGun' Nelson">Párrafo 2</p>
@@ -38,8 +76,9 @@
             <li><img src="html.png" alt="HTML" height="100"></li>
             <li><img src="http://via.placeholder.com/100" alt="HTML"></li>
         </ul>    
-    
-    <h2>Poema</h2>
+        <a href="#contenidos">Volver a Contenidos</a>
+
+    <h2 id="poema">Poema</h2>
     <p>Usando p y br</p>
     <p>
         My Bonnie lies over the ocean.
@@ -60,7 +99,81 @@
       
         Oh, bring back my Bonnie to me.
       </pre>
-    <h2>H2</h2>
-    <h2>H2</h2>
+      <a href="#contenidos">Volver a Contenidos</a>
+
+    <h2>Iconos de Google</h2>
+    <div>
+        <span class="material-symbols-outlined">
+            home
+        </span>
+        <span class="material-symbols-outlined">
+            menu
+        </span>
+        <span class="material-symbols-outlined">
+            done
+        </span>
+        <a href="#contenidos">Volver a Contenidos</a>
+    </div>
+    <h2 id="formato-textos">Formato de Texto</h2>
+    <div>
+        <ul>
+            <li><b>Texto en negritas</b></li>
+            <li><strong>Texto resaltado</strong></li>
+            <li><i>Cursiva</i></li>
+            <li><em>Énfasis</em></li>
+            <li><mark>Texto de resaltado</mark></li>
+            <li><small>Texto pequeño</small></li>
+            <li><del>Texto tachado</del></li>
+            <li><ins>Texto subrayado</ins></li>
+            <li><b>Subíndice:</b> H<sub>2</sub>O</li>
+            <li><b>Superíndice:</b> x * x = x<sup>2</sup></li>
+        </ul>
+        <a href="#contenidos">Volver a Contenidos</a>
+    </div>
+    <h2 id="citas" style="color:#9f9e8d;">Citas</h2>
+    <div>
+        <ul>
+            <li>
+                <b>Bloque de citas:</b>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature.
+                    The world's leading conservation organization,
+                    WWF works in 100 countries and is supported by
+                    1.2 million members in the United States and
+                    close to 5 million globally.
+                </blockquote>
+            </li>
+            <li>
+                <b>Cita corta en línea:</b>
+                WWF's goal is to: <q>Build a future where people live in harmony with nature.</q>
+            </li>
+            <li>
+                <b>Abreviaturas / acrónimos:</b>
+                The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+            </li>
+            <li>
+                <b>Dirección:</b>
+                <address>
+                    Written by John Doe.<br>
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+                    </address>
+            </li>
+            <li>
+                <b>Cita para el título de una obra:</b>
+                <cite>The Scream</cite> by Edvard Munch. Painted in 1893.
+            </li>
+            <li>
+                <b>Anulación bidireccional (ltr, rtl)</b>
+                <bdo dir="ltr">Esto es un texto de izquierda a derecha</bdo>
+                <br>
+                <bdo dir="rtl">This text will be written from right to left</bdo>
+            </li>
+
+        </ul>
+        <a href="#contenidos">Volver a Contenidos</a>
+    </div>
 </body>
 </html>
