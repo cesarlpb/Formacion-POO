@@ -104,3 +104,37 @@
     margin: 0 auto;
     display: block;
 }
+
+/* Botones */
+.button{
+    background-color: lightgreen;
+    border:none;
+    color: #4d4d4d;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.25em;
+    margin: 5px;
+    cursor: pointer;
+}
+#botones a{
+    width: 20%;
+}
+/* Botones grandes */
+.button-grande{
+    background-color: lisghtgreen;
+    border: none;
+    /* Color texto */
+    color: #4d4d4d;
+    padding: 30px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 2em;
+    margin: 10px;
+    cursor: pointer;
+}
+#botones-grandes a{
+    width: 50%;
+}
