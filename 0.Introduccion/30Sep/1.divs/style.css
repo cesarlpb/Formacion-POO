@@ -1,0 +1,106 @@
+.container{
+    border: 1px solid black;
+    padding: 5px;
+}
+/* Centrado horizontal de un div dentro de otro div o elemento */
+#div-centrado-horizontal{
+    border: 5px solid black;
+    /* Ancho */
+    width: 40%;
+    /* Márgenes Individuales */
+    /* Arriba */
+    margin-top: 0;
+    /* Abajo */
+    margin-bottom: 0;
+    /* Izquierda */
+    margin-left: auto;
+    /* Derecha */
+    margin-right: auto;
+    /* Editar los 4 márgenes a la vez */
+    /* arriba derecha abajo izquierda */
+    margin: 0 auto 0 auto;
+    /* Forma más compacta 
+    * arriba/abajo derecha/izquierda
+    */
+    margin: 0 auto;
+    /* Los 4 valores iguales */
+    margin: auto;
+}
+#div-centrado-horizontal p{
+    text-align: center;
+}
+/* ******************** */
+/* Centrado vertical de un div dentro de otro div o elemento */
+#container-centrado-vertical, #container-centrado, #container-centrado-vertical-izquierda{
+    /* Altura */
+    height: 150px;
+}
+#div-centrado-vertical, #div-centrado, #div-centrado-vertical-izquierda{
+    /* Centrado vertical y horizontal */
+    border: 5px solid black;
+    width: 70%;
+    /* Altura */
+    height: 50%;
+    /* Distancia desde la parte superior del elemento externo (container) */
+    top: 25%;
+    /* Distancia desde la parte inferior del elemento externo (container) */
+    bottom: 25%;
+    /* Opcional: centrado horizontal con margin */
+    margin-left: auto;
+    margin-right: auto;
+    /* Ajuste de posición respecto del elemento que envuelve a este div (container) */
+    position:relative;
+}
+#div-centrado-vertical p, #div-centrado p{
+    text-align: center;
+}
+
+/* Centrado vertical alineado izquierda */
+#div-centrado-vertical-izquierda{
+    margin-left: 0;
+}
+/* Centrado vertical alineado derecha */
+
+/* Ejercicio */
+
+/********* Columnas **********/
+/* Dos Columnas */
+/* divs */
+#col-1, #col-2{
+    border: 2px solid brown;
+    width: 47%;
+    margin: 0 auto;
+    padding: 10px;
+    display: inline-block;
+}
+#col-1 img, #col-2 img{
+    margin: 0 auto;
+    display: block;
+}
+
+/* Tres Columnas */
+/* Selector de clase es . */
+.col3{
+    border: 2px solid red;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    display: inline-block;
+}
+.col3 img{
+    margin: 0 auto;
+    display: block;
+}
+
+/* Más columnas (ejemplo con 4) */
+.col4{
+    border: 2px solid blue;
+    width: 22%;
+    margin: 0 auto;
+    padding: 10px;
+    display: inline-block;
+}
+.col4 img{
+    margin: 0 auto;
+    display: block;
+}
