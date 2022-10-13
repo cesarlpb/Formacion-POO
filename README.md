@@ -9,4 +9,4 @@ Repositorio de la formación IFCD0112 de 710 horas
 
 **PAUSA**
 
-- **13Oct:** Retomamos la formación. Hicimos ejemplos de etiquetas HTML. [Archivos 13-Oct](/1-Modulo/1-IntroWeb)
+- **13Oct:** Retomamos la formación. Hicimos ejemplos de etiquetas HTML. [Archivos 13-Oct](/1-Modulo/1-IntroWeb-pt1)
