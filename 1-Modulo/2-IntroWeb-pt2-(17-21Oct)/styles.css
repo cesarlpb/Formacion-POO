@@ -23,13 +23,29 @@
   }
   /* Estilos sobre figure y elementos dentro de figure */
   #img-div{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    width: 100%;
+    margin: 0 auto; /* centrado */
   }
+  
   #image{
     /*border: 1px solid black;*/
     width: 50%;
     max-width: 100%;
-    height: auto;
+    height: auto; /* valor por defecto */
+  
+    /* Notación de valores margin, padding... */
+          /* top right bottom left*/
+    margin: 10px 20px  30px   50px;
+          /* top right-left bottom */
+    margin: 10px 20px       50px;
+          /* top-bottom right-left*/  
+    margin: 10px        20px;
+          /* todos */
+    margin: 10px;
+    /*****************************************/
+    
+    /* % del elemento padre */
     margin: 10px 25%;
     display: block;
   }
@@ -53,8 +69,3 @@
     padding: 15px;
   }
   
-  
-  /*
-  - Centramos la imagen
-  - Seguimos con puntos 7-9
-  */
