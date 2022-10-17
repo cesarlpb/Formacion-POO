@@ -1,0 +1,32 @@
+#mi-otro-h2{
+    color: brown;
+}
+#mi-otro{
+    color: blueviolet;
+}
+
+/* Estilos para el ejercicio CSS 8-ejercicioCSS */
+/* div */
+.container, body {
+    background-color: burlywood;
+}
+.container{
+    border: 3px solid brown;
+}
+/* h2 */
+.h2{
+    color: brown;
+    font-size: 25px;
+    text-align: right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    padding: 20px;
+}
+/* parráfos */
+.para{
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    padding: 10px;
+}
