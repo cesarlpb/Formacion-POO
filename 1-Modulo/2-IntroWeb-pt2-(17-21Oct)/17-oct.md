@@ -7,4 +7,4 @@
 - Explicación ejercicio [Tribute Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page) 2 de 5 para certificado Responsive Web Design de FCC
 - Solución del ejercicio en [Solución](1.TributePage.html)
 - Hemos aplicado CSS a Tribute Page
-- JS
+- JS -> Introducción -> Estructura de proyectos
