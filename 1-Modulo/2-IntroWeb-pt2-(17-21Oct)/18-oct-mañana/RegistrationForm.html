@@ -16,11 +16,16 @@
             <label for="new-password">Create a New Password: <input id="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
           </fieldset>
           <fieldset>
-            <label><input type="radio" />texto</label>
-            <label><input type="radio" /></label>
-            <label><input type="checkbox" required /></label>
+            <label for="personal-account"><input id="personal-account" type="radio" name="account-type" /> Personal Account</label>
+            <label for="business-account"><input id="business-account" type="radio" name="account-type" /> Business Account</label>
+            <label for="terms-and-conditions">
+              <input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+            </label>
           </fieldset>
-        <fieldset></fieldset>
+          <fieldset>
+            <label>Upload a profile picture: <input type="file" /></label>
+            
+          </fieldset>
         <input type="submit" value="Submit" />
     </form>
   </body>
