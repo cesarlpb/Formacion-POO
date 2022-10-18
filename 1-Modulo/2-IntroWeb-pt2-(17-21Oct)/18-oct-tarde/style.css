@@ -1,0 +1,90 @@
+/* Fuentes */
+body{
+    font-family: "Tahoma";
+  }
+  
+  /* Colores */
+  body{
+    background-color: rgba(81, 90, 160, 0.8);
+    color: white;
+  }
+  
+  input, select, textarea {
+   background-color: rgba(81, 90, 160, 0.95);
+   border: none;
+   padding: 0 5px;
+  }
+  
+  /* Chrome, Opera, Safari */
+  ::placeholder{
+    color: #DDD;
+    opacity: 1; /* Firefox opacidad */
+  }
+  :-ms-input-placeholder{
+    color: #DDD;
+  }
+  ::-ms-input-placeholder{
+    color: #DDD;
+  }
+  
+  /* Centrado */
+  h1, p{
+    text-align: center;
+    padding: 0.7em 0;
+  }
+  form{
+    margin: 0 auto;
+    min-width: 400px;
+    width: 70vw;
+    max-width: 500px;
+    border: 0px solid black;
+  }
+  select{
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    color: white;
+    height: 2em;
+    padding: 0 5px;
+  }
+  textarea{
+    min-width: 250px;
+    width: 300px;
+    max-width: 350px;
+    margin: 10px auto;
+    color: white;
+    padding: 10px;
+  }
+  /* Espaciado */
+  label{
+    padding: 5px 0;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  input{
+    display: block;
+    padding: 5px;
+    width: 50%;
+    margin: 0px auto;
+  }
+  input[type="submit"]{
+    margin: 10px auto;
+  }
+  /* Corrección radio buttons */
+  input[type="radio"], input[type="checkbox"]{
+    width: 20%;
+    display: inline-block;
+  }
+  .label-inline{
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    border: 0px solid black;
+  }
+  div{
+    width: 50%;
+    padding: 10px 0;
+    margin: 10px auto;
+  }
