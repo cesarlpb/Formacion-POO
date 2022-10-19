@@ -34,3 +34,18 @@ h1 {
     border-bottom: 1px solid black;
     padding: 10px;
 }
+.algo {
+    background-color: white;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+.algo h4 {
+    text-align: center;
+}
+.center {
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid white;
+}
