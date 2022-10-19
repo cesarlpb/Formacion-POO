@@ -49,7 +49,23 @@ innerText = `Esto es una declaración en
 más líneas
 más líneas
 
-varias líneas.`
+varias líneas sin etiquetas, solo texto.`;
+
+document.getElementById("demo2").
+innerHTML = `<p>Esto es una declaración en 
+
+más líneas
+más líneas
+
+varias líneas en etiqueta 'p'.</p>`
+
+document.getElementById("demo3").
+innerHTML = `<pre>Esto es una declaración en 
+
+más líneas
+más líneas
+
+varias líneas dentro de etiqueta 'pre'.</pre>`
 
 /**********************************/
 console.log("Final del script")
