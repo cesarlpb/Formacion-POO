@@ -39,7 +39,17 @@ console.error("Esto es un error")
 
 // Declaraciones (statements) en JS
 
-var x = 2; var y = 2; document.getElementById("suma").innerText = x + y;
+var x = 1; 
+var y = 2; 
+document.getElementById("suma").innerText = x + y;
+
+document.getElementById("demo").
+innerText = `Esto es una declaración en 
+
+más líneas
+más líneas
+
+varias líneas.`
 
 /**********************************/
 console.log("Final del script")
