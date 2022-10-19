@@ -79,5 +79,31 @@ console.log(param)
 console.log(Param)
 console.log($param)
 
+// Ejercicio - Crear elementos y modificar valor con resultados
+// de operaciones básicas + - * /
+let a = 1;
+let b = 3;
+
+// Método 1 -> seleccionamos el, asignamos texto a variable text1
+// realizamos operación -> asignamos valor a text1
+// Asignamos valor a el1.innerText
+
+let el1 = document.getElementById("sum") // <p id="sum"   class="inline">Suma: </p>
+let text1 = el1.innerText                // 'Suma:'
+text1 = text1 + (a + b)                  // 'Suma:4'
+el1.innerText = text1                    // Asignamos valor a el1
+
+// Método 2 -> Usamos una variable para guardar el resultado
+let el2 = document.getElementById("resta")  // <p id="resta" class="inline">Resta: </p>
+let resultado2 = el2.innerText + (b - a)      // 'Resta:2'
+el2.innerText = resultado2
+
+// Método 3 -> Asignamos el resultado directamente en innerText
+let el3 = document.getElementById("prod")   // <p id="prod"  class="inline">Producto: </p>
+el3.innerText = el3.innerText + (a * b)     // 'Producto:' + 3
+
+// Método 4 -> += operador de sumar y asignar
+document.getElementById("divi").innerText += (b / a)
+
 /**********************************/
 console.log("Final del script")

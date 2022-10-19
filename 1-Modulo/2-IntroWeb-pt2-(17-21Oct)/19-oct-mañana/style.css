@@ -23,8 +23,15 @@ h1 {
     margin: 10px auto;
     width: 80%;
 }
+.solucion {
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(167, 167, 167);
+    margin: 0 auto;
+}
 .inline{
     display: inline-block;
+    padding: 0 5px;
 }
 .border-bottom{
     border-bottom: 1px solid black;
