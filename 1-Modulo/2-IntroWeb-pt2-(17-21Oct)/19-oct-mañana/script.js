@@ -67,5 +67,17 @@ más líneas
 
 varias líneas dentro de etiqueta 'pre'.</pre>`
 
+// Variables
+
+let _param = 'parámetro'
+let param = 'otro parámetro'
+let Param = 'otro parámetro mas'
+let $param = 'otro más'
+
+console.log(_param)
+console.log(param)
+console.log(Param)
+console.log($param)
+
 /**********************************/
 console.log("Final del script")
