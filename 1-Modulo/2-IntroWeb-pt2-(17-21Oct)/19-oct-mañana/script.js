@@ -10,6 +10,8 @@ document.getElementById("p1").innerText = "Lorem ipsum dolor sit amet consectetu
 // Encontramos elemento con id "p2" y cambiamos el HTML interno
 document.getElementById("p2").innerHTML = "<strong>Texto en negritas: </strong> Más texto"
 
+document.getElementById("p3").innerText = "asdf"
+
 // Ejemplo con un div
 document.getElementById("div").innerHTML = "<p style='border: 1px solid black; width: 50%; margin: 0 auto;'>Esto es un párrafo.</p>"
 
@@ -23,6 +25,17 @@ document.write("<h1>Título 1</h1><h2>Título 2</h2>")
 document.write("<hr>")
 document.write("<h1>404</h1><p>No hemos encontrado lo que buscabas...</p><p><a href='#'> Volver</a>")
 document.write("<hr>")
+
+// window.alert()
+alert("Esto es una notificación")
+
+// console.log()
+console.log("Esto es un log")
+console.info("Esto es info")
+console.warn("Es es un warning")
+console.error("Esto es un error")
+
+//window.print()
 
 /**********************************/
 console.log("Final del script")
