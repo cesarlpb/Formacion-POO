@@ -23,3 +23,6 @@ h1 {
     margin: 10px auto;
     width: 80%;
 }
+.inline{
+    display: inline-block;
+}

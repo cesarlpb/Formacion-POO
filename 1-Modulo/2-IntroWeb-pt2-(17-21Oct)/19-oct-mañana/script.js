@@ -37,5 +37,9 @@ console.error("Esto es un error")
 
 //window.print()
 
+// Declaraciones (statements) en JS
+
+var x = 2; var y = 2; document.getElementById("suma").innerText = x + y;
+
 /**********************************/
 console.log("Final del script")
