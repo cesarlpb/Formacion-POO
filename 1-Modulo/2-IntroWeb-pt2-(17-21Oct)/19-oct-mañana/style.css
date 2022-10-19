@@ -6,3 +6,20 @@ h1{
 } */
 
 /***************************/
+body {
+    padding: 10px;
+    background-color: rgb(227, 225, 225);
+}
+h1 {
+    text-align: center;
+}
+.lead {
+ text-align: center;
+}
+.descripcion{
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+}

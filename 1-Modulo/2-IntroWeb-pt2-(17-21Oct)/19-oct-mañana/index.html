@@ -9,12 +9,30 @@
 </head>
 <body>
     <h1>Javascript</h1>
-    <p>Temas en <a href="https://www.w3schools.com/js/default.asp" target="_blank">Intro a JS</a></p>
+    <p class="lead">Temas en <a href="https://www.w3schools.com/js/default.asp" target="_blank">Intro a JS</a></p>
     
     <h2>Salida de Datos en JS</h2>
+    <!-- document.getElementById -->
+    <div class="descripcion">
+        <h3>document.getElementById - Caso de Uso:</h3>    
+        Siempre que queramos encontrar un elemento identificado por id en el HTML.
+        Si hubiese mas de uno con ese id, encuentra el primero.
+        Devuelve el elemento HTML o 'null' si no lo encuentra.
+    </div>
     <p id="p1"></p>
     <p id="p2"></p>
+
+    <div id="div"></div>
     
+    <!-- document.write() -->
+    <div class="descripcion">
+        <h3>document.write() - Caso de Uso:</h3>    
+        Cuando queramos escribir una salida de datos, texto, etc. en la página.
+        <strong>Importante: </strong> Si se usa 'document.write()' con la página cargada se sobreescribe el contenido.
+        Devuelve el contenido que estamos pasando a document.write() ya sea texto o HTML.
+    </div>
+    <p>Este texto es de ejemplo.</p>
+
     <script src="script.js"></script>
 </body>
 </html>
