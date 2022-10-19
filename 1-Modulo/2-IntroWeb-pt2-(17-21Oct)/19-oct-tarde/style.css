@@ -10,6 +10,9 @@ body {
 h1 {
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
 .lead {
  text-align: center;
 }
@@ -47,5 +50,14 @@ h1 {
     margin: 20px auto;
     padding: 10px;
     width: 60%;
+    text-align: center;
     border: 1px solid white;
+}
+.center p {
+    width: 20%;
+    margin: 10px auto;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
 }
