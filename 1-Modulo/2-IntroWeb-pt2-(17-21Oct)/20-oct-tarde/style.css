@@ -44,17 +44,41 @@ body {
     border: 1px dashed lightgray;
     margin-left: 15vw;
     position: relative;
+    z-index: 2;
 }
 #menu-items a {
     padding: 0 10vw;
+    font-weight: 600;
+    font-size: 3rem;
     color: white;
     text-decoration: none;
+    z-index: 999;
 }
 .menu-item {
     border: 1px solid green;
     padding: 5vh 0;
     margin: 2vh 0;
 }
+#dot-pattern {
+    background-image: white; /* radial gradient ? */
+    background-position: 0% 0%;
+    left: 0px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    
+}
 #bg-image {
     border: 1px dotted red;
+    background-image: url(bg-5.jpeg);
+    background-position: center left;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    opacity: 0.5;
+    transition: none; /* animación */
+    width: 100vw;
+    z-index: -999;
 }
+
