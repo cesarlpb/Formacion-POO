@@ -17,7 +17,26 @@ body {
 #menu {
     color: white;
     border: 1px solid white;
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    /* Centrado */
+    /* text-align: center;
+    margin: 0 auto; */
+
+    /* Centrado con flex box */
+    display: flex;
+    /* Vertical */
+    /*  Arriba -> flex-start
+        Abajo ->  flex-end
+    */
+    align-items: center;
+    /* Horizontal */
+    /*
+        Izq -> flex-start
+        Der -> flex-end
+    */
+    justify-content: center;
+    /* Centrado en ambos: center */
 }
 #menu-items {
     border: 1px dashed lightgray;
