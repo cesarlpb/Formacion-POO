@@ -25,25 +25,35 @@ body {
 
     /* Centrado con flex box */
     display: flex;
+    
     /* Vertical */
     /*  Arriba -> flex-start
         Abajo ->  flex-end
     */
     align-items: center;
+
     /* Horizontal */
     /*
         Izq -> flex-start
         Der -> flex-end
     */
-    justify-content: center;
+    /*justify-content: center;*/
     /* Centrado en ambos: center */
 }
 #menu-items {
     border: 1px dashed lightgray;
+    margin-left: 15vw;
+    position: relative;
+}
+#menu-items a {
+    padding: 0 10vw;
+    color: white;
+    text-decoration: none;
 }
 .menu-item {
     border: 1px solid green;
-    padding: 10px 0;
+    padding: 5vh 0;
+    margin: 2vh 0;
 }
 #bg-image {
     border: 1px dotted red;
