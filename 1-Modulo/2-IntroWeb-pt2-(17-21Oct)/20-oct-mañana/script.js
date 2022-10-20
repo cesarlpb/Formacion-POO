@@ -21,20 +21,20 @@ a / 0 // Infinity -> no es número
  ***********************/
 
 let edad = Number(prompt("Ingresa tu edad:")) // devuelve número o NaN
-let mensaje;
+let mensajeA;
 if( edad > 18 ) {
     // Lo que ejecutamos en caso de true
     console.log("Bienvenido a la página!")
-    mensaje = "Bienvenido a la página!"
+    mensajeA = "Bienvenido a la página!"
 } else if (edad == 18 ) {
     // (Opcional) Podemos usar >= en el if anterior
     console.log("Acabas de cumplir 18. Enhorabuena!")
-    mensaje = "Acabas de cumplir 18. Enhorabuena!"
+    mensajeA = "Acabas de cumplir 18. Enhorabuena!"
 } 
 else if ( edad < 18 ){
     // Lo que ejecutamos en caso de false
     console.warn("No puedes acceder por ser menor de edad") // probad también console.error()
-    mensaje = "No puedes acceder por ser menor de edad"
+    mensajeA = "No puedes acceder por ser menor de edad"
 } else {
     // NaN
     console.log("Vaya, hemos recibido NaN :(")
@@ -43,17 +43,18 @@ else if ( edad < 18 ){
     // Recibimos el dato y SALIMOS del bucle
     // No se escribe ninguno de los mensajes anteriores
     // No se valida este valor recibido -> esto podría causar problemas
-    mensaje = "Gracias!"
+    mensajeA = "Gracias!"
 }
 
 let a = document.getElementById("sol-a")    // </div id="sol-a"></div>
-a.innerText = mensaje;
+a.innerText = mensajeA;
 
 /**********************
- * b. Comprobar qué día es y sacar un mensaje personalizado en cada caso
+ * b. Comprobar qué día es y sacar un mensajeA personalizado en cada caso
  ***********************/
 
 let dia = prompt("Escribe el día de la semana:")    // recibimos texto
+let mensajeB
 
 // Alternativa:
 // dia = dia.toLowerCase()  // Podemos manipular el string para que sea en minúsculas
@@ -62,19 +63,30 @@ let dia = prompt("Escribe el día de la semana:")    // recibimos texto
 // Modificamos este código para comprobar días con minúscula
 if( dia == 'Lunes' || dia == 'lunes' ) {
     console.log("Los lunes son lo mejor!")
+    mensajeB = "Los lunes son lo mejor!"
 } else if ( dia == 'Martes' || dia == 'martes' ) {
     console.log("Buh, martes")
+    mensajeB = "Buh, martes"
 } else if ( dia == 'Miércoles' || dia == 'miércoles' ) {
     console.log("Un día más cerca del viernes...")
+    mensajeB = "Un día más cerca del viernes..."
 } else if ( dia == 'Jueves' || dia == 'jueves' ){
     console.log("Ya casi es viernes!")
+    mensajeB = "Ya casi es viernes!"
 } else if ( dia == 'Viernes' || dia == 'viernes' ){
     console.log("Por fin es viernes!!!")
+    mensajeB = "Por fin es viernes!!!"
 } else if ( dia == 'Sábado' || dia =='sábado' ) {
     console.log("zzz...")
+    mensajeB = "zzz..."
 } else if ( dia == 'Domingo' || dia == 'domingo' ){
     console.log("Es domingo!")
+    mensajeB = "Es domingo!"
 } else { 
     // Este mensaje aparece en caso de cualquier falta ortográfica
     console.log("Eso no es un día válido.")
 }
+
+let b = document.getElementById("sol-b")
+b.innerText = mensajeB;
+
