@@ -12,7 +12,6 @@ if (esDia20 == true) {
 console.log("Después del bucle if")
 
 /* 
-- Comprobar qué día es y sacar un mensaje personalizado en cada caso
 - Pedir dos datos para realizar una división -> comprobar que el divisor (segundo número en a / b sería la b) no es cero 
 a / 0 // Infinity -> no es número
 */
@@ -49,3 +48,28 @@ else if ( edad < 18 ){
 
 let a = document.getElementById("sol-a")    // </div id="sol-a"></div>
 a.innerText = mensaje;
+
+/**********************
+ * b. Comprobar qué día es y sacar un mensaje personalizado en cada caso
+ ***********************/
+
+let dia = prompt("Escribe el día de la semana:")    // recibimos texto
+
+// Modificamos este código para comprobar días con minúscula
+if( dia == 'Lunes' ) {
+    console.log("Los lunes son lo mejor!")
+} else if ( dia == 'Martes' ) {
+    console.log("Buh, martes")
+} else if ( dia == 'Miércoles' ) {
+    console.log("Un día más cerca del viernes...")
+} else if ( dia == 'Jueves' ){
+    console.log("Ya casi es viernes!")
+} else if ( dia == 'Viernes' ){
+    console.log("Por fin es viernes!!!")
+} else if ( dia == 'Sábado' ) {
+    console.log("zzz...")
+} else if ( dia == 'Domingo' ){
+    console.log("Es domingo!")
+} else {
+    console.log("No has ingresado un día :(")
+}
