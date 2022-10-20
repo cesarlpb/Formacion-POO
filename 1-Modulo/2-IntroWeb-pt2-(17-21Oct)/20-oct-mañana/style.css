@@ -1,0 +1,63 @@
+/* Hoja de Estilos Externa 
+Plantilla para Ejercicios
+*/
+
+/***************************/
+body {
+    padding: 10px;
+    background-color: rgb(227, 225, 225);
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.lead {
+ text-align: center;
+}
+.descripcion{
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+.solucion {
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(167, 167, 167);
+    margin: 0 auto;
+}
+.inline{
+    display: inline-block;
+    padding: 0 5px;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.algo {
+    background-color: white;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+.algo h4 {
+    text-align: center;
+}
+.center {
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    border: 1px solid white;
+}
+.center p {
+    width: 20%;
+    margin: 10px auto;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
