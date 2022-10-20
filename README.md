@@ -16,3 +16,5 @@ Repositorio de la formación IFCD0112 de 710 horas
 ### Semana del 17 al 21 de Octubre
 - **17 Oct:** Hicimos ejercicios de HTML y CSS. [Archivos del día 17 mañana](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/17-oct-mañana) y [Archivos del día 17 tarde](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/17-oct-tarde).
 - **18 Oct:** Hicimos formulario con HTML y le pusimos estilos con CSS. [Archivos del día 18 mañana](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/18-oct-mañana) y [Archivos del día 18 tarde](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/17-oct-tarde).
+- **19 Oct:** Implementamos las operaciones básicas de + - * / y presentamos los resultados en elementos del HTML. [Mañana](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/19-oct-mañana) [Tarde](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/19-oct-tarde)
+- **20 Oct:** Hemos seguido con el temario de JS desde Let hasta Operators. [Temario JS](https://www.w3schools.com/js/js_let.asp) Hemos hecho el ejercio 1 usando operadores y bucle if. [Ejercicio 1](/1-Modulo/2-IntroWeb-pt2-(17-21Oct)/20-oct-mañana)
