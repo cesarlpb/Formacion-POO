@@ -55,21 +55,26 @@ a.innerText = mensaje;
 
 let dia = prompt("Escribe el día de la semana:")    // recibimos texto
 
+// Alternativa:
+// dia = dia.toLowerCase()  // Podemos manipular el string para que sea en minúsculas
+// Solo habría que comprobar condición en minúsculas
+
 // Modificamos este código para comprobar días con minúscula
-if( dia == 'Lunes' ) {
+if( dia == 'Lunes' || dia == 'lunes' ) {
     console.log("Los lunes son lo mejor!")
-} else if ( dia == 'Martes' ) {
+} else if ( dia == 'Martes' || dia == 'martes' ) {
     console.log("Buh, martes")
-} else if ( dia == 'Miércoles' ) {
+} else if ( dia == 'Miércoles' || dia == 'miércoles' ) {
     console.log("Un día más cerca del viernes...")
-} else if ( dia == 'Jueves' ){
+} else if ( dia == 'Jueves' || dia == 'jueves' ){
     console.log("Ya casi es viernes!")
-} else if ( dia == 'Viernes' ){
+} else if ( dia == 'Viernes' || dia == 'viernes' ){
     console.log("Por fin es viernes!!!")
-} else if ( dia == 'Sábado' ) {
+} else if ( dia == 'Sábado' || dia =='sábado' ) {
     console.log("zzz...")
-} else if ( dia == 'Domingo' ){
+} else if ( dia == 'Domingo' || dia == 'domingo' ){
     console.log("Es domingo!")
-} else {
-    console.log("No has ingresado un día :(")
+} else { 
+    // Este mensaje aparece en caso de cualquier falta ortográfica
+    console.log("Eso no es un día válido.")
 }
