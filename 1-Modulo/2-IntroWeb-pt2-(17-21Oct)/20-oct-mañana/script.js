@@ -11,11 +11,6 @@ if (esDia20 == true) {
 }
 console.log("Después del bucle if")
 
-/* 
-- Pedir dos datos para realizar una división -> comprobar que el divisor (segundo número en a / b sería la b) no es cero 
-a / 0 // Infinity -> no es número
-*/
-
 /**********************
  * a. Pedir un dato al usuario y comprobar si es mayor de edad 
  ***********************/
@@ -90,3 +85,27 @@ if( dia == 'Lunes' || dia == 'lunes' ) {
 let b = document.getElementById("sol-b")
 b.innerText = mensajeB;
 
+/**********************
+ * c. Pedir dos datos para realizar una división -> comprobar que el divisor (segundo número en a / b sería la b) no es cero 
+ ***********************/
+
+// a / 0 // Infinity -> no es número
+
+let dividendo = Number(prompt("Ingresa el dividendo:"))
+let divisor = Number(prompt("Ingresa el divisor:"))
+let mensajeC
+let resultado
+
+if ( divisor == 0 ){
+    // Explicamos por qué no se puede realizar esta operación
+    mensajeC = "No podemos dividir por cero. Acaba mal."
+    console.log(mensajeC)
+} else {
+    // Realizamos la operación
+    resultado = dividendo / divisor
+    mensajeC = resultado
+    console.log(mensajeC)
+}
+
+let c = document.getElementById("divi")
+c.innerText = mensajeC
