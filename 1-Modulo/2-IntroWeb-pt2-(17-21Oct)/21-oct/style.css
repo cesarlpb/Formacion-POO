@@ -191,3 +191,21 @@ h1, h2, h3 {
                                     los divs intentan abarcar todo el espacio 
                                     dentro del container */
 }
+
+/* Order */
+.order-flex-start-container {
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    height: 300px;
+}
+.order-flex-start-container .flex-item {
+    width: unset;
+}
+.order-flex-start-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
