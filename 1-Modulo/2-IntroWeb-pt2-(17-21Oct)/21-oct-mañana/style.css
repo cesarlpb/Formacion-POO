@@ -27,22 +27,22 @@ h1, h2, h3 {
 /* Flex box */
 
 .flex-container, 
-.flex-start-container,
-.center-container,
-.flex-end-container {
+.h-flex-start-container,
+.h-center-container,
+.h-flex-end-container {
     border: 2px dashed brown;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     padding: 10px;
 }
 /* Horizontal */
-.flex-start-container {
+.h-flex-start-container {
     justify-content: flex-start;
 }
-.center-container {
+.h-center-container {
     justify-content: center;
 }
-.flex-end-container {
+.h-flex-end-container {
     justify-content: flex-end;
 }
 
@@ -61,3 +61,14 @@ h1, h2, h3 {
 .v-center-container div {
     height: 25px;
 }
+
+.v-flex-start-container{
+    align-items: flex-start;
+}
+.v-center-container {
+    align-items: center;
+}
+.v-flex-end-container {
+    align-items: flex-end;
+}
+
