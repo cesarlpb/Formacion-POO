@@ -184,8 +184,10 @@ h1, h2, h3 {
 }
 .wrap-container {
     flex-wrap: wrap;
-    justify-content:;
 }
 .no-wrap-container {
     flex-wrap: nowrap;
+    /* align-items: stretch; */ /* comportamiento por defecto 
+                                    los divs intentan abarcar todo el espacio 
+                                    dentro del container */
 }
