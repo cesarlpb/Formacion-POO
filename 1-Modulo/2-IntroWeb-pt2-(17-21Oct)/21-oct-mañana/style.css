@@ -150,3 +150,17 @@ h1, h2, h3 {
     justify-content: baseline;
     /* flex-direction: column-reverse; */
 }
+
+/* Estilos para las otras páginas de subtemas */
+.home-link {
+    margin: 10px;
+    
+    /* border: 1px dashed white; */
+    display: flex;
+    justify-content: flex-end;
+}
+.home-link a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
