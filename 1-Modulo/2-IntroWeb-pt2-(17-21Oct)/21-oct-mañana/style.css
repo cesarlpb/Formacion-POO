@@ -117,3 +117,14 @@ h1, h2, h3 {
     justify-content: flex-end;
     align-items: baseline;
 }
+
+/* Columnas */
+.col-flex-start-container,
+.col-center-container,
+.col-flex-end-container{
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
