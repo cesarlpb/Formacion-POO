@@ -45,3 +45,19 @@ h1, h2, h3 {
 .flex-end-container {
     justify-content: flex-end;
 }
+
+/* Vertical */
+.v-flex-start-container, 
+.v-flex-end-container,
+.v-center-container {
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px;
+    height: 20vh;
+}
+.v-flex-start-container div, 
+.v-flex-end-container div,
+.v-center-container div {
+    height: 25px;
+}
