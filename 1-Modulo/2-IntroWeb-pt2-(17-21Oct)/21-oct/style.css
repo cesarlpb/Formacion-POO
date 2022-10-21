@@ -17,6 +17,7 @@ ul {
     list-style-type:decimal-leading-zero;
 }
 
+/* clase genérica para los divs en containers */
 .flex-item {
     border: 1px solid black;
     font-size: 0.8em;
@@ -163,4 +164,28 @@ h1, h2, h3 {
     border: 1px solid white;
     border-radius: 5px;
     padding: 10px;
+}
+
+/* Wrap */
+.wrap-container,
+.no-wrap-container {
+    border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    height: 300px;
+}
+.wrap-container .flex-item, 
+.no-wrap-container .flex-item {
+    height: 5vh;
+    width: 5vw;
+    font-size: 0.6em;
+}
+.wrap-container {
+    flex-wrap: wrap;
+    justify-content:;
+}
+.no-wrap-container {
+    flex-wrap: nowrap;
 }
