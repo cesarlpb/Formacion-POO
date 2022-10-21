@@ -108,14 +108,17 @@ h1, h2, h3 {
 .vh-flex-start-container {
     justify-content: flex-start;
     align-items: center;
+    /* flex-direction: row-reverse */
 }
 .vh-center-container {
     justify-content: center;
     align-items: center;
+    /* flex-direction: row-reverse */
 }
 .vh-flex-end-container {
     justify-content: flex-end;
     align-items: baseline;
+    /* flex-direction: row-reverse */
 }
 
 /* Columnas */
@@ -127,4 +130,23 @@ h1, h2, h3 {
     display: flex;
     padding: 10px;
     flex-direction: column;
+    height: 300px;
+}
+
+.col-flex-start-container {
+    /* flex-direction:column intercambia 
+    el comportamiento de estas propiedades */
+    align-items: flex-start; /* horizontal */
+    justify-content: center; /* vertical */
+    /* flex-direction: column-reverse; */
+}
+.col-center-container {
+    align-items: center; /* horizontal */
+    justify-content: center; /* vertical */
+    /* flex-direction: column-reverse; */
+}
+.col-flex-end-container {
+    align-items: center;
+    justify-content: baseline;
+    /* flex-direction: column-reverse; */
 }
