@@ -216,12 +216,14 @@ h1, h2, h3 {
     border: 2px dashed brown;
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    padding: 10px;
+    padding: 10px 0;
     /* flex-direction: column; */
-    height: 100px;
+    height: 150px;
     justify-content: space-between;
+    align-items: flex-end;
 }
 .shrink-grow-container .flex-item {
-    width: 5vw;
+    /* width: 5vw; */
     height: 5vh;
+    min-width: unset;
 }
