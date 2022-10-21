@@ -18,13 +18,30 @@ body {
     min-width: 50px;
     background-color: rgb(76, 236, 183);
 }
-h2 {
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
     color: rgb(137, 52, 52);
 }
 /* Flex box */
 
-.flex-container {
+.flex-container, 
+.flex-start-container,
+.center-container,
+.flex-end-container {
     border: 2px dashed brown;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     padding: 10px;
+}
+/* Horizontal */
+.flex-start-container {
+    justify-content: flex-start;
+}
+.center-container {
+    justify-content: center;
+}
+.flex-end-container {
+    justify-content: flex-end;
 }
