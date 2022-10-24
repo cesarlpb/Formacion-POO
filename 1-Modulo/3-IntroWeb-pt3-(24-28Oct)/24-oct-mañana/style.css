@@ -42,7 +42,7 @@ ul {
     justify-content: center;
     background-color: rgba(181, 181, 181, 0.853);
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     border: 0px solid black;
 }
 pre code {
@@ -109,4 +109,12 @@ legend {
     width: 5vw;
     margin-right: 0;
     margin-left: auto;
+}
+
+/* Estos estilos no son 100% compatibles entre navegadores */
+select optgroup {
+    background-color: white;
+    font-weight: 600;
+    opacity: 1;
+    color: black;
 }

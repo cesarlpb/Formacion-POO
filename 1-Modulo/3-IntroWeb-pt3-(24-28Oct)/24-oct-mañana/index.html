@@ -214,20 +214,58 @@ lang="en" spellcheck="true"
                     </div>
                 </form>
 
+<pre>
+<code>
+&lt;form action="#"&gt;
+    &lt;div&gt;
+        &lt;label for="text-input" style="border: 1px solid brown; width: 100%; display:block"&gt;Etiqueta del input (haz clic)&lt;/label&gt;
+        &lt;input id="text-input" style="display: block; width: 100%; margin-top: 5px;" type="text" placeholder="Texto..."&gt;
+    &lt;/div&gt;
+    
+    &lt;fieldset id="radio-btn"&gt;
+        &lt;legend&gt;Radio buttons&lt;/legend&gt;
+        &lt;label for="radio1"&gt;Radio button&lt;/label&gt;
+        &lt;input id="radio1" name="radio-btn" type="radio"&gt;
+        &lt;label for="radio2"&gt;Radio button con más texto&lt;/label&gt;
+        &lt;input id="radio2" name="radio-btn" type="radio"&gt;
+        &lt;label for="radio3"&gt;Radio button con poco texto&lt;/label&gt;
+        &lt;input id="radio3" name="radio-btn" type="radio"&gt;
+    &lt;/fieldset&gt;
+
+    &lt;div&gt;
+        &lt;fieldset id="checkboxes"&gt;
+            &lt;legend&gt;Checkboxes&lt;/legend&gt;
+            &lt;label for="checkbox1"&gt;Checkbox&lt;/label&gt;
+            &lt;input id="checkbox1" type="checkbox"&gt;   
+            &lt;label for="checkbox2"&gt;Checkbox&lt;/label&gt;
+            &lt;input id="checkbox2" type="checkbox"&gt; 
+            &lt;label for="checkbox3"&gt;Checkbox&lt;/label&gt;
+            &lt;input id="checkbox3" type="checkbox"&gt;                  
+        &lt;/fieldset&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+</code>
+</pre>
             </div>
             
             <div id="9" class="etiqueta">
                 <h2>9. Agrupar &lt;optgroup&gt; en &lt;select&gt;</h2>
                 <select 
                 style="margin: 10px auto; display: block; width: 50%;">
-                    <optgroup label="Lenguajes de Programación"></optgroup>
-                    <option value="">Python</option>
-                    <option value="">Javascript</option>
-                    <optgroup label="IDEs"></optgroup>
-                    <option value="">VS Code</option>
-                    <option value="">Sublime Text</option>
-                    <optgroup label="Otra categoría"></optgroup>
-                    <option value="">Otro</option>
+                    <optgroup label="Lenguajes de Programación">
+                        <option value="">Elije una opción</option>
+                        <option value="" disabled>-----</option>
+                        <option value="">Python</option>
+                        <option value="">Javascript</option>
+                    </optgroup>
+                    <optgroup label="IDEs">
+                        <option value="">VS Code</option>
+                        <option value="">Sublime Text</option>
+                    </optgroup>
+                    <optgroup label="Otra categoría">
+                        <option value="">Otro</option>
+                    </optgroup>
                 </select>
 <pre><code>
 &lt;select style="margin: 0 auto; display: block; width: 50%;"&gt;
@@ -241,17 +279,36 @@ lang="en" spellcheck="true"
             
             <div id="10" class="etiqueta">
                 <h2>Autocompletar</h2>
-                <label for="autocompletar" style="display: block; width: 100%;">Introduce un lenguaje de programación:</label>
-                <input list="lenguajes-poo" id="autocompletar" style="display: block; width: 100%;" type="text">
+                
                 <form action="#">
-
+                    <label for="autocompletar" style="display: block; width: 100%;">Introduce un lenguaje de programación:</label>
+                <input list="lenguajes-poo" id="autocompletar" style="display: block; width: 100%;" type="text">
                 </form>
+                
                 <datalist id="lenguajes-poo">
                     <option value="Python"></option>
                     <option value="Javascript"></option>
                     <option value="Ruby"></option>
+                    <option value="C#"></option>
                 </datalist>
-                </div>
+<pre>
+<code>
+&lt;form action="#"&gt;
+    &lt;label for="autocompletar" style="display: block; width: 100%;"&gt;Introduce un lenguaje de programación:&lt;/label&gt;
+&lt;input list="lenguajes-poo" id="autocompletar" style="display: block; width: 100%;" type="text"&gt;
+&lt;/form&gt;
+
+&lt;datalist id="lenguajes-poo"&gt;
+    &lt;option value="Python"&gt;&lt;/option&gt;
+    &lt;option value="Javascript"&gt;&lt;/option&gt;
+    &lt;option value="Ruby"&gt;&lt;/option&gt;
+    &lt;option value="C#"&gt;&lt;/option&gt;
+&lt;/datalist&gt;
+    
+</code>
+</pre>
+            </div>
+            
         </section>
         
     </main>
