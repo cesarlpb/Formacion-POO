@@ -1,0 +1,51 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+
+/* clase genérica para los divs en containers */
+.flex-item {
+    border: 1px solid black;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 10vw;
+    min-width: 50px;
+    background-color: rgb(76, 236, 183);
+}
+.flex-item p {
+    border: 1px dashed blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
