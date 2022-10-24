@@ -37,17 +37,21 @@ ul {
     margin: 0 auto 20px auto;
     font-family: 'Open Sans', sans-serif;
 }
-.etiqueta pre {
-    display: flex;
-    justify-content: center;
+pre {
+    display: flex; 
+    justify-content: space-between;
     background-color: rgba(181, 181, 181, 0.853);
     width: 90%;
     margin: 10px auto;
+    padding: 10px;
     border: 0px solid black;
 }
 pre code {
     border: 0px solid black;
+    padding: 0 0 0 10px;
+    display: inline-block; 
 }
+
 mark {
     text-decoration: underline;
 }
@@ -117,4 +121,13 @@ select optgroup {
     font-weight: 600;
     opacity: 1;
     color: black;
+}
+
+/* Iconos de Google */
+.material-symbols-outlined {
+    display: inline-block; 
+    padding: 10px; 
+    border: 0px solid black; 
+    height: auto; 
+    align-self: flex-start;
 }
