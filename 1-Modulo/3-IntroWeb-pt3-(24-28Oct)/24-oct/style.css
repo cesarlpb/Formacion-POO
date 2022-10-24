@@ -130,4 +130,5 @@ select optgroup {
     border: 0px solid black; 
     height: auto; 
     align-self: flex-start;
+    cursor: pointer;
 }

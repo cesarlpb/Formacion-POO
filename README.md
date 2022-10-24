@@ -22,4 +22,4 @@ Repositorio de la formación IFCD0112 de 710 horas
 
 ### Semana del 24 al 28 de Octubre
 
-- Lunes
+- Hemos visto el uso de 10 etiquetas HTML poco usadas. [Archivos 24 oct](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/24-oct)
