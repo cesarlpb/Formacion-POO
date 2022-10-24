@@ -48,3 +48,6 @@ ul {
 pre code {
     border: 0px solid black;
 }
+mark {
+    text-decoration: underline;
+}
