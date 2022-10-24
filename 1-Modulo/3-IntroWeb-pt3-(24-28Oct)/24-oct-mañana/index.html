@@ -137,7 +137,44 @@ lang="en" spellcheck="true"
 
             <div id="7" class="etiqueta">
                 <h2>Modales con &lt;dialog&gt;</h2>
-                
+
+                <dialog close>Esto es una etiqueta dialog cerrada</dialog>
+
+                <!-- Comentamos esto para que se vea mejor el ejemplo 
+                    <dialog open>Esto es una etiqueta dialog abierta</dialog> 
+                -->
+
+                <h3>Botones apra abrir y cerrar dialog</h3>
+                <button onclick="miDialog.showModal()">Abrir modal</button>
+                <dialog id="miDialog">
+                    <button id="X" 
+                    style="display:block; margin-right: 0; margin-left: auto;"
+                    onclick="miDialog.close()"
+                    >
+                        Cerrar [X]
+                    </button>
+                    <p>
+                        Texto dentro del dialog que ahora puedes cerrar clicando X.
+                    </p>
+                </dialog>
+
+                <button onclick="miDialog.close()">Cerrar modal</button>
+
+<pre><code>
+&lt;button onclick="miDialog.showModal()">Abrir modal&lt;/button&gt;
+&lt;dialog id="miDialog"&gt;
+    &lt;button id="X" 
+    style="display:block; margin-right: 0; margin-left: auto;"
+    onclick="miDialog.close()"
+    &gt;
+    Cerrar [X]
+    &lt;/button&gt;
+    &lt;p&gt;
+        Texto dentro del dialog que ahora puedes cerrar clicando X.
+    &lt;/p&gt;
+&lt;/dialog&gt;
+
+</code></pre>
             </div>
             
             <div id="8" class="etiqueta">8</div>

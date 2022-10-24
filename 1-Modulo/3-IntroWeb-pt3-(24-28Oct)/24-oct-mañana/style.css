@@ -80,3 +80,8 @@ details p {
     width: 90%;
     box-shadow: 2px 2px 2px burlywood;
 }
+
+dialog {
+    background-color: antiquewhite;
+    width: 50%;
+}
