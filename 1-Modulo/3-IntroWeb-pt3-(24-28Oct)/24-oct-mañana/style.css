@@ -30,17 +30,20 @@ ul {
 }
 
 .etiqueta {
+    padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
     width: 80vw;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     font-family: 'Open Sans', sans-serif;
 }
 .etiqueta pre {
     display: flex;
     justify-content: center;
     background-color: rgba(181, 181, 181, 0.853);
-    border: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+    border: 0px solid black;
 }
 pre code {
     border: 0px solid black;
