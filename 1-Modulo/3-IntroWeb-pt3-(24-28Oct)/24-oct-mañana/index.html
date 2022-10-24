@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Algunas Etiquetas HTML Poco Conocidas</title>
 </head>
@@ -26,7 +26,7 @@
                 <li><a href="#5">Corrector Ortográfico: atributo spellcheck</a></li>
                 <li><a href="#6">Acordeón con &lt;details&gt;</a></li>
                 <li><a href="#7">Modales con &lt;dialog&gt;</a></li>
-                <li><a href="#8">8</a></li>
+                <li><a href="#8">&lt;label&gt; con &lt;input&gt;</a></li>
                 <li><a href="#9">9</a></li>
                 <li><a href="#10">10</a></li>
             </ul>
@@ -145,21 +145,26 @@ lang="en" spellcheck="true"
                 -->
 
                 <h3>Botones apra abrir y cerrar dialog</h3>
+                <div style="margin-bottom: 10px;">
+                <!-- Botón para abrir el modal -->
                 <button onclick="miDialog.showModal()">Abrir modal</button>
+                <!-- Ventana modal -->
                 <dialog id="miDialog">
+                    <!-- Botón para cerrar el modal -->
                     <button id="X" 
                     style="display:block; margin-right: 0; margin-left: auto;"
                     onclick="miDialog.close()"
                     >
                         Cerrar [X]
                     </button>
+                    <!-- Texto que sale en la ventana modal -->
                     <p>
                         Texto dentro del dialog que ahora puedes cerrar clicando X.
                     </p>
                 </dialog>
 
                 <button onclick="miDialog.close()">Cerrar modal</button>
-
+                </div>
 <pre><code>
 &lt;button onclick="miDialog.showModal()">Abrir modal&lt;/button&gt;
 &lt;dialog id="miDialog"&gt;
@@ -177,7 +182,39 @@ lang="en" spellcheck="true"
 </code></pre>
             </div>
             
-            <div id="8" class="etiqueta">8</div>
+            <div id="8" class="etiqueta">
+                <h2>&lt;label&gt; con &lt;input&gt;</h2>
+
+                <form action="#">
+                    <div>
+                        <label for="text-input" style="border: 1px solid brown; width: 100%; display:block">Etiqueta del input (haz clic)</label>
+                        <input id="text-input" style="display: block; width: 100%; margin-top: 5px;" type="text" placeholder="Texto...">
+                    </div>
+                    
+                    <fieldset id="radio-btn">
+                        <legend>Radio buttons</legend>
+                        <label for="radio1">Radio button</label>
+                        <input id="radio1" name="radio-btn" type="radio">
+                        <label for="radio2">Radio button con más texto</label>
+                        <input id="radio2" name="radio-btn" type="radio">
+                        <label for="radio3">Radio button con poco texto</label>
+                        <input id="radio3" name="radio-btn" type="radio">
+                    </fieldset>
+
+                    <div>
+                        <fieldset id="checkboxes">
+                            <legend>Checkboxes</legend>
+                            <label for="checkbox1">Checkbox</label>
+                            <input id="checkbox1" type="checkbox">   
+                            <label for="checkbox2">Checkbox</label>
+                            <input id="checkbox2" type="checkbox"> 
+                            <label for="checkbox3">Checkbox</label>
+                            <input id="checkbox3" type="checkbox">                  
+                        </fieldset>
+                    </div>
+                </form>
+
+            </div>
             
             <div id="9" class="etiqueta">9</div>
             

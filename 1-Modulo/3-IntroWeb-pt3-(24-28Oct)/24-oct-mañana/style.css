@@ -85,3 +85,28 @@ dialog {
     background-color: antiquewhite;
     width: 50%;
 }
+#radio-btn {
+    border: 2px solid brown;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0;
+}
+legend {
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+#radio-btn label, #checkboxes label {
+    display: inline-block;
+    border: 1px solid brown;
+    min-width: 50vw;
+    width: 70vw;
+    margin: 10px 0;
+}
+#radio-btn input, #checkboxes input {
+    display: inline-block;
+    width: 5vw;
+    margin-right: 0;
+    margin-left: auto;
+}
