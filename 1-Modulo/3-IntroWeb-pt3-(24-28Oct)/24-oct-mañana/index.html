@@ -27,8 +27,8 @@
                 <li><a href="#6">Acordeón con &lt;details&gt;</a></li>
                 <li><a href="#7">Modales con &lt;dialog&gt;</a></li>
                 <li><a href="#8">&lt;label&gt; con &lt;input&gt;</a></li>
-                <li><a href="#9">9</a></li>
-                <li><a href="#10">10</a></li>
+                <li><a href="#9">Agrupar &lt;options&gt; en &lt;select&gt;</a></li>
+                <li><a href="#10">Autocompletar</a></li>
             </ul>
         </section>
         <section id="pre-y-code">
@@ -48,7 +48,7 @@ window.prompt()
         <section id="contenidos">
 
             <div id="1">
-                <h2>Contenido Editable</h2>
+                <h2>1. Contenido Editable</h2>
                 <div class="etiqueta">
                     <p contenteditable="true">Esto es una caja de contenido editable.</p>
 <pre><code>
@@ -59,7 +59,7 @@ contenteditable="true"
             </div>
 
             <div id="2" class="etiqueta">
-                <h2>Color Picker</h2>
+                <h2>2. Color Picker</h2>
                 <div style="padding: 10px;">
                     Elije un color: <input type="color" value="#dfdfdf">
                 </div>
@@ -70,7 +70,7 @@ contenteditable="true"
             </div>
             
             <div id="3" class="etiqueta">
-                <h2>Highlight o Marcado de Texto</h2>
+                <h2>3. Highlight o Marcado de Texto</h2>
                 <p>
                 Esto es un texto. 
                 <mark 
@@ -91,7 +91,7 @@ mark {
             </div>
             
             <div id="4" class="etiqueta">
-                <h2>Barras de Progreso</h2>
+                <h2>4. Barras de Progreso</h2>
                 <meter min="0" max="100" value="50"></meter>
                 
                 <progress min="0" max="100"></progress>
@@ -108,7 +108,7 @@ mark {
             </div>
             
             <div id="5" class="etiqueta">
-                <h2>Corrector Ortográfico: atributo spellcheck</h2>
+                <h2>5. Corrector Ortográfico: atributo spellcheck</h2>
                 <p contenteditable="true" spellcheck="true">
                 <code>spellcheck</code> no funciona (<u>todavía</u>) en todos los navegadores. 
                 Se puede cambiar idioma con <code>lang="en"</code>.</p>
@@ -120,7 +120,7 @@ lang="en" spellcheck="true"
             </div>
 
             <div id="6" class="etiqueta">
-                <h2>Acordeón con &lt;details&gt;</h2>
+                <h2>6. Acordeón con &lt;details&gt;</h2>
                 
                 <details>
                     <summary>Esto es un tema</summary>
@@ -136,7 +136,7 @@ lang="en" spellcheck="true"
             </div>
 
             <div id="7" class="etiqueta">
-                <h2>Modales con &lt;dialog&gt;</h2>
+                <h2>7. Modales con &lt;dialog&gt;</h2>
 
                 <dialog close>Esto es una etiqueta dialog cerrada</dialog>
 
@@ -183,7 +183,7 @@ lang="en" spellcheck="true"
             </div>
             
             <div id="8" class="etiqueta">
-                <h2>&lt;label&gt; con &lt;input&gt;</h2>
+                <h2>8. &lt;label&gt; con &lt;input&gt;</h2>
 
                 <form action="#">
                     <div>
@@ -216,7 +216,28 @@ lang="en" spellcheck="true"
 
             </div>
             
-            <div id="9" class="etiqueta">9</div>
+            <div id="9" class="etiqueta">
+                <h2>9. Agrupar &lt;options&gt; en &lt;select&gt;</h2>
+                <select 
+                style="margin: 10px auto; display: block; width: 50%;">
+                    <optgroup label="Lenguajes de Programación"></optgroup>
+                    <option value="">Python</option>
+                    <option value="">Javascript</option>
+                    <optgroup label="IDEs"></optgroup>
+                    <option value="">VS Code</option>
+                    <option value="">Sublime Text</option>
+                    <optgroup label="Otra categoría"></optgroup>
+                    <option value="">Otro</option>
+                </select>
+<pre><code>
+&lt;select style="margin: 0 auto; display: block; width: 50%;"&gt;
+    &lt;optgroup label="Lenguajes de Programación">&lt;/optgroup&gt;
+    &lt;option value="">Python&lt;/option&gt;
+    &lt;option value="">Javascript&lt;/option&gt;
+&lt;/select&gt;
+
+</code></pre>
+            </div>
             
             <div id="10" class="etiqueta">10</div>
         </section>
