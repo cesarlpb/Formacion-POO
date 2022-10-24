@@ -27,7 +27,7 @@
                 <li><a href="#6">Acordeón con &lt;details&gt;</a></li>
                 <li><a href="#7">Modales con &lt;dialog&gt;</a></li>
                 <li><a href="#8">&lt;label&gt; con &lt;input&gt;</a></li>
-                <li><a href="#9">Agrupar &lt;options&gt; en &lt;select&gt;</a></li>
+                <li><a href="#9">Agrupar &lt;optgroup&gt; en &lt;select&gt;</a></li>
                 <li><a href="#10">Autocompletar</a></li>
             </ul>
         </section>
@@ -217,7 +217,7 @@ lang="en" spellcheck="true"
             </div>
             
             <div id="9" class="etiqueta">
-                <h2>9. Agrupar &lt;options&gt; en &lt;select&gt;</h2>
+                <h2>9. Agrupar &lt;optgroup&gt; en &lt;select&gt;</h2>
                 <select 
                 style="margin: 10px auto; display: block; width: 50%;">
                     <optgroup label="Lenguajes de Programación"></optgroup>
@@ -239,7 +239,19 @@ lang="en" spellcheck="true"
 </code></pre>
             </div>
             
-            <div id="10" class="etiqueta">10</div>
+            <div id="10" class="etiqueta">
+                <h2>Autocompletar</h2>
+                <label for="autocompletar" style="display: block; width: 100%;">Introduce un lenguaje de programación:</label>
+                <input list="lenguajes-poo" id="autocompletar" style="display: block; width: 100%;" type="text">
+                <form action="#">
+
+                </form>
+                <datalist id="lenguajes-poo">
+                    <option value="Python"></option>
+                    <option value="Javascript"></option>
+                    <option value="Ruby"></option>
+                </datalist>
+                </div>
         </section>
         
     </main>
