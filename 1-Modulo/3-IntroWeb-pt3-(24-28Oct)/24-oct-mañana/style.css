@@ -51,3 +51,13 @@ pre code {
 mark {
     text-decoration: underline;
 }
+meter {
+    width: 50vw;
+    display: block;
+    height: 1.5em;
+}
+progress {
+    display: block;
+    width: 50vw;
+    height: 1.25em;
+}
