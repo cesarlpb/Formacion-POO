@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Algunas Etiquetas HTML Poco Conocidas</title>
 </head>
 <body>
@@ -15,21 +19,44 @@
             <h2>Índice</h2>
 
             <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
+                <li><a href="#1">Contenido Editable</a></li>
+                <li><a href="#2">2</a></li>
+                <li><a href="#3">3</a></li>
+                <li><a href="#4">4</a></li>
+                <li><a href="#5">5</a></li>
+                <li><a href="#6">6</a></li>
+                <li><a href="#7">7</a></li>
+                <li><a href="#8">8</a></li>
+                <li><a href="#9">9</a></li>
+                <li><a href="#10">10</a></li>
             </ul>
         </section>
-        
+        <section id="pre-y-code">
+            <h2>&lt;pre&gt; y &lt;code&gt;</h2>
+            <p>Esto es un trozo de código <code>inline</code> con &lt;code&gt;: <code>window.prompt()</code>.</p>
+<p>Esto es un bloque con &lt;pre&gt;:</p>
+<pre>
+window.prompt()
+</pre>
+Ejemplo con &lt;pre&gt; y &lt;code&gt; (<code>display: block;</code>):
+<pre><code>
+window.prompt()
+
+</code></pre>
+        </section>
         <section id="contenidos">
-            <div>1</div>
+            <div id="1">
+                <h2>Contenido Editable</h2>
+                <div class="etiqueta">
+                    <p contenteditable="true">Esto es una caja de contenido editable.</p>
+<pre><code>
+contenteditable="true"
+
+</code></pre>
+
+
+            </div>
+            </div>
             <div>2</div>
             <div>3</div>
             <div>4</div>

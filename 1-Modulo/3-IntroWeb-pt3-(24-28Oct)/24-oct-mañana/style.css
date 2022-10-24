@@ -28,3 +28,20 @@ h1, h2, h3 {
 ul {
     list-style-type:decimal-leading-zero;
 }
+
+.etiqueta {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80vw;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.etiqueta pre {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(181, 181, 181, 0.853);
+    border: 1px solid black;
+}
+pre code {
+    border: 0px solid black;
+}
