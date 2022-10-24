@@ -61,3 +61,22 @@ progress {
     width: 50vw;
     height: 1.25em;
 }
+details summary {
+    border: 2px solid brown;
+    background-color: rgba(222, 184, 135, 1);
+    box-shadow: 2px 2px 2px burlywood;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    margin: 10px auto;
+}
+details p {
+    background-color: rgba(222, 184, 135, 0.7);
+    border: 2px solid brown;
+    border-top: 0;
+    padding: 10px;
+    margin: -10px auto 10px auto;
+    width: 90%;
+    box-shadow: 2px 2px 2px burlywood;
+}

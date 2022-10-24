@@ -23,9 +23,9 @@
                 <li><a href="#2">Color Picker</a></li>
                 <li><a href="#3">Highlight o Marcado de Texto</a></li>
                 <li><a href="#4">Barras de Progreso</a></li>
-                <li><a href="#5">Corrector Ortográfico: Spellchecker</a></li>
-                <li><a href="#6">Acordeón</a></li>
-                <li><a href="#7">7</a></li>
+                <li><a href="#5">Corrector Ortográfico: atributo spellcheck</a></li>
+                <li><a href="#6">Acordeón con &lt;details&gt;</a></li>
+                <li><a href="#7">Modales con &lt;dialog&gt;</a></li>
                 <li><a href="#8">8</a></li>
                 <li><a href="#9">9</a></li>
                 <li><a href="#10">10</a></li>
@@ -108,17 +108,37 @@ mark {
             </div>
             
             <div id="5" class="etiqueta">
-                <h2>Corrector Ortográfico: Spellchecker</h2>
-                <p contenteditable="true" spellcheck="true">Spellchecker no funciona (todavía) en todos los navegadores. Se puede cambiar idioma con <code>lang="en"</code>.</p>
+                <h2>Corrector Ortográfico: atributo spellcheck</h2>
+                <p contenteditable="true" spellcheck="true">
+                <code>spellcheck</code> no funciona (<u>todavía</u>) en todos los navegadores. 
+                Se puede cambiar idioma con <code>lang="en"</code>.</p>
                 <textarea lang="es" cols="30" spellcheck="true">Escribe en español...</textarea>
                 <textarea lang="en" cols="30" spellcheck="true">Escribe texto en inglés...</textarea>
                 <pre><code>
 lang="en" spellcheck="true"
                 </code></pre>
             </div>
-            <div id="6" class="etiqueta">Acordeón</div>
-            
-            <div id="7" class="etiqueta">7</div>
+
+            <div id="6" class="etiqueta">
+                <h2>Acordeón con &lt;details&gt;</h2>
+                
+                <details>
+                    <summary>Esto es un tema</summary>
+                    <p>Esto es el detalle del tema.</p>
+                </details>
+<pre><code>
+&lt;details&gt;
+    &lt;summary&gt;Esto es un tema&lt;/summary&gt;
+    &lt;p&gt;Esto es el detalle del tema.&lt;/p&gt;
+&lt;/details&gt;
+
+</code></pre>
+            </div>
+
+            <div id="7" class="etiqueta">
+                <h2>Modales con &lt;dialog&gt;</h2>
+                
+            </div>
             
             <div id="8" class="etiqueta">8</div>
             
