@@ -50,4 +50,23 @@ function decrementar(){
     asignacion.innerText = contador;
 }
 
-tipos.innerText = "tipos"
+/* Tipos de Datos en JS */
+
+let myBoolean = true    // Para condiciones o tipos de dato -> Sí / No
+let number = 1000       // Números
+let string = "Texto"    // Textos
+
+/* Array o arreglo de números */
+let array = [1, 2, 3]   // Colecciones o listas de números. Ej: precios, días, etc.
+/* Array o arreglo de textos */
+let arrayStr = ["Primer texto", "Segundo", "Tercer Texto"] // Cualquier tipo de texto
+/* Array de booleanos */
+let arrayBool = [true, false, true] // conjunto de condiciones o valores verdadero o falso
+
+/* Array de diversos tipos - EVITAR HACER ESTO (siempre que sea posible) */
+let arrayMixto = [1, "2", false, [1, 2], {"fiesta": "Es una fiesta"}] // No, gracias.
+/* No hacer lo de arriba (a menos que no quede otra opción) ^^^^ */ 
+
+let obj = { "campo": "valor", "otro_campo": "Otro Valor", "tercera_key":"asdad" } // Lo vemos en tema Objetos
+
+tipos.innerText = "[" + array + "]"
