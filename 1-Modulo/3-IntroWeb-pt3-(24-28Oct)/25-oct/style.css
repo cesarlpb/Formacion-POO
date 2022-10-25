@@ -29,8 +29,13 @@ ul {
     list-style-type:decimal-leading-zero;
 }
 /****************************************/
-/* font-family: 'Open Sans', sans-serif; */
 
 .container{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#operadores, #asignacion, #tipos {
+    font-family: 'Open Sans', sans-serif;
 }
