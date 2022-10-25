@@ -18,8 +18,5 @@ function sumarIva4(precioBase){
     let iva = precioBase * 4 / 100;
     let precioFinal = precioBase + iva;
     return precioFinal;
-    return resultado;
 }
 // Caso general
-
-// Calculadora
