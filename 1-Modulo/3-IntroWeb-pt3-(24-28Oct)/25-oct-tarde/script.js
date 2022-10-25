@@ -17,7 +17,7 @@ ejemplo2.innerText = calcularPrecioFinal2(200)
 /* Ejercicios */
 // Escribimos el desglose de precios
 let ejercicio1 = document.getElementById("ejercicio-1");
-let resultado = calcularDesglose(100)
+let resultado = calcularDesglose(100) // asignación en var resultado del return por la fn
 ejercicio1.innerText = resultado;
 
 // Escribimos variable global
