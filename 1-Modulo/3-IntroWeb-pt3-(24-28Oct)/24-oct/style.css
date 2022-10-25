@@ -28,7 +28,7 @@ h1, h2, h3 {
 ul {
     list-style-type:decimal-leading-zero;
 }
-
+/****************************************/
 .etiqueta {
     padding: 10px;
     border: 1px solid black;
