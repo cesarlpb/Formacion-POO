@@ -39,3 +39,13 @@ ul {
 #operadores, #asignacion, #tipos {
     font-family: 'Open Sans', sans-serif;
 }
+
+#calc-container {
+    display: flex;
+    justify-content: space-around;
+}
+#calc-container div {
+    border: 1px solid brown;
+    padding: 10px;
+    border-radius: 10px;
+}

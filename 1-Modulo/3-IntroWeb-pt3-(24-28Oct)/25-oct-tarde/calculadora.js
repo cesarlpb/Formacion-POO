@@ -1,14 +1,16 @@
 // Calculadora
 let calculadora = document.getElementById("calculadora");
+let sumaEl = document.getElementById("suma");
+let restaEl = document.getElementById("resta");
+let productoEl = document.getElementById("producto");
+let divisionEl = document.getElementById("division");
 
-calculadora.innerText += "Resultados: \n"
-calculadora.innerText += suma(10, 20);
-calculadora.innerText += "\n";
-calculadora.innerText += resta(50, 10);
-calculadora.innerText += "\n";
-calculadora.innerText += producto(11, 12);
-calculadora.innerText += "\n";
-calculadora.innerText += division(100, 50);
+calculadora.innerText += "Resultados:"
+
+sumaEl.innerText += String(suma(10, 20));
+restaEl.innerText += String(resta(50, 10));
+productoEl.innerText += String(producto(11, 12));
+divisionEl.innerText += String(division(100, 50));
 
 // + - * /
 
@@ -30,3 +32,5 @@ function division(a, b){
     let resultado = a / b;
     return resultado;
 }
+
+// Ejercicio -> colocamos cada resultado en su caja (div)
