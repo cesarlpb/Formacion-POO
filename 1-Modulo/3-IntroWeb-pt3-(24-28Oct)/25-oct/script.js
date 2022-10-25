@@ -28,6 +28,26 @@ operadoresHtml.innerHTML = "<p style='border:1px solid black; padding: 10px;'>" 
 
 operadores.innerText = opCombTexto + ": " + String(opComb)
 
-asignacion.innerText = "asignacion"
+/* Asignación con operadores aritméticos:
++= -= *= /=
+
+%=
+**=
+
+*/
+let contador = 0;
+asignacion.innerText = contador;
+// Creamos un botón que incrementa un contador al hacer clic
+// Implementamos o definimos incrementar()
+function incrementar(){
+    ++contador;
+    asignacion.innerText = contador;
+}
+// Creamos el botón que decrementa el contados al hacer clic
+// Implementamos o definimos decrementar()
+function decrementar(){
+    --contador;
+    asignacion.innerText = contador;
+}
 
 tipos.innerText = "tipos"
