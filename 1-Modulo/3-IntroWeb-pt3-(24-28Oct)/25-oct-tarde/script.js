@@ -15,9 +15,10 @@ ejemplo.innerText = "El precio calculado es: " + String(precio) + " €.";
 ejemplo2.innerText = calcularPrecioFinal2(200)
 
 /* Ejercicios */
+// Escribimos el desglose de precios
 let ejercicio1 = document.getElementById("ejercicio-1");
-let array = calcularDesglose(100)
-ejercicio1.innerText = array;
+let resultado = calcularDesglose(100)
+ejercicio1.innerText = resultado;
 
 // Escribimos variable global
 // Variable Global 
@@ -65,11 +66,16 @@ function calcularPrecioFinal2(precioBase){
 function calcularDesglose(precioFinal){
     let precioBase = precioFinal / 1.21;
     let iva = precioFinal - precioBase;
+    
     // Ej. limitar los decimales a 2 decimales
-    // Ej. cambiar a texto -> formatear la salida
-    return [precioBase, iva]
-}
-// Ejercicio -> función que añada 10% de IVA
-// Ejercicio -> función que añada 4% de IVA
+    // Modificamos y asignamos valor con 2 decimales a precioBase
+    // precioBase = precioBase.toFixed(2)
+    // iva = iva.toFixed(2)
 
-// Calculadora
+    // Ej. cambiar a texto -> formatear la salida
+    let linea1 = "Desglose\n"
+    let linea2 = "Precio base: " + String(precioBase.toFixed(2)) + " €\n"
+    let linea3 = "IVA: " + String(iva.toFixed(2)) + " €"
+    let texto = linea1 + linea2 + linea3
+    return texto
+}
