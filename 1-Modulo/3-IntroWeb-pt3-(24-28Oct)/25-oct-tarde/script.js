@@ -9,6 +9,12 @@ let precio = calcularPrecioFinal(100);
 // Escribir el dato recibido de la fn en el elemento ejemplo
 ejemplo.innerText = "El precio calculado es: " + String(precio) + " €.";
 
+/* Ejercicios */
+let ejercicio1 = document.getElementById("ejercicio-1");
+let array = calcularDesglose(200)
+ejercicio1.innerText = array;
+
+/* Funciones */
 function calcularPrecioFinal(precioBase){
     // Calculamos IVA como el 21% del parámetro precioBase
     let iva = 21/100 * precioBase;
@@ -18,5 +24,15 @@ function calcularPrecioFinal(precioBase){
     return precioFinal;
 }
 
+// Ejercicio -> recibimos cantidad total y calculamos el desglose de precio base e IVA
+function calcularDesglose(precioFinal){
+    let precioBase = precioFinal / 1.21;
+    let iva = precioFinal - precioBase;
+    // Ej. limitar los decimales a 2 decimales
+    // Ej. cambiar a texto -> formatear la salida
+    return [precioBase, iva]
+}
 // Ejercicio -> función que añada 10% de IVA
 // Ejercicio -> función que añada 4% de IVA
+
+// Calculadora
