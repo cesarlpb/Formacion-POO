@@ -25,7 +25,34 @@ function calc(){
     console.log("Logaritmo 10: " + res7)
     
     // Tomar valores del select cuando se llame calc()
+    let operacionesSel = document.getElementById("operaciones") // select
+    let posicion = operacionesSel.options['selectedIndex'] // entero, posición en array
+    // posicion -> 0 es Suma, 1 es Resta ... 6 es Logaritmo 10
+    
     // Llamar a la fn seleccionada
+    if( posicion === 0 ){
+        // suma()
+        console.log("Suma")
+    } else if( posicion === 1 ){
+        // resta
+        console.log("Resta")
+    } else if( posicion === 2 ){
+        // prod
+        console.log("Prod")
+    } else if( posicion === 3 ){
+        // divi
+        console.log("Divi")
+    } else if( posicion === 4 ){
+        // raiz
+        console.log("raiz")
+    } else if( posicion === 5 ){
+        // potencia
+        console.log("Pow")
+    } else {
+        // log 10
+        console.log("Log")
+    }
+    
     // Escribir el resultado en textarea
 
 }
