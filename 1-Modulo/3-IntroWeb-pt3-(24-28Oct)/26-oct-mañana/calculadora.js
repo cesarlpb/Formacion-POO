@@ -3,9 +3,27 @@
 function calc(){
     let numA = document.getElementById("myInputA")
     let numB = document.getElementById("myInputB")
-    console.log("Has ingresado estos valores:")
-    console.log(numA.value)
-    console.log(numB.value)
+
+    // numA = numA.valueAsNumber
+    // numB = numB.valueAsNumber
+
+    let res1 = suma(Number(numA.value), Number(numB.value))
+    let res2 = resta(Number(numA.value), Number(numB.value))
+    let res3 = producto(Number(numA.value), Number(numB.value))
+    let res4 = division(Number(numA.value), Number(numB.value))
+    let res5 = raizCuadrada(Number(numA.value))
+    let res6 = potencia(Number(numA.value), Number(numB.value))
+    let res7 = log10(Number(numA.value))
+
+    console.log("Resultados:")
+    console.log("Suma: " + res1)
+    console.log("Resta: " + res2)
+    console.log("Producto: " + res3)
+    console.log("División: " + res4)
+    console.log("Raíz cuadrada: " + res5)
+    console.log("Potencia: " + res6)
+    console.log("Logaritmo 10: " + res7)
+
 }
 // Funciones para operaciones básicas + - * / ** % sqrt() log() 
 // Suma
