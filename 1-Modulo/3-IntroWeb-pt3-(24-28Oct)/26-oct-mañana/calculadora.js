@@ -7,7 +7,7 @@ function calc(){
     // numA = numA.valueAsNumber
     // numB = numB.valueAsNumber
 
-    let res1 = suma(Number(numA.value), Number(numB.value))
+    let res1 = suma(Number(numA.values), Number(numB.value))
     let res2 = resta(Number(numA.value), Number(numB.value))
     let res3 = producto(Number(numA.value), Number(numB.value))
     let res4 = division(Number(numA.value), Number(numB.value))
@@ -23,6 +23,10 @@ function calc(){
     console.log("Raíz cuadrada: " + res5)
     console.log("Potencia: " + res6)
     console.log("Logaritmo 10: " + res7)
+    
+    // Tomar valores del select cuando se llame calc()
+    // Llamar a la fn seleccionada
+    // Escribir el resultado en textarea
 
 }
 // Funciones para operaciones básicas + - * / ** % sqrt() log() 

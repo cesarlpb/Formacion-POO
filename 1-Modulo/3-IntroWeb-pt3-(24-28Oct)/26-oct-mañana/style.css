@@ -45,7 +45,7 @@ ul {
     justify-content: space-around;
 }
 #calc-container div {
-    border: 1px solid brown;
+    border: 2px solid brown;
     padding: 10px;
     border-radius: 10px;
 }
@@ -55,4 +55,48 @@ ul {
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
+}
+#calc-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: lightgray;
+}
+#calc-container div {
+    background-color: rgba(222, 184, 135, 0.865);
+}
+#calc-container p,
+#calc-container div,
+#calc-container input,
+#calc-container select,
+#calc-btn {
+    display: block;
+    margin: 10px auto;
+    width: 95%;
+    min-height: 1.75em;
+    padding: 3px 0;
+    text-align: center;
+}
+#calc-container input {
+    padding: 0;
+}
+#calc-container textarea {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+#calc-container, 
+#calc-container div {
+    padding: 15px 5px;
+}
+#calc-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: white;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px auto 10px;
 }
