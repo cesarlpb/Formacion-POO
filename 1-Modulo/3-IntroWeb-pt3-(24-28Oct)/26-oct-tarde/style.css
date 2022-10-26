@@ -1,5 +1,3 @@
-/* Hoja de estilos para el conversor de decimales a romano */
-
 /* Hoja de estilos para aplicar Flex box 
 *  Aplicamos esta hoja de estilos a contenido HTML de temas
 */
@@ -42,39 +40,39 @@ ul {
     font-family: 'Open Sans', sans-serif;
 }
 
-#calc-container {
+#conversor-container {
     display: flex;
     justify-content: space-around;
 }
-#calc-container div {
+#conversor-container div {
     border: 2px solid brown;
     padding: 10px;
     border-radius: 10px;
 }
 
 /* Calculadora con botones */
-#calc-container {
+#conversor-container {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
 }
-#calc-container code {
+#conversor-container code {
     font-size: 1.2em;
     padding: 0px 10px;
     margin: 0px 0px;
     background-color: lightgray;
 }
-#calc-container div {
+#conversor-container div {
     max-width: 50vw;
     margin: 0 auto;
     background-color: rgba(222, 184, 135, 0.865);
 }
-#calc-container p,
-#calc-container div,
-#calc-container input,
-#calc-container select,
-#calc-btn {
+#conversor-container p,
+#conversor-container div,
+#conversor-container input,
+#conversor-container select,
+#conversor-btn {
     display: block;
     margin: 10px auto;
     width: 95%;
@@ -82,21 +80,21 @@ ul {
     padding: 3px 0;
     text-align: center;
 }
-#calc-container input {
+#conversor-container input {
     padding: 0;
 }
-#calc-container textarea {
+#conversor-container textarea {
     display: block;
     margin: 10px auto;
     width: 90%;
     padding: 10px;
     text-align: center;
 }
-#calc-container, 
-#calc-container div {
+#conversor-container, 
+#conversor-container div {
     padding: 15px 5px;
 }
-#calc-btn {
+#conversor-btn {
     background-color: rgba(33, 33, 164, 0.89);
     color: white;
     box-shadow: 0;

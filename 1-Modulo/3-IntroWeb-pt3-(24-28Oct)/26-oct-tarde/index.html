@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Convertidor Números Decimales a Romanos</title>
+</head>
+<body>
+    <h1>Convertidor Números Decimales a Romanos</h1>
+    <main>
+        <div id="conversor-container">
+            <p>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</p>
+            <div>
+                <label for="resultados">Resultados:</label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+
+                <label for="operaciones">Elije una operación aritmética:</label>
+                <!-- <select name="operaciones" id="operaciones">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="prod">Producto</option>
+                    <option value="divi">División</option>
+                    <option value="sqrt">Raíz cuadrada</option>
+                    <option value="pow">Potencia</option>
+                    <option value="log10">Logaritmo 10</option>
+                </select> -->
+
+                <label for="myInputA">Introduce el primer operando:</label>
+                <input id="myInputA" type="number" placeholder="1">
+
+                <!-- <label for="myInputB">Introduce el segundo operando:</label>
+                <input id="myInputB" type="number" placeholder="2"> -->
+
+                <button id="conversor-btn" onclick="convertir()">Convertir</button>  
+            </div>
+        </div>
+    </main>
+    <script src="decimal-a-romano.js"></script>
+</body>
+</html>
