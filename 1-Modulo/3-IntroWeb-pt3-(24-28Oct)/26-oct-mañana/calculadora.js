@@ -4,57 +4,53 @@ function calc(){
     let numA = document.getElementById("myInputA")
     let numB = document.getElementById("myInputB")
 
-    numA = numA.valueAsNumber // numéro
-    numB = numB.valueAsNumber // numéro
-
-    // let res1 = suma(Number(numA.values), Number(numB.value))
-    // let res2 = resta(Number(numA.value), Number(numB.value))
-    // let res3 = producto(Number(numA.value), Number(numB.value))
-    // let res4 = division(Number(numA.value), Number(numB.value))
-    // let res5 = raizCuadrada(Number(numA.value))
-    // let res6 = potencia(Number(numA.value), Number(numB.value))
-    // let res7 = log10(Number(numA.value))
-
-    // console.log("Resultados:")
-    // console.log("Suma: " + res1)
-    // console.log("Resta: " + res2)
-    // console.log("Producto: " + res3)
-    // console.log("División: " + res4)
-    // console.log("Raíz cuadrada: " + res5)
-    // console.log("Potencia: " + res6)
-    // console.log("Logaritmo 10: " + res7)
+    numA = numA.valueAsNumber // número
+    numB = numB.valueAsNumber // número
     
     // Tomar valores del select cuando se llame calc()
     let operacionesSel = document.getElementById("operaciones") // select
+    // let posicion = operacionesSel.options.selectedIndex // equivalente a la sig línea
     let posicion = operacionesSel.options['selectedIndex'] // entero, posición en array
     // posicion -> 0 es Suma, 1 es Resta ... 6 es Logaritmo 10
     
     // Llamar a la fn seleccionada
     if( posicion === 0 ){
         let res = suma(numA, numB)
+        escribirResultado(res)
         console.log("Suma: " + res)
     } else if( posicion === 1 ){
         let res = resta(numA, numB)
+        escribirResultado(res)
         console.log("Resta: " + res)
     } else if( posicion === 2 ){
         let res = producto(numA, numB)
+        escribirResultado(res)
         console.log("Prod: " + res)
     } else if( posicion === 3 ){
         let res = division(numA, numB)
+        escribirResultado(res)
         console.log("División: " + res)
     } else if( posicion === 4 ){
         let res = raizCuadrada(numA)
+        escribirResultado(res)
         console.log("Raíz: " + res)
     } else if( posicion === 5 ){
         let res = potencia(numA, numB)
+        escribirResultado(res)
         console.log("Pow: " + res)
     } else {
         let res = log10(numA)
+        escribirResultado(res)
         console.log("Log10: " + res)
     }
     
     // Escribir el resultado en textarea
 
+}
+// Fn para escribir un dato en el textarea
+function escribirResultado(num){
+    let textarea = document.getElementById("resultados")
+    textarea.innerText = String(num)
 }
 // Funciones para operaciones básicas + - * / ** % sqrt() log() 
 // Suma

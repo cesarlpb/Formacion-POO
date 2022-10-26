@@ -102,3 +102,7 @@ ul {
     border-radius: 5px;
     margin: 20px auto 10px;
 }
+#resultados {
+    font-size: 2em;
+    line-height: 100%;
+}
