@@ -59,7 +59,7 @@ function simboloRomano(num) {
 function descomponer(num){
     //         M  C  D  U
     let arr = [0, 0, 0, 0];
-    
+
     // Abordar casos en los que recibimos 1, 2, o 3 dígitos
         // Usando str.length determinamos si le faltan ceros al num
             // añadimos los ceros a la izq
@@ -71,6 +71,13 @@ function descomponer(num){
          *  2.5. Cambiamos el tipo a Number
          */
     let numStr = String(num)
+    
+    let len = numStr.length // 1, 2, 3, 4
+    if( len === 1 )     { numStr = '000' + numStr }
+    else if( len === 2) { numStr = '00' + numStr }
+    else if( len === 3) { numStr = '0' + numStr }
+
+    // Estas asignaciones funciona cuando son 4 dígitos
     arr[0] = Number(numStr[0])
     arr[1] = Number(numStr[1])
     arr[2] = Number(numStr[2])
