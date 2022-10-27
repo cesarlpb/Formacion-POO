@@ -15,7 +15,11 @@ function convertir(){
     }
     
     // Recibe número decimal entero
-    
+    /*
+     * 1. Descomponer con descomponer(num) -> arr
+     * 2. procesarArray(arr) 
+     * 3. Escribir el string en div
+     */
     // Equivalencia con símbolos en numeración romana
 
     // Ordenación y eliminación de símbolos no necesarios
@@ -85,14 +89,23 @@ function procesarArray(arr) {
 
     // Decenas: 0, 1 ... 9
     if( char2 == 0 ){ char2 = ""}
-    else if( char2 >= 1 & char2 <= 3 ){ char2 = simboloRomano(10).repeat(char2) }   // X, XX, XXX
-    else if( char2 == 4 ){ char2 = simboloRomano(10) + simboloRomano(50) }          // XL
-    else if( char2 == 5 ){ char2 = simboloRomano(50) }                              // L
+    else if( char2 >= 1 & char2 <= 3 ){ char2 = diezRom.repeat(char2) }   // X, XX, XXX
+    else if( char2 == 4 ){ char2 = diezRom + cincuentaRom }               // XL
+    else if( char2 == 5 ){ char2 = cincuentaRom }                         // L
     else if( char2 >= 6 & char2 <= 8 ){
-        char2 = simboloRomano(50) + simboloRomano(10).repeat(Number(char2) - 5)     // LX, LXX, LXXX
+        char2 = cincuentaRom + diezRom.repeat(Number(char2) - 5)          // LX, LXX, LXXX
     }
-    else if( char2 == 9 ){ char2 = simboloRomano(10) + simboloRomano(100) }         // XC
+    else if( char2 == 9 ){ char2 = diezRom + cienRom }                    // XC
+    
     // Unidades: 0, ... 9
+    if( char3 == 0 ){ char3 = "" }
+    else if( char3 >= 1 & char3 <= 3 ){ char3 = simboloRomano(1).repeat(char3) }    // I, II, III
+    else if( char3 == 4 ){ char3 = simboloRomano(1) + simboloRomano(5) }            // IV
+    else if( char3 == 5 ){ char3 = simboloRomano(5) }                               // V
+    else if( char3 >= 6 & char3 <= 8){ 
+        char3 = simboloRomano(5) + simboloRomano(1).repeat( Number(char3) - 5 )     // VI, VII, VIII
+    }
+    else if( char3 == 9 ){ char3 = simboloRomano(1) + simboloRomano(10) }           // IX
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
     simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
