@@ -113,14 +113,14 @@ ul {
     border-radius: 5px;
     width: 50%;
     padding: 10px;
-    margin: 50px auto 10px;
+    margin: 10px auto 50px;
 }
 #resultados-div {
     background-color: rgb(233, 229, 229)!important;
     color: black;
 }
 
-/* Fracciones a Decimal -> estilos <hr>, <select> e inputs */
+/* Fracciones a Decimal -> estilos <hr>, <select>, <button> e inputs */
 hr {
     width: 50%;
     margin: 0 auto;
@@ -135,6 +135,27 @@ hr {
     height: 2em;
     margin-top: 0;
     margin-bottom: 40px;
+}
+#borrar-btn {
+    padding: 5px;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    border: 0;
+    border-radius: 5px;
+}
+#borrar-span {
+    padding: 0 0 0 10px;
+    line-height: 100%;
+    height: 100%;
+    display: inline-block;
+    align-self: center;
+    border: 0px solid black;
 }
 /* Final de Estilos para Conversor de Fracciones a Decimal */
 

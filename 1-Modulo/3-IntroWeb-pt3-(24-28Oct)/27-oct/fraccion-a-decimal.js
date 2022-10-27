@@ -15,3 +15,13 @@ function convertir(){
     
     document.getElementById("resultados").innerText = String(resultado.toFixed(decimales))
 }
+
+function borrar(){
+    let myInputA = document.getElementById("myInputA");
+    let myInputB = document.getElementById("myInputB");
+    let resultado = document.getElementById("resultados");
+
+    myInputA.value = "";
+    myInputB.value = "";
+    resultado.innerText = "";
+}
