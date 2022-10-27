@@ -10,7 +10,7 @@ function convertir(){
         alert("Debes ingresar un número positivo")
         return NaN;
     } else if ( numDecimal > 3999 ){
-        alert("No podemos representar este número")
+        alert("No podemos representar este número.\nIngresa un número inferior a 4000.")
         return NaN;
     }
     
@@ -21,10 +21,11 @@ function convertir(){
      * 3. Escribir el string en div
      */
     // Equivalencia con símbolos en numeración romana
+    // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
 
-    // Ordenación y eliminación de símbolos no necesarios
-
-    document.getElementById("resultados").innerText = numDecimal;
+    let arr = descomponer(numDecimal);      // [1, 2, 3, 4]
+    let numRomano = procesarArray(arr);     // "M CC XXX IV"
+    document.getElementById("resultados").innerText = numRomano;
 }
 
 // Recibe un número (1, 5, 10, 50, 100, 1000) y 
