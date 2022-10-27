@@ -64,7 +64,8 @@ ul {
     background-color: lightgray;
 }
 #conversor-container div {
-    max-width: 50vw;
+    width: 300px;
+    max-width: 400px;
     margin: 0 auto;
     background-color: rgba(222, 184, 135, 0.865);
 }
@@ -112,4 +113,12 @@ ul {
     font-size: 3em;
     display: inline-block;
     align-self: center;
+}
+
+/* Media Query */
+
+@media (width > 800px){
+    #conversor-container div {
+        max-width: 450px;
+    }
 }
