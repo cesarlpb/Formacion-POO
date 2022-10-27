@@ -23,3 +23,6 @@ Repositorio de la formación IFCD0112 de 710 horas
 ### Semana del 24 al 28 de Octubre
 
 - Hemos visto el uso de 10 etiquetas HTML poco usadas. [Archivos 24 oct](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/24-oct)
+- **Martes 25:** Introducción a funciones. [Archivos 25-oct mañana](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/25-oct-mañana) y [Archivos 25-oct tarde](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/25-oct-tarde)
+- **Miércoles 26:** Ejercicios de Calculadoras con funciones. [Archivos 26-oct mañana](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/26-oct-mañana) y [Archivos 26-oct tarde](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/26-oct-tarde)
+- **Jueves 27** Continuación convertidor Decimal a Números Romanos [Convertidor Decimal a Romano](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/26-oct-tarde) y [Script del conversor decimal a romano](/1-Modulo/3-IntroWeb-pt3-(24-28Oct)/26-oct-tarde/decimal-a-romano.js).
