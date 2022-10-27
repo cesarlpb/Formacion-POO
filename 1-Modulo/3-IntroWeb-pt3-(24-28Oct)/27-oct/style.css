@@ -70,6 +70,8 @@ ul {
     margin: 0 auto;
     background-color: rgba(222, 184, 135, 0.865);
 }
+
+/* To do: separar estos selectores en individuales */
 #conversor-container p,
 #conversor-container div,
 #conversor-container input,
@@ -118,6 +120,16 @@ ul {
     color: black;
 }
 
+/* Fracciones -> estilos <hr> e inputs */
+hr {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgb(83, 83, 83);
+    background-color: rgb(83, 83, 83);;
+}
+#conversor-container input {
+    margin: 5px auto;
+}
 /* <p> */
 #resultados {
     font-size: 3em;
