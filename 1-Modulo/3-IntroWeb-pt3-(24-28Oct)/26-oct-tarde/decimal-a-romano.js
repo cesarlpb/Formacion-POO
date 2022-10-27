@@ -57,17 +57,32 @@ function procesarArray(arr) {
     char2 = String(arr[2]); // decenas
     char3 = String(arr[3]); // unidades
 
+    let milRom = simboloRomano(1000)
+    let quinientosRom = simboloRomano(500)
+    let cienRom = simboloRomano(100)
+    let cincuentaRom = simboloRomano(50)
+    let diezRom = simboloRomano(10)
+    let cincoRom = simboloRomano(5)
+    let unoRom = simboloRomano(1)
+    
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
     // Miles: 0, 1, 2, 3
-    if( char0 == 0 ){ char0 = "" }
-    else if( char0 == 1 ){ char0 = simboloRomano(1000) }
-    else if( char0 == 2 ){ char0 = simboloRomano(1000).repeat(2) }
-    else if( char0 == 3 ){ char0 = simboloRomano(1000).repeat(3) }
+    if( char0 == 0 ){ char0 = "" }                                  // ""
+    else if( char0 == 1 ){ char0 = milRom }            // M
+    else if( char0 == 2 ){ char0 = milRom.repeat(2) }  // MM
+    else if( char0 == 3 ){ char0 = milRom.repeat(3) }  // MMM
 
     // Centenas: 0, 1, ..., 9
-    
+    if( char1 == 0 ){ char1 = "" }                                  // ""
+    else if( char1 >= 1 & char1 <= 3 ){ char1 = cienRom.repeat(char1) } // C, CC, CCC
+    else if( char1 == 4 ){ char1 = cienRom + quinientosRom }       // CD
+    else if( char1 == 5 ){ char1 = quinientosRom }                            // D
+    else if( char1 >= 6 & char1 <= 8 ){ 
+        char1 = quinientosRom + cienRom.repeat(Number(char1) - 5)  // 6 DC, 7 DCC, 8 DCCC 
+    } else if ( char1 == 9 ){ char1 = cienRom + milRom }   // 9 CM
+
     // Decenas: 0, 1 ... 9
 
     // Unidades: 0, ... 9
