@@ -63,6 +63,7 @@ ul {
     margin: 0px 0px;
     background-color: lightgray;
 }
+/* #resultados-wrapper */
 #conversor-container div {
     width: 300px;
     max-width: 400px;
@@ -75,14 +76,21 @@ ul {
 #conversor-container select,
 #conversor-btn {
     display: block;
-    margin: 10px auto;
-    width: 95%;
+    margin: 20px auto;
+    width: 90%;
     min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
     padding: 3px 0;
     text-align: center;
 }
+#conversor-container label {
+    padding: 10px 0;
+    display: block;
+    margin: 30px 0 10px;
+}
 #conversor-container input {
-    padding: 0;
+    padding: 5px 0;
+    font-size: 1em;
+    width: 50%;
 }
 #conversor-container textarea {
     display: block;
@@ -101,7 +109,9 @@ ul {
     box-shadow: 0;
     border: 0;
     border-radius: 5px;
-    margin: 20px auto 10px;
+    width: 50%;
+    padding: 10px;
+    margin: 50px auto 10px;
 }
 #resultados-div {
     background-color: rgb(233, 229, 229)!important;
@@ -120,5 +130,11 @@ ul {
 @media (width > 800px){
     #conversor-container div {
         max-width: 450px;
+        padding: 15px;
+    }
+}
+@media (width < 800px){
+    #resultados {
+        font-size: 2em;
     }
 }

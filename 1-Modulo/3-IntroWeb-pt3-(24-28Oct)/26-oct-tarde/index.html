@@ -16,13 +16,14 @@
     <main>
         <div id="conversor-container">
             <p>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</p>
-            <div>
-                <label for="resultados">Resultados:</label>
+            <p>Este conversor solo admite números del <code>1</code> al <code>3999</code>.</p>
+            <div id="resultados-wrapper">
+                <label for="resultados">Número en representación romana:</label>
                 <div id="resultados-div">
                     <p id="resultados"></p>
                 </div>
 
-                <label for="myInputA">Introduce el número decimal a convertir:</label>
+                <label for="myInputA">Introduce el número en base 10 a convertir:</label>
                 <input id="myInputA" type="number"  placeholder="1">
 
                 <button id="conversor-btn" onclick="convertir()">Convertir</button>  
