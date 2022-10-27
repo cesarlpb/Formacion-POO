@@ -120,7 +120,7 @@ ul {
     color: black;
 }
 
-/* Fracciones -> estilos <hr> e inputs */
+/* Fracciones a Decimal -> estilos <hr>, <select> e inputs */
 hr {
     width: 50%;
     margin: 0 auto;
@@ -130,6 +130,14 @@ hr {
 #conversor-container input {
     margin: 5px auto;
 }
+#conversor-container select {
+    width: 50%;
+    height: 2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+/* Final de Estilos para Conversor de Fracciones a Decimal */
+
 /* <p> */
 #resultados {
     font-size: 3em;
