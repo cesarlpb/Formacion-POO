@@ -23,6 +23,8 @@ function convertir(){
     document.getElementById("resultados").innerText = numDecimal;
 }
 
+// Recibe un número (1, 5, 10, 50, 100, 1000) y 
+// devuelve el caracter en numeración romana
 function simboloRomano(num) {
     /* 
     1       ->  I 
@@ -43,12 +45,42 @@ function simboloRomano(num) {
     else { return NaN; }
 }
 
-// Descomposición del número en sumandos -> 120 -> 100 + 20 -> 1*100 + 2*10
-    // Calcula los sumandos de un número determinado -> 1, 10, 100, 1000
-    
-    /*
-    Ejemplos:
+// Fn que procesa el array del número 
+// Recibe array de descomponer(num) -> [1, 9, 8, 9]
+// Devuelve string de caracteres
+function procesarArray(arr) {
+    let char0, char1, char2, char3;
+    let str;
 
+    char0 = String(arr[0]);
+    char1 = String(arr[1]);
+    char2 = String(arr[2]);
+    char3 = String(arr[3]);
+
+    // -- Repetir para cada char --
+    // Si es cero -> nada -> ""
+    
+    // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
+    simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
+    
+    // Si es cualquier otro valor, ej. 4, 9... 
+        // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
+    
+    str = char0 + char1 + char2 + char3; 
+    return str;
+}
+
+//  Descomposición del número en sumandos 
+//  Recibe num de entre 1 y 4 digitos, 
+//  Devuelve array de 4 dígitos
+/*
+    Ejemplos:    
+    -> 120 -> 100 + 20 -> 1*100 + 2*10
+    Calcula los sumandos de un número determinado 
+    -> 1, 10, 100, 1000   
+*/
+function descomponer(num){
+    /* Ejemplos de descomposición:
     2022 -> 2*1000 + 2*10 + 2*1 -> [M, C, X, I] -> [2, 0, 2, 2]
     1989 -> [1, 9, 8, 9] 
     147  -> [0, 1, 4, 7]
@@ -56,7 +88,6 @@ function simboloRomano(num) {
     8   ->  [0, 0, 0, 8]
     */
 
-function descomponer(num){
     //         M  C  D  U
     let arr = [0, 0, 0, 0];
 
