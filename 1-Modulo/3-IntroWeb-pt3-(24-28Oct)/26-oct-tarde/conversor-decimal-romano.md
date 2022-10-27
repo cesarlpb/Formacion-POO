@@ -13,3 +13,4 @@ Actualmente, el conversor solo admite números entre `1` y `3999`.
 - Rehacer con bucles `for`, `map()`, `() => { ... }`etc.
 - Extender para todo tipo de números enteros hasta donde permita la numeración romana.
 - Considerar usar estas funciones para transformar años, fechas, etc.
+- **Hacer un conversor inverso**, de números decimales a números romanos.

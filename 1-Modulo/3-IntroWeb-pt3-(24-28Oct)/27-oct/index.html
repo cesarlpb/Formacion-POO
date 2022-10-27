@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Fracciones a Números Decimales</title>
+</head>
+<body>
+    <h1>Conversor de Fracciones a Números Decimales</h1>
+    <main>
+        <div id="conversor-container">
+            <p>Descripción 1</p>
+            <p>Descripción 2</p>
+            <div id="resultados-wrapper">
+                <label for="resultados">Fracción en representación decimal:</label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+
+                <label for="myInputA">Introduce los valores de la fracción:</label>
+                <input id="myInputA" type="number"  placeholder="1">
+                <hr>
+                <input id="myInputB" type="number"  placeholder="2">
+
+                <button id="conversor-btn" onclick="convertir()">Convertir fracción</button>  
+            </div>
+        </div>
+    </main>
+    <script src="fraccion-a-decimal.js"></script>
+</body>
+</html>
