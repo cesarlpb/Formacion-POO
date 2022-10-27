@@ -2,6 +2,8 @@
 
 Actualmente, el conversor solo admite números entre `1` y `3999`.
 
+![Diagrama](conversor-decimal-a-romano.png)
+
 ## Cambios a considerar en el Conversor
 
 - Usar bucles `for` para reducir repeticiónd de condiciones.
