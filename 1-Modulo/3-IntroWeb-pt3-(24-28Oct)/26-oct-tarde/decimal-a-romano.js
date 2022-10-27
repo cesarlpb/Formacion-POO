@@ -52,14 +52,26 @@ function procesarArray(arr) {
     let char0, char1, char2, char3;
     let str;
 
-    char0 = String(arr[0]);
-    char1 = String(arr[1]);
-    char2 = String(arr[2]);
-    char3 = String(arr[3]);
+    char0 = String(arr[0]); // miles -> 0, 1, 2, 3
+    char1 = String(arr[1]); // centenas
+    char2 = String(arr[2]); // decenas
+    char3 = String(arr[3]); // unidades
 
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
+    // Miles: 0, 1, 2, 3
+    if( char0 == 0 ){ char0 = "" }
+    else if( char0 == 1 ){ char0 = simboloRomano(1000) }
+    else if( char0 == 2 ){ char0 = simboloRomano(1000).repeat(2) }
+    else if( char0 == 3 ){ char0 = simboloRomano(1000).repeat(3) }
+
+    // Centenas: 0, 1, ..., 9
+    
+    // Decenas: 0, 1 ... 9
+
+    // Unidades: 0, ... 9
+
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
     simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
     
