@@ -64,7 +64,7 @@ function procesarArray(arr) {
     let diezRom = simboloRomano(10)
     let cincoRom = simboloRomano(5)
     let unoRom = simboloRomano(1)
-    
+
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
@@ -84,7 +84,14 @@ function procesarArray(arr) {
     } else if ( char1 == 9 ){ char1 = cienRom + milRom }   // 9 CM
 
     // Decenas: 0, 1 ... 9
-
+    if( char2 == 0 ){ char2 = ""}
+    else if( char2 >= 1 & char2 <= 3 ){ char2 = simboloRomano(10).repeat(char2) }   // X, XX, XXX
+    else if( char2 == 4 ){ char2 = simboloRomano(10) + simboloRomano(50) }          // XL
+    else if( char2 == 5 ){ char2 = simboloRomano(50) }                              // L
+    else if( char2 >= 6 & char2 <= 8 ){
+        char2 = simboloRomano(50) + simboloRomano(10).repeat(Number(char2) - 5)     // LX, LXX, LXXX
+    }
+    else if( char2 == 9 ){ char2 = simboloRomano(10) + simboloRomano(100) }         // XC
     // Unidades: 0, ... 9
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
