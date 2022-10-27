@@ -14,7 +14,7 @@ function calc(){
     // posicion -> 0 es Suma, 1 es Resta ... 6 es Logaritmo 10
     
     // Llamar a la fn seleccionada
-    if( posicion = 0 ){
+    if( posicion === 0 ){
         let res = suma(numA, numB)
         escribirResultado(res)
         console.log("Suma: " + res)
