@@ -100,13 +100,13 @@ function procesarArray(arr) {
     
     // Unidades: 0, ... 9
     if( char3 == 0 ){ char3 = "" }
-    else if( char3 >= 1 & char3 <= 3 ){ char3 = simboloRomano(1).repeat(char3) }    // I, II, III
-    else if( char3 == 4 ){ char3 = simboloRomano(1) + simboloRomano(5) }            // IV
-    else if( char3 == 5 ){ char3 = simboloRomano(5) }                               // V
+    else if( char3 >= 1 & char3 <= 3 ){ char3 = unoRom.repeat(char3) }    // I, II, III
+    else if( char3 == 4 ){ char3 = unoRom + cincoRom }            // IV
+    else if( char3 == 5 ){ char3 = cincoRom }                               // V
     else if( char3 >= 6 & char3 <= 8){ 
-        char3 = simboloRomano(5) + simboloRomano(1).repeat( Number(char3) - 5 )     // VI, VII, VIII
+        char3 = cincoRom + unoRom.repeat( Number(char3) - 5 )     // VI, VII, VIII
     }
-    else if( char3 == 9 ){ char3 = simboloRomano(1) + simboloRomano(10) }           // IX
+    else if( char3 == 9 ){ char3 = unoRom + diezRom }           // IX
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
     simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
