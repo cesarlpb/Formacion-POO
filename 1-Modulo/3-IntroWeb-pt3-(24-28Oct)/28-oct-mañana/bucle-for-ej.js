@@ -1,5 +1,7 @@
 /* Script para resolver ejercicios de bucle for con JS */
 
+ej1()
+
 // 1
 /*
 Usando un bucle for escribir un script que pida un valor entero y 
@@ -9,6 +11,25 @@ Los números se separarán por comas.
 Salida:
 0, 1, 2, 3, 4, 5  
 */
+
+function ej1(){
+    let number = Number(prompt("Introduce un número entero positivo:")) // Si no recibimos número es NaN
+    
+    if( isNaN(number) ){ alert("No podemos realizar la iteración") }
+    else if ( number < 1 ){ alert("Necesitamos un número positivo") }
+
+    number = Math.floor(number) // 2.5 -> 2 redondeo a la baja
+
+    // Ejercicio 1
+    let texto = "";
+    for(let i = 0; i < number; i++){
+        texto += i + ", "
+    }
+    //
+
+    // quitar coma y espacio finales
+    escribirSalida(texto, 1);
+}
 
 // 2 
 /*
@@ -31,3 +52,8 @@ Salida
 6
 ...
 */
+
+function escribirSalida(contenido, num){
+    let div = document.getElementById(num);
+    div.innerText = contenido;
+}
