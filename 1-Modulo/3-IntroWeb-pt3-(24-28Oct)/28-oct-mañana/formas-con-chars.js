@@ -1,7 +1,7 @@
 /* Formas con caracteres */
 
-let number = solicitarDato();
-let char = prompt("Introduce un char:");
+// let number = solicitarDato();
+// let char = prompt("Introduce un char:");
 
 // Usamos el número recibido
 // trianguloDerecha(number); // Completado
@@ -9,12 +9,13 @@ let char = prompt("Introduce un char:");
 
 // Usamos un char recibido
 //trianguloDerechaChar(char, number); // Completado
-cuadradoChar(char, number);           // Completado
+// cuadradoChar(char, number);           // Completado
 
 // -> Solicitar estos datos
-// let base = solicitarDato();
-// let altura = solicitarDato();
-// rectangulo(base, altura);
+let filas = solicitarDato();
+let columnas = solicitarDato();
+
+rectangulo(filas, columnas);
 
 // 1. Triángulo inclinado hacia la derecha
 /* Ejemplo con n = 3
@@ -92,8 +93,12 @@ f(3,2)
 ***
 
  */
-function rectangulo(base, altura){
-    //
+function rectangulo(filas, columnas){
+    let texto = "";
+    for(let i = 1; i <= filas; i++){
+        texto += "* ".repeat(columnas) + "\n";
+    }
+    escribirSalida(texto, 0);
 }
 
 /* Funciones Auxiliares */
