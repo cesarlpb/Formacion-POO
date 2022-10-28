@@ -3,7 +3,8 @@
 //ej1()     // 1. Cuenta hacia adelante -> introducimos string.slice(0,-2)
 //ej2()     // 2. Cuenta atrás
 //ej3()     // 3. Números pares con salto de línea
-ej4()
+//ej4()     // 4. Tabla de multiplicar
+ej5()
 
 // 1
 /*
@@ -104,6 +105,35 @@ function ej4(){
         texto += String(number) + " x " + i + " = " + String(number*i) + "\n";
     }
     escribirSalida(texto, 4)
+}
+
+/* 
+En este ejercicio mezclamos bucles on condicionales: el usuario escribe un número y 
+el script imprimirá (console.log) todos los números menores que al dividirlos por 3 den como resto 2.
+Recuerda: un número es múltiplo de N es cuando el dividirlo por N el resto es 0.
+
+Input: 14
+Output: 2, 5, 8, 12
+*/
+function ej5(){
+    let number = solicitarDato();
+    // Ej 5
+    let texto = "";
+    for(let i = 1; i < number; i++){
+        if( number % i == 2){
+            texto += i + ", "
+        }
+    }
+    escribirSalida(texto.slice(0,-2), 5)
+}
+
+/**
+ * Este script el usuario deberá teclear una letra y un número, 
+ * y el programa mostrará una cadena formada por la letra repetida el número que haya tecleado.
+ */
+
+function ej6(){
+    //
 }
 
 /* Funciones Auxiliares */
