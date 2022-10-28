@@ -1,7 +1,8 @@
 /* Script para resolver ejercicios de bucle for con JS */
 
 //ej1() // 1. Cuenta hacia adelante -> introducimos string.slice(0,-2)
-ej2()   // 2. Cuenta atrás
+//ej2()   // 2. Cuenta atrás
+ej3()
 
 // 1
 /*
@@ -49,10 +50,13 @@ function ej2(){
 
     number = Math.floor(number) // 2.5 -> 2 redondeo a la baja
 
+    // Ej 2
     let texto = "";
     for(let i = number; i > 0; i--){
         texto += i + ", "
     }
+    //
+
     escribirSalida(texto.slice(0,-2), 2)
 }
 
@@ -70,7 +74,45 @@ Salida
 ...
 */
 
+function ej3(){
+    let number = solicitarDato();
+    // Ej 3
+    let texto = "";
+    for(let i = 1; i < number; i++){
+        if( i % 2 == 0){
+            texto += i + "\n";
+        }
+    }
+    escribirSalida(texto, 3)
+}
+
+/*
+Este script debe escribir la tabla de multiplicar del número que el usuario teclee. 
+La tabla mostrará en diferentes líneas cada producto y el resultado en la forma a x b = ab.
+Recuerda que el salto de linea es el carácter "\n"
+
+4 x 1 = 4
+
+4 x 2 = 8...
+*/
+function ej4(){
+    //Ej 4
+}
+
+/* Funciones Auxiliares */
+function solicitarDato(){
+    let number = Number(prompt("Introduce un número entero positivo:")) // Si no recibimos número es NaN
+
+    if( isNaN(number) ){ alert("No podemos realizar la iteración") }
+    else if ( number < 1 ){ alert("Necesitamos un número positivo") }
+
+    return Math.floor(number); 
+}
+
 function escribirSalida(contenido, num){
     let div = document.getElementById(num);
-    div.innerText = contenido;
+    texto = "Ejercicio " + String(num) + ":\n";
+    texto += "-------------\n";
+    texto += contenido;
+    div.innerText = texto;
 }
