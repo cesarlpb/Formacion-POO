@@ -144,15 +144,15 @@ Ej: f(1,1) : -
 function rectanguloConBorde(filas, columnas){
     let texto = "\n";
     
-    let charInt = "* ";
-    let charExt = "o ";
+    let charInt = "o ";
+    let charExt = "x ";
     let char = "";
 
     for(let i = 1; i <= filas; i++){
-        if( i == 1 || i == filas ){ char = charExt; }
-        else { char = charInt }
         for(let j = 1; j<= columnas; j++){
-            // border cols
+            if( j == 1 || j == columnas){ char = charExt; }
+            else if( i == 1 || i == filas ){ char = charExt; }
+            else { char = charInt; }
             texto += char;
         }
         texto += "\n"

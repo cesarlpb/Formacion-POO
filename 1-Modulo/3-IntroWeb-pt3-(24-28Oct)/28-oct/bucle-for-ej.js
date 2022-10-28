@@ -7,7 +7,8 @@
 //ej5()     // 5. Comprueba si el resto de la división es 2
 //ej6()     // 6. Repite char N veces
 //ej7()     // 7. Contador base 5
-// ej8()    // 8. Triángulo izq
+//ej8()     // 8. Triángulo izq
+ej9()       // 9. Suma de 0 a N
 
 // 1
 /*
@@ -195,6 +196,17 @@ function ej8(){
         texto += "\n";
     }
     escribirSalida(texto, 8)
+}
+
+function ej9(){
+    let number = solicitarDato();
+    let texto = "El resultado de la suma es: ";
+    let suma = 0;
+    for(let i = 0; i <= number; i++ ){
+        suma += i;
+    }
+    texto += suma;
+    escribirSalida(texto, 9);
 }
 /* Funciones Auxiliares */
 function solicitarDato(){
