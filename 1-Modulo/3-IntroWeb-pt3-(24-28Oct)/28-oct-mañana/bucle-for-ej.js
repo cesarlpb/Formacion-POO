@@ -7,7 +7,7 @@
 //ej5()     // 5. Comprueba si el resto de la división es 2
 //ej6()     // 6. Repite char N veces
 //ej7()     // 7. Contador base 5
-ej8()
+// ej8()    // 8. Triángulo izq
 
 // 1
 /*

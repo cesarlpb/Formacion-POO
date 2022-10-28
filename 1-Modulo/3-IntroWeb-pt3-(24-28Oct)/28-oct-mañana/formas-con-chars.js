@@ -4,7 +4,7 @@ let number = solicitarDato();
 let char = prompt("Introduce un char:");
 
 // Usamos el número recibido
-trianguloDerecha(number);
+// trianguloDerecha(number);
 cuadrado(number);
 
 // Usamos un char recibido
@@ -36,7 +36,12 @@ function trianguloDerecha(num){
 
 */
 function cuadrado(num){
-    //
+    let texto = "";
+    for(let i = 0; i < num; i++){
+        texto += "* ".repeat(num);
+        texto += "\n";
+    }
+    escribirSalida(texto, 0);
 }
 // 3. Extendemos funciones anteriores para recibir n y char
 /** f('o', 3)
