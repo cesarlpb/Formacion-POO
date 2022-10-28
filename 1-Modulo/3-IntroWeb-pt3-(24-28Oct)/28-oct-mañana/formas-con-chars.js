@@ -4,11 +4,11 @@ let number = solicitarDato();
 let char = prompt("Introduce un char:");
 
 // Usamos el número recibido
-// trianguloDerecha(number);
-cuadrado(number);
+// trianguloDerecha(number); // Completado
+// cuadrado(number);         // Completado
 
 // Usamos un char recibido
-// trianguloDerechaChar(char, number);
+trianguloDerechaChar(char, number);
 // cuadradoChar(char, number);
 
 // -> Solicitar estos datos
@@ -25,7 +25,19 @@ cuadrado(number);
 
 */
 function trianguloDerecha(num){
-    //
+    let texto = "";
+    let espacios = 0;
+    
+    for(let i = 1; i <= num; i++){
+        espacios = num - i;
+        texto += ' '.repeat(espacios); 
+        texto += "*".repeat(i) + "\n";
+    }
+
+    let el = document.getElementById("0");
+    el.style.textAlign = "right";
+    
+    escribirSalida(texto.slice(0,-1), 0); // Quitamos el último salto de línea (opcional)
 }
 
 // 2. Dibujamos cuadrado 
