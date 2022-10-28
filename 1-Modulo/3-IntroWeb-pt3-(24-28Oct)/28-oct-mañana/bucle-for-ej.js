@@ -6,7 +6,8 @@
 //ej4()     // 4. Tabla de multiplicar
 //ej5()     // 5. Comprueba si el resto de la división es 2
 //ej6()     // 6. Repite char N veces
-ej7()
+//ej7()     // 7. Contador base 5
+ej8()
 
 // 1
 /*
@@ -179,6 +180,22 @@ function ej7(){
     escribirSalida(texto, 7);
 }
 
+/**
+ * Se trata de dibujar un triángulo con asteriscos. 
+ * El usuario tecleará un valor entero, el programa escribirá con asteriscos tantas lineas como diga ese número. 
+ * Cada linea estará formada por una serie de astericos tan larga como diga el número de línea en el que está.
+
+Para separar una línea de la siguiente en console o en alert debes usar "\n". En este ejercicio usa console.log.
+ */
+function ej8(){
+    let number = solicitarDato();
+    let texto = "";
+    for(let i = 1; i <= number; i++){
+        texto += "*".repeat(i);
+        texto += "\n";
+    }
+    escribirSalida(texto, 8)
+}
 /* Funciones Auxiliares */
 function solicitarDato(){
     let number = Number(prompt("Introduce un número entero positivo:")) // Si no recibimos número es NaN
