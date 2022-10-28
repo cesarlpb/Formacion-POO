@@ -8,14 +8,16 @@
 // cuadrado(number);         // Completado
 
 // Usamos un char recibido
-//trianguloDerechaChar(char, number); // Completado
+//trianguloDerechaChar(char, number);    // Completado
 // cuadradoChar(char, number);           // Completado
 
 // -> Solicitar estos datos
 let filas = solicitarDato();
 let columnas = solicitarDato();
 
-rectangulo(filas, columnas);
+// rectangulo(filas, columnas);         // Completado
+
+rectanguloConBorde(filas, columnas);
 
 // 1. Triángulo inclinado hacia la derecha
 /* Ejemplo con n = 3
@@ -98,6 +100,68 @@ function rectangulo(filas, columnas){
     for(let i = 1; i <= filas; i++){
         texto += "* ".repeat(columnas) + "\n";
     }
+    escribirSalida(texto, 0);
+}
+
+/**
+Cuadrados o rectángulos con borde
+
+Ej: f(1,1) : -
+
+    f(1,n) : - - - - - ... n ... - - -
+
+    f(n,1) : 
+            -
+            -
+            -
+            -
+            ...
+            n veces
+            - 
+            - 
+            -
+
+    f(2,2) : 
+            - -
+            - -
+    f(3,3) :
+            - - -
+            - * -
+            - - -
+    f(3,5) : 
+            - - - - -
+            - * * * -
+            - - - - -
+    f(4,6) : 
+            - - - - - -
+            - * * * * -
+            - * * * * -
+            - - - - - -
+
+    Forma más general: f(filas, columnas, charInt, charExt)
+* 
+*/
+function rectanguloConBorde(filas, columnas){
+    let texto = "\n";
+    
+    let charInt = "* ";
+    let charExt = "o ";
+    let char = "";
+
+    for(let i = 1; i <= filas; i++){
+        if( i == 1 || i == filas ){ char = charExt; }
+        else { char = charInt }
+        for(let j = 1; j<= columnas; j++){
+            // border cols
+            texto += char;
+        }
+        texto += "\n"
+    }
+
+    // Cambiamos estilo del div para que se aprecie mejor la salida (opcional)
+    let el = document.getElementById("0");
+    el.style.lineHeight = '0.8em';
+    //
     escribirSalida(texto, 0);
 }
 
