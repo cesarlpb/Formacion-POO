@@ -5,7 +5,8 @@
 //ej3()     // 3. Números pares con salto de línea
 //ej4()     // 4. Tabla de multiplicar
 //ej5()     // 5. Comprueba si el resto de la división es 2
-ej6()
+//ej6()     // 6. Repite char N veces
+ej7()
 
 // 1
 /*
@@ -62,7 +63,6 @@ function ej2(){
 
     escribirSalida(texto.slice(0,-2), 2)
 }
-
 
 // 3 
 /*
@@ -142,6 +142,41 @@ function ej6(){
         texto += char;
     }
     escribirSalida(texto, 6); 
+}
+
+/**
+ * Se quiere tener un contador de dos dígitos en base 5. 
+ * El funcionamiento es simple: el dígito de la derecha irá aumentando y 
+ * cuando pase de 4 su valor se pondrá a 0 y el dígito de la izquierda se incrementa en 1. 
+ * El contador debe deternerse cuando alcancemos el valor 1:4
+ 
+0:0
+0:1
+0:2
+0:3
+0:4
+1:0
+1:1
+1:2
+1:3
+1:4 -> fin aquí
+...
+4:4
+ */
+
+function ej7(){
+    /**
+     * - Podemos iterar hasta 25 por la base 5
+     */
+    let texto = "";
+    let idx = 0;
+    for(let i = 0; i < 10; i++){
+        if( (i > 0) & (i % 5 == 0) ){
+            idx++;
+        }
+        texto += idx + ":" + (i%5) + "\n";
+    }
+    escribirSalida(texto, 7);
 }
 
 /* Funciones Auxiliares */
