@@ -8,8 +8,8 @@ let char = prompt("Introduce un char:");
 // cuadrado(number);         // Completado
 
 // Usamos un char recibido
-trianguloDerechaChar(char, number);
-// cuadradoChar(char, number);
+//trianguloDerechaChar(char, number); // Completado
+cuadradoChar(char, number);           // Completado
 
 // -> Solicitar estos datos
 // let base = solicitarDato();
@@ -64,10 +64,20 @@ ooo
 
  */
 function trianguloDerechaChar(char, num){
-    //
+    let texto = "";
+    for(let i = 1; i <= num; i++){
+        texto += "-".repeat(num-i) + char.repeat(i) + "\n";
+    }
+    // Si usamos espacios con " " el alineado nos lo pone a la izq por defecto
+    escribirSalida(texto, 0)
 }
 function cuadradoChar(char, num){
-    //
+    let texto = "\n";
+    for(let i = 1; i <= num; i++){
+        char += " "; // opcional - mejor espaciado
+        texto += char.repeat(num) + "\n";
+    }
+    escribirSalida(texto, 0)
 }
 // 4. Dibujamos rectángulo -> f(a,b)
 /** f(2,3)
