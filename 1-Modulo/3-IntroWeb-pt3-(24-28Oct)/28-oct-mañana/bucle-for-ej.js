@@ -1,8 +1,9 @@
 /* Script para resolver ejercicios de bucle for con JS */
 
-//ej1() // 1. Cuenta hacia adelante -> introducimos string.slice(0,-2)
-//ej2()   // 2. Cuenta atrás
-ej3()
+//ej1()     // 1. Cuenta hacia adelante -> introducimos string.slice(0,-2)
+//ej2()     // 2. Cuenta atrás
+//ej3()     // 3. Números pares con salto de línea
+ej4()
 
 // 1
 /*
@@ -96,7 +97,13 @@ Recuerda que el salto de linea es el carácter "\n"
 4 x 2 = 8...
 */
 function ej4(){
+    let number = solicitarDato();
     //Ej 4
+    let texto = "";
+    for(let i = 1; i <= 10; i++){
+        texto += String(number) + " x " + i + " = " + String(number*i) + "\n";
+    }
+    escribirSalida(texto, 4)
 }
 
 /* Funciones Auxiliares */
