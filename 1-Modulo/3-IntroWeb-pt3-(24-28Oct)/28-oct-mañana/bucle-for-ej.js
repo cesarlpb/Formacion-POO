@@ -4,7 +4,8 @@
 //ej2()     // 2. Cuenta atrás
 //ej3()     // 3. Números pares con salto de línea
 //ej4()     // 4. Tabla de multiplicar
-ej5()
+//ej5()     // 5. Comprueba si el resto de la división es 2
+ej6()
 
 // 1
 /*
@@ -133,7 +134,14 @@ function ej5(){
  */
 
 function ej6(){
-    //
+    let number = solicitarDato(); // número
+    let char = prompt("Introduce un caracter:");
+    // let texto = char.repeat(number); // alternativa con repeat()
+    let texto = "";
+    for(let i = 0; i < number; i++){
+        texto += char;
+    }
+    escribirSalida(texto, 6); 
 }
 
 /* Funciones Auxiliares */
