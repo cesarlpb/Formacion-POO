@@ -1,6 +1,7 @@
 /* Script para resolver ejercicios de bucle for con JS */
 
-ej1()
+//ej1() // 1. Cuenta hacia adelante -> introducimos string.slice(0,-2)
+ej2()   // 2. Cuenta atrás
 
 // 1
 /*
@@ -27,8 +28,8 @@ function ej1(){
     }
     //
 
-    // quitar coma y espacio finales
-    escribirSalida(texto, 1);
+    // quitar coma -> usamos slice(0,-2) para quitar los 2 últimos caracteres
+    escribirSalida(texto.slice(0,-2), 1);
 }
 
 // 2 
@@ -39,6 +40,22 @@ es decir, una lista de numeros separados por coma desde el número tecleado hast
 Salida:
 5,4,3,2,1
 */
+
+function ej2(){
+    let number = Number(prompt("Introduce un número entero positivo:")) // Si no recibimos número es NaN
+
+    if( isNaN(number) ){ alert("No podemos realizar la iteración") }
+    else if ( number < 1 ){ alert("Necesitamos un número positivo") }
+
+    number = Math.floor(number) // 2.5 -> 2 redondeo a la baja
+
+    let texto = "";
+    for(let i = number; i > 0; i--){
+        texto += i + ", "
+    }
+    escribirSalida(texto.slice(0,-2), 2)
+}
+
 
 // 3 
 /*
