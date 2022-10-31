@@ -7,7 +7,8 @@
 //ej5(); // Obj ficha de entrenamiento
 //ej6(); // Objs bus y conductor
 //ej7(); // Objs Artículo y Proveedor
-ej8();
+//ej8(); // Objs Alumnos
+ej9();
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -244,9 +245,76 @@ function ej7(){
 
 // Ej 8 - Alumnos
 function ej8(){
-    let alumno = {
-
+    let alumno1 = {
+        "nombre": "María",
+        "apellido": "De La Fuente",
+        "matricula": 12345,
+        "calificacion": 1,
+        "calificar": function(nota){
+            this.calificacion = nota;
+            return this.calificacion;
+        },
+        "datosAlumno": function(){
+            return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
+        }
     }
+    let alumno2 = {
+        "nombre": "Pepe",
+        "apellido": "Valiente",
+        "matricula": 12358,
+        "calificacion": 1,
+        "calificar": function(nota){
+            this.calificacion = nota;
+            return this.calificacion;
+        },
+        "datosAlumno": function(){
+            return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
+        }
+    }
+    let alumno3 = {
+        "nombre": "Juanito",
+        "apellido": "Martínez",
+        "matricula": 25698,
+        "calificacion": 1,
+        "calificar": function(nota){
+            this.calificacion = nota;
+            return this.calificacion;
+        },
+        "datosAlumno": function(){
+            return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
+        }
+    }
+    let alumno4 = {
+        "nombre": "Ana",
+        "apellido": "Gómez",
+        "matricula": 34587,
+        "calificacion": 1,
+        "calificar": function(nota){
+            this.calificacion = nota;
+            return this.calificacion;
+        },
+        "datosAlumno": function(){
+            return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
+        }
+    }
+
+    // Asignamos notas
+    alumno1.calificar(7);
+    alumno2.calificar(5);
+    alumno3.calificar(8);
+    alumno4.calificar(10);
+
+    // Usamos string datos para guardar todas las salidas
+    let datos = alumno1.datosAlumno();
+    datos += "\n" + alumno2.datosAlumno();
+    datos += "\n" + alumno3.datosAlumno();
+    datos += "\n" + alumno4.datosAlumno();
+
+    escribirResultado("Notas de los alumnos:", datos)
+}
+
+function ej9(){
+    //
 }
 
 // Funciones auxiliares
