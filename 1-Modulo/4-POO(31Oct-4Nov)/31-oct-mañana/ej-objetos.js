@@ -4,7 +4,8 @@
 //ej2(); // Obj para calcular el precio neto de un producto
 //ej3(); // Obj para calcular la densidad de una piedra en kg/m3 y en g/cc
 //ej4(); // Obj que representa a una cuenta bancaria
-ej5();
+//ej5(); // Obj ficha de entrenamiento
+ej6();
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -98,10 +99,46 @@ function ej4(){
     
 }
 
-// Ej 5
+// Ej 5 - Ficha de entrenamiento
 function ej5(){
+    let ficha = {
+        "nombre": "Pepe",
+        "apellido": "Grande",
+        "sesiones": 0,      // float de km -> 1.56
+        "numSesiones": 0,   // int
+        "anotarSesion": function(kms){
+            // Deberíamos validar que kms no sea negativo
+            if( kms < 0 ){
+                let msj = "No se pueden registrar valores negativos";
+                alert(msj);
+                return msj;
+            }
+            this.sesiones += kms;   // Guardamos los km de todas sesiones
+            this.numSesiones += 1;  // Incrementamos el contador de sesiones
+            return this.sesiones + " km"
+        },
+        "calcMedia": function(){
+            // Hay que evitar división por cero
+            if( this.sesiones == 0 ){ 
+                alert("¡Aún no hay realizado una sesión!"); 
+                return "No hay sesiones registradas"
+            }
+            return (this.sesiones / this.numSesiones).toFixed(2) + " km por sesión";
+        }
+    }
+    // escribirResultado("Anotar -1 km: ", ficha.anotarSesion(-1));    // Debe arrojar alert
+    // escribirResultado("Media con 0 sesiones: ", ficha.calcMedia())  // Debe arrojar alert
+    escribirResultado("Anotar +10 km: ", ficha.anotarSesion(10));   // Debe retornar '10 km'
+    ficha.anotarSesion(20);
+    ficha.anotarSesion(70);
+    escribirResultado("Calculamos media en ficha de " + ficha.nombre, ficha.calcMedia());     // Debe retornar '10 km por sesión'
+}
+
+// Ej 6
+function ej6(){
     //
 }
+
 // Funciones auxiliares
 function escribirResultado(op, res){
     let div = document.getElementById("resultado");
