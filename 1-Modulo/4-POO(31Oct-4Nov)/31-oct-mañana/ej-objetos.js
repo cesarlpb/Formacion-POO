@@ -136,7 +136,61 @@ function ej5(){
 
 // Ej 6
 function ej6(){
-    //
+    let bus = {
+        "linea": "Línea 1",
+        "empresa": "Empresa 123",
+        "capacidad": 40,
+        "pasajeros": 0,
+        "conductor": {
+            "nombre": "José",
+            "licencia": 1234
+        },
+        "subir": function(pasajerosQueSuben){
+            // Comprobamos capacidad
+            if(pasajerosQueSuben >= this.capacidad){
+                this.pasajeros = this.capacidad;    // 50 -> 40
+                console.log(this.pasajeros)
+                return this.pasajeros;
+            } else if(this.pasajeros + pasajerosQueSuben >= this.capacidad){
+                this.pasajeros = this.capacidad; // 39 + 39 = 78 -> NO
+                console.log(this.pasajeros)
+                return this.pasajeros;
+            }
+            // 10 + 11 = 21 -> SI
+            this.pasajeros += pasajerosQueSuben;
+            console.log(this.pasajeros)
+            return this.pasajeros;
+        },
+        "bajar": function(pasajerosQueBajan){
+            // Las restas negativas son 0
+            if(pasajerosQueBajan >= this.capacidad){ 
+                this.pasajeros = 0; // 100 -> 0
+                console.log(this.pasajeros)
+                return this.pasajeros;
+            } 
+            else if(pasajerosQueBajan > this.pasajeros){ 
+                this.pasajeros = 0; // Hay 21 y bajan 50 -> 0
+                console.log(this.pasajeros)
+                return this.pasajeros;
+            } 
+            this.pasajeros -= pasajerosQueBajan;
+            console.log(this.pasajeros)
+            return this.pasajeros;
+        }
+    }
+
+    /* En consola podemos ver el valor de this.pasajeros antes de cada return */
+    escribirResultado("Suben 25 pasajeros: ", bus.subir(25)); // 25
+    escribirResultado("Suben 35 pasajeros: ", bus.subir(35)); // 25 + 35 -> capacidad -> 40
+    escribirResultado("Bajan 45 pasajeros: ", bus.bajar(45)); // 0
+    
+    // escribirResultado("Bajan 100", bus.bajar(100)); // 0
+    // escribirResultado("Suben 35", bus.subir(35))    // 35
+    // escribirResultado("Bajan 40", bus.bajar(40));   // 0
+
+    // escribirResultado("Bajan 100", bus.bajar(100)); // 0
+    // escribirResultado("Suben 35", bus.subir(200))   // 40
+    // escribirResultado("Bajan 40", bus.bajar(50));   // 0
 }
 
 // Funciones auxiliares
