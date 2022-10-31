@@ -1,1 +1,0 @@
-/* Ejercicios con Objetos en JS */
