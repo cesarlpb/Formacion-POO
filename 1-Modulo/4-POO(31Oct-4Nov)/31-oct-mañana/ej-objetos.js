@@ -228,11 +228,16 @@ function ej7(){
                 "nombreProveedor": this.proveedor.nombreProveedor,
                 "telefonoProveedor": this.proveedor.telefono
             }
+        },
+        "escribirTelefono": function(){
+            return "XYZ El teléfono del " + this.proveedor.nombreProveedor + " es " + this.proveedor.telefono;
         }
     }
-    let nombre = articulo.telefono().nombreProveedor;
-    let tlf = articulo.telefono().telefonoProveedor;
-    escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+    // let nombre = articulo.telefono().nombreProveedor;
+    // let tlf = articulo.telefono().telefonoProveedor;
+    // escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+
+    escribirResultado("String formateado en método: ", articulo.escribirTelefono())
 }
 
 // Funciones auxiliares
