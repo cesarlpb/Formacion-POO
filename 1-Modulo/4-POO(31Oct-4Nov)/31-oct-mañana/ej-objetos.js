@@ -5,7 +5,8 @@
 //ej3(); // Obj para calcular la densidad de una piedra en kg/m3 y en g/cc
 //ej4(); // Obj que representa a una cuenta bancaria
 //ej5(); // Obj ficha de entrenamiento
-ej6();
+//ej6(); // Objs bus y conductor
+ej7();
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -195,6 +196,43 @@ function ej6(){
     // escribirResultado("Bajan 100", bus.bajar(100)); // 0
     // escribirResultado("Suben 35", bus.subir(200))   // 40
     // escribirResultado("Bajan 40", bus.bajar(50));   // 0
+}
+
+function ej7(){
+    // let articuloPlantilla = {
+    //     "nombreArticulo": "Producto 123",
+    //     "precio": 100.00,
+    //     "proveedor": {
+    //         "nombreProveedor": "Proveedor 12345",
+    //         "email": "test@test.com",
+    //         "telefono": "(+34) 123 456 789"
+    //     },
+    //     "telefono": function(){
+    //         return {
+    //             "nombre": this.proveedor.nombreArticulo,
+    //             "telefono": this.proveedor.telefono
+    //         }
+    //     }
+    // }
+    let articulo = {
+        "nombreArticulo": "Monitor",
+        "precio": 200.00,
+        "proveedor": {
+            "nombreProveedor": "Tecnoshop",
+            "email": "tcn@tecno.com",
+            "telefono": "(+34) 123 456 789"
+        },
+        "telefono": function(){
+            console.log("Teléfono de " + this.proveedor.nombreProveedor + " es " + this.proveedor.telefono);
+            return {
+                "nombreProveedor": this.proveedor.nombreProveedor,
+                "telefonoProveedor": this.proveedor.telefono
+            }
+        }
+    }
+    let nombre = articulo.telefono().nombreProveedor;
+    let tlf = articulo.telefono().telefonoProveedor;
+    escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
 }
 
 // Funciones auxiliares
