@@ -314,7 +314,53 @@ function ej8(){
 }
 
 function ej9(){
-    //
+    let cliente1 = {
+        "nombre": "Juan", 
+        "apellido": "Pérez", 
+        "DNI": "12345678A",
+        "direccion": "Calle sin nombre 098",
+        "email": "juan@perez.com",
+        "telefono": "+34 123456789"
+    }
+    let cliente2 = {
+        "nombre": "Ana", 
+        "apellido": "Pérez", 
+        "DNI": "12345678A",
+        "direccion": "Calle sin nombre 098",
+        "email": "ana@perez.com",
+        "telefono": "+34 123456789"
+    }
+    let cliente3 = {
+        "nombre": "María", 
+        "apellido": "Pérez", 
+        "DNI": "12345678A",
+        "direccion": "Calle sin nombre 098",
+        "email": "maria@perez.com",
+        "telefono": "+34 123456789"
+    }
+    let arrayClientes = [cliente1, cliente2, cliente3]  // "lista" de clientes
+    // Factura
+    let factura = {
+        "idCliente": 1,       // 0, 1, 2
+        "importeTotal": 100,    // Asignamos importe en cada caso
+        "estado": "no emitida", // pendiente o pagada
+        "pagar": function(){
+            this.estado = "pagada"
+            console.table({"idCliente": this.idCliente, "importeTotal": this.importeTotal, "estado": this.estado});
+            return "La factura está '" + this.estado + "'."
+        },
+        "imprimir": function(){
+            this.estado = "pendiente";
+            // arrayClientes[0] -> cliente1
+            // arrayClientes[1] -> cliente2
+            // arrayClientes[2] -> cliente3
+            console.table(arrayClientes[this.idCliente]) // por defecto es cliente1
+            console.table({"idCliente": this.idCliente, "importeTotal": this.importeTotal, "estado": this.estado});
+            return "La factura está '" + this.estado + "' de pago.";
+        }
+    }
+    escribirResultado("Emitimos factura ", factura.imprimir())
+    // escribirResultado("Pagamos factura: ", factura.pagar())
 }
 
 // Funciones auxiliares
