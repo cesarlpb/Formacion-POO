@@ -184,6 +184,10 @@ function ej6(){
     escribirResultado("Suben 35 pasajeros: ", bus.subir(35)); // 25 + 35 -> capacidad -> 40
     escribirResultado("Bajan 45 pasajeros: ", bus.bajar(45)); // 0
     
+    // Comprobamos que el conductor está asignado
+    // escribirResultado("Nombre del conductor: ", bus.conductor.nombre);      // José
+    // escribirResultado("Licencia del conductor: ", bus.conductor.licencia)   // 1234
+
     // escribirResultado("Bajan 100", bus.bajar(100)); // 0
     // escribirResultado("Suben 35", bus.subir(35))    // 35
     // escribirResultado("Bajan 40", bus.bajar(40));   // 0
