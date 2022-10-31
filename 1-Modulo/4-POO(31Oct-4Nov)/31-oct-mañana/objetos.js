@@ -1,0 +1,1 @@
+/* Script para practicar los objetos en JS */
