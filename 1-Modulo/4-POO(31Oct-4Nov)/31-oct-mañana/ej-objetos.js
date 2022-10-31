@@ -2,7 +2,9 @@
 
 //ej1(); // Obj alumno y método que promedia notas
 //ej2(); // Obj para calcular el precio neto de un producto
-ej3();
+//ej3(); // Obj para calcular la densidad de una piedra en kg/m3 y en g/cc
+//ej4(); // Obj que representa a una cuenta bancaria
+ej5();
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -64,6 +66,42 @@ function ej3(){
     escribirResultado("Densidad en gr/cc:", piedra.calcDensidadGrCc() + " g/cc")
 }
 
+// Ej 4 - Objeto que emula una cuenta de banco con ingresar() y retirar()
+    // consultarSaldo() escribe el saldo actual
+function ej4(){
+    let cuenta = {
+        "balance": 100.00,     // €
+        "ingresar": function(cantidad){
+            this.balance += cantidad;    // limitamos los decimales a 2
+            console.log("Balance actual: " + this.balance)
+            return this.balance.toFixed(2) + " €";
+        },
+        "retirar": function(cantidad){
+            if(cantidad > this.balance){
+                alert("No se puede retirar esa cantidad");
+                return 0;
+            } else if(cantidad < 0){
+                alert("No se admiten cantidades negativas");
+                return 0;
+            }
+            this.balance -= cantidad;    // limitamos los decimales a 2
+            return cantidad.toFixed(2);
+        },
+        "consultarBalance": function(){
+            return this.balance + " €";
+        }
+    }
+    // escribirResultado("Retirar 200 €: ", cuenta.retirar(200));
+    // escribirResultado("Retirar -1 €: ", cuenta.retirar(-1));
+    // escribirResultado("Retirar 50 €: ", "Balance retirado: " + cuenta.retirar(50) + " €");
+    escribirResultado("Ingresamos una cantidad con decimales €: ", cuenta.ingresar(10.12345));
+    
+}
+
+// Ej 5
+function ej5(){
+    //
+}
 // Funciones auxiliares
 function escribirResultado(op, res){
     let div = document.getElementById("resultado");
