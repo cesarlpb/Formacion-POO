@@ -6,7 +6,8 @@
 //ej4(); // Obj que representa a una cuenta bancaria
 //ej5(); // Obj ficha de entrenamiento
 //ej6(); // Objs bus y conductor
-ej7();
+//ej7(); // Objs Artículo y Proveedor
+ej8();
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -135,7 +136,7 @@ function ej5(){
     escribirResultado("Calculamos media en ficha de " + ficha.nombre, ficha.calcMedia());     // Debe retornar '10 km por sesión'
 }
 
-// Ej 6
+// Ej 6 - Objs Bus y Conductor
 function ej6(){
     let bus = {
         "linea": "Línea 1",
@@ -198,6 +199,7 @@ function ej6(){
     // escribirResultado("Bajan 40", bus.bajar(50));   // 0
 }
 
+// Ej 7 - Artículo y Proveedor // return de obj
 function ej7(){
     // let articuloPlantilla = {
     //     "nombreArticulo": "Producto 123",
@@ -238,6 +240,13 @@ function ej7(){
     // escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
 
     escribirResultado("String formateado en método: ", articulo.escribirTelefono())
+}
+
+// Ej 8 - Alumnos
+function ej8(){
+    let alumno = {
+
+    }
 }
 
 // Funciones auxiliares
