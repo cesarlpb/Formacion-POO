@@ -10,9 +10,11 @@ ej5(); // clase Ficha
 //ej8(); // Objs Alumnos
 //ej9(); // Objs Cliente y Factura
 
-// Ej 1 - Obj para guardar notas de alumno y método que promedia notas
-    // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
-    // Método: calcular media de las tres asignaturas
+/* Ej 1 - Clase Alumno 
+    Clase para guardar notas de alumno y método que promedia notas
+    Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
+    Método: calcular media de las tres asignaturas
+*/
 function ej1(){
     // Definición de clase Alumno para crear obj de alumnos
     class Alumno {
@@ -57,7 +59,8 @@ function ej1(){
     escribirResultado("Promedio de notas", alumno3.promediarNotas())
 }
 
-// Ej 2 - Cálculo del precio neto de un producto aplicando descuento
+// Ej 2 - Clase Precio
+    // Cálculo del precio neto de un producto aplicando descuento
 function ej2(){
     class Producto {
         // Ejemplo de parámetros por defecto en constructor
@@ -88,7 +91,8 @@ function ej2(){
     escribirResultado("Calculamos precio neto", producto3.calcularPrecioNeto() + " €")
 }
 
-// Ej 3 - Objeto piedra que tiene masa y volumen a partir de lo cual de calcula densidad
+// Ej 3 - Clase Piedra 
+    //Tiene masa y volumen a partir de lo cual de calcula densidad
 function ej3(){
     class Piedra{
         constructor(color = "", 
@@ -141,7 +145,7 @@ function ej3(){
     escribirResultado("Densidad en gr/cc:", piedra2.calcDensidadGrCc() + " g/cc")
 }
 
-// Ej 4 - Objeto que emula una cuenta de banco con ingresar() y retirar()
+// Ej 4 - Clase Cuenta
     // consultarSaldo() escribe el saldo actual
 function ej4(){
     class Cuenta{
