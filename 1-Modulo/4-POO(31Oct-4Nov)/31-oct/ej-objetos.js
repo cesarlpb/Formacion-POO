@@ -8,7 +8,7 @@
 //ej6(); // Objs bus y conductor
 //ej7(); // Objs Artículo y Proveedor
 //ej8(); // Objs Alumnos
-ej9();
+ej9();   // Objs Cliente y Factura
 
 // Ej 1 - Obj para guardar notas de alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
@@ -313,6 +313,7 @@ function ej8(){
     escribirResultado("Notas de los alumnos:", datos)
 }
 
+// Ej 9 - Clientes y Factura
 function ej9(){
     let cliente1 = {
         "nombre": "Juan", 
