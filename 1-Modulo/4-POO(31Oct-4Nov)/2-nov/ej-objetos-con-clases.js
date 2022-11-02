@@ -6,8 +6,8 @@
 //ej4(); // clase Cuenta
 //ej5(); // clase Ficha
 //ej6(); // Clases Bus y Conductor
-ej7(); // Objs Artículo y Proveedor
-//ej8(); // Objs Alumnos
+//ej7(); // Clases Artículo y Proveedor
+ej8(); // Clase Alumno
 //ej9(); // Objs Cliente y Factura
 
 /* Ej 1 - Clase Alumno 
@@ -510,6 +510,28 @@ function ej7(){
 
 // Ej 8 - Alumnos
 function ej8(){
+    class Alumno {
+        constructor(
+            nombre = "Nombre",
+            apellido = "Apellido por defecto",
+            matricula = 10000,
+            calificacion = 0.00
+            )
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.matricula = matricula;
+            this.calificacion = calificacion;
+        }
+        calificar(nota){
+            this.calificacion = nota;
+            return this.calificacion;
+        }
+        datos(){
+            return "Alumn@: " + this.nombre + ", " + this.apellido + " con matrícula: " + this.matricula + ", tiene nota: " + this.calificacion;
+        }
+    }
+    /* Objs alumno creados por separado (sin clase)
     let alumno1 = {
         "nombre": "María",
         "apellido": "De La Fuente",
@@ -519,7 +541,7 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
@@ -532,7 +554,7 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
@@ -545,7 +567,7 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
@@ -558,22 +580,28 @@ function ej8(){
             this.calificacion = nota;
             return this.calificacion;
         },
-        "datosAlumno": function(){
+        "datos": function(){
             return "Alumn@ " + this.nombre + " " + this.apellido + " con matrícula " + this.matricula + " tiene nota: " + this.calificacion;
         }
     }
+    */
 
-    // Asignamos notas
-    alumno1.calificar(7);
-    alumno2.calificar(5);
-    alumno3.calificar(8);
-    alumno4.calificar(10);
+    let alumno1 = new Alumno("María", "Pérez", 12345, 7)
+    let alumno2 = new Alumno("Pepe", "Valiente", 21234, 5)
+    let alumno3 = new Alumno("Ana", "Ramirez", 31234, 8)
+    let alumno4 = new Alumno("Juanito", "Burgos", 41234, 10)
+
+    // Asignamos notas a cada alumno
+    // alumno1.calificar(7);
+    // alumno2.calificar(5);
+    // alumno3.calificar(8);
+    // alumno4.calificar(10);
 
     // Usamos string datos para guardar todas las salidas
-    let datos = alumno1.datosAlumno();
-    datos += "\n" + alumno2.datosAlumno();
-    datos += "\n" + alumno3.datosAlumno();
-    datos += "\n" + alumno4.datosAlumno();
+    let datos = alumno1.datos();
+    datos += "\n\n" + alumno2.datos();
+    datos += "\n\n" + alumno3.datos();
+    datos += "\n\n" + alumno4.datos();
 
     escribirResultado("Notas de los alumnos:", datos)
 }
