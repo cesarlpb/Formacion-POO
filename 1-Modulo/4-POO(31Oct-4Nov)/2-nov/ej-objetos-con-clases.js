@@ -14,24 +14,47 @@ ej1(); // Obj alumno y método que promedia notas
     // Propiedades: nombre, apellido, ingles, prog, html (asignaturas)
     // Método: calcular media de las tres asignaturas
 function ej1(){
-    let alumno = {
-        "nombre": "Pepe",
-        "apellido": "Valiente",
-        "ingles": 7.5,
-        "prog": 6.75,
-        "html": 8,
-        "promediarNotas": function(){
-            let ingles = this.ingles; 
-            let prog = this.prog;
-            let html = this.html;
-            let res = (ingles + prog + html) / 3 
+    // Definición de clase Alumno para crear obj de alumnos
+    class Alumno {
+        // Definimos constructor de esta clase
+        constructor(nombre, apellido, ingles, prog, html){
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.ingles = ingles;
+            this.prog = prog;
+            this.html = html;
+        }
+        // Resto de métodos por debajo
+        promediarNotas(){
+            let res = (this.ingles + this.prog + this.html) / 3 
             return res.toFixed(2);
-
-            // Alternativa del return sin variables adicionales:
-            //return ( (this.ingles + this.prog + this.html) / 3 ).toFixed(2); 
         }
     }
-    escribirResultado("Promedio de notas", alumno.promediarNotas())
+    // Anteriormente, teníamos que escribir cada objeto por separado
+    // let alumno = {
+    //     "nombre": "Pepe",
+    //     "apellido": "Valiente",
+    //     "ingles": 7.5,
+    //     "prog": 6.75,
+    //     "html": 8,
+    //     "promediarNotas": function(){
+    //         let ingles = this.ingles; 
+    //         let prog = this.prog;
+    //         let html = this.html;
+    //         let res = (ingles + prog + html) / 3 
+    //         return res.toFixed(2);
+
+    //         // Alternativa del return sin variables adicionales:
+    //         //return ( (this.ingles + this.prog + this.html) / 3 ).toFixed(2); 
+    //     }
+    // }
+    
+    let alumno = new Alumno("Pepe", "Valiente", 8, 7.5, 6.75)
+    let alumno2 = new Alumno("María", "De La Fuente", 10, 5, 7)
+    let alumno3 = new Alumno("Ana", "Meneses", 7, 8, 9)
+    // Ahora, podemos instanciar la clase Alumno y crear objetos de Alumno ^
+    
+    escribirResultado("Promedio de notas", alumno3.promediarNotas())
 }
 
 // Ej 2 - Cálculo del precio neto de un producto aplicando descuento
