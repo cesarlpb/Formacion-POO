@@ -1,9 +1,9 @@
 /* Ejercicios con Objetos en JS */
 
 //ej1(); // clase Alumno
-//ej2(); // Obj para calcular el precio neto de un producto
-ej3(); // Obj para calcular la densidad de una piedra en kg/m3 y en g/cc
-//ej4(); // Obj que representa a una cuenta bancaria
+//ej2(); // clase Producto
+//ej3(); // clase Piedra
+ej4(); // clase Cuenta
 //ej5(); // Obj ficha de entrenamiento
 //ej6(); // Objs bus y conductor
 //ej7(); // Objs Artículo y Proveedor
@@ -144,7 +144,31 @@ function ej3(){
 // Ej 4 - Objeto que emula una cuenta de banco con ingresar() y retirar()
     // consultarSaldo() escribe el saldo actual
 function ej4(){
-    let cuenta = {
+    class Cuenta{
+        constructor(balance = 0){
+            this.balance = balance;
+        }
+        ingresar(cantidad = 0){
+            this.balance += cantidad;    // limitamos los decimales a 2
+            console.log("Balance actual: " + this.balance)
+            return this.balance.toFixed(2) + " €";
+        }
+        retirar(cantidad){
+            if(cantidad > this.balance){
+                alert("No se puede retirar esa cantidad");
+                return 0;
+            } else if(cantidad < 0){
+                alert("No se admiten cantidades negativas");
+                return 0;
+            }
+            this.balance -= cantidad;    // limitamos los decimales a 2
+            return cantidad.toFixed(2);
+        }
+        consultarBalance(){
+            return this.balance + " €";
+        }
+    }
+    /*let cuenta = {
         "balance": 100.00,     // €
         "ingresar": function(cantidad){
             this.balance += cantidad;    // limitamos los decimales a 2
@@ -166,10 +190,16 @@ function ej4(){
             return this.balance + " €";
         }
     }
+    */
+    
+    /* Objetos cuenta de clase Cuenta */
+    let cuenta = new Cuenta();
+
     // escribirResultado("Retirar 200 €: ", cuenta.retirar(200));
     // escribirResultado("Retirar -1 €: ", cuenta.retirar(-1));
+    cuenta.ingresar(100)
     // escribirResultado("Retirar 50 €: ", "Balance retirado: " + cuenta.retirar(50) + " €");
-    escribirResultado("Ingresamos una cantidad con decimales €: ", cuenta.ingresar(10.12345));
+    // escribirResultado("Ingresamos una cantidad con decimales €: ", cuenta.ingresar(10.12345));
     
 }
 
