@@ -4,8 +4,8 @@
 //ej2(); // clase Producto
 //ej3(); // clase Piedra
 //ej4(); // clase Cuenta
-ej5(); // clase Ficha
-//ej6(); // Objs bus y conductor
+//ej5(); // clase Ficha
+ej6(); // Objs bus y conductor
 //ej7(); // Objs Artículo y Proveedor
 //ej8(); // Objs Alumnos
 //ej9(); // Objs Cliente y Factura
@@ -293,7 +293,59 @@ function ej5(){
 
 // Ej 6 - Objs Bus y Conductor
 function ej6(){
-    let bus = {
+    class Conductor {
+        constructor(nombre = "Conductor por defecto", licencia = 1234){
+            this.nombre = nombre;
+            this.licencia = licencia;
+        }
+        toString(){
+            return "Conductor: " + this.nombre + ", con licencia: " + this.licencia;
+        }
+    }
+    class Bus {
+        constructor(
+            linea = "", 
+            empresa = "", 
+            capacidad = 40, 
+            pasajeros = 0, 
+            conductor = new Conductor("Pepe", 9087)
+            )
+        {
+            this.linea = linea;
+            this.empresa = empresa;
+            this.capacidad = capacidad;
+            this.pasajeros = pasajeros;
+            this.conductor = conductor;
+        }
+        subir(pasajerosQueSuben){
+            // Comprobamos capacidad
+            if(pasajerosQueSuben >= this.capacidad){
+                this.pasajeros = this.capacidad;    // 50 -> 40
+                return this.pasajeros;
+            } else if(this.pasajeros + pasajerosQueSuben >= this.capacidad){
+                this.pasajeros = this.capacidad; // 39 + 39 = 78 -> NO
+                return this.pasajeros;
+            }
+            // 10 + 11 = 21 -> SI
+            this.pasajeros += pasajerosQueSuben;
+            return this.pasajeros;
+        }
+        bajar(pasajerosQueBajan){
+            // Las restas negativas son 0
+            if(pasajerosQueBajan >= this.capacidad){ 
+                this.pasajeros = 0; // 100 -> 0
+                return this.pasajeros;
+            } 
+            else if(pasajerosQueBajan > this.pasajeros){ 
+                this.pasajeros = 0; // Hay 21 y bajan 50 -> 0
+                return this.pasajeros;
+            } 
+            this.pasajeros -= pasajerosQueBajan;
+            return this.pasajeros;
+        }
+    }
+
+    /*let bus = {
         "linea": "Línea 1",
         "empresa": "Empresa 123",
         "capacidad": 40,
@@ -335,23 +387,26 @@ function ej6(){
             return this.pasajeros;
         }
     }
+    */
 
+    // Objeto de clase Bus con objeto Conductor en una propiedad
+    let bus = new Bus()
     /* En consola podemos ver el valor de this.pasajeros antes de cada return */
-    escribirResultado("Suben 25 pasajeros: ", bus.subir(25)); // 25
-    escribirResultado("Suben 35 pasajeros: ", bus.subir(35)); // 25 + 35 -> capacidad -> 40
-    escribirResultado("Bajan 45 pasajeros: ", bus.bajar(45)); // 0
+    // escribirResultado("Suben 25 pasajeros: ", bus.subir(25)); // 25
+    // escribirResultado("Suben 35 pasajeros: ", bus.subir(35)); // 25 + 35 -> capacidad -> 40
+    // escribirResultado("Bajan 45 pasajeros: ", bus.bajar(45)); // 0
     
-    // Comprobamos que el conductor está asignado
-    // escribirResultado("Nombre del conductor: ", bus.conductor.nombre);      // José
-    // escribirResultado("Licencia del conductor: ", bus.conductor.licencia)   // 1234
+    // Comprobamos que el conductor está asignado como new Conductor("Pepe", 9087)
+    // escribirResultado("Nombre del conductor: ", bus.conductor.nombre);      // Pepe
+    // escribirResultado("Licencia del conductor: ", bus.conductor.licencia)   // 9087
 
     // escribirResultado("Bajan 100", bus.bajar(100)); // 0
     // escribirResultado("Suben 35", bus.subir(35))    // 35
     // escribirResultado("Bajan 40", bus.bajar(40));   // 0
 
-    // escribirResultado("Bajan 100", bus.bajar(100)); // 0
-    // escribirResultado("Suben 35", bus.subir(200))   // 40
-    // escribirResultado("Bajan 40", bus.bajar(50));   // 0
+    escribirResultado("Bajan 100", bus.bajar(100)); // 0
+    escribirResultado("Suben 35", bus.subir(35))   // 40
+    escribirResultado("Bajan 40", bus.bajar(40));   // 0
 }
 
 // Ej 7 - Artículo y Proveedor // return de obj
