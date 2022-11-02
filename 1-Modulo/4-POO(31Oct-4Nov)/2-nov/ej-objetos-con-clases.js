@@ -5,8 +5,8 @@
 //ej3(); // clase Piedra
 //ej4(); // clase Cuenta
 //ej5(); // clase Ficha
-ej6(); // Objs bus y conductor
-//ej7(); // Objs Artículo y Proveedor
+//ej6(); // Clases Bus y Conductor
+ej7(); // Objs Artículo y Proveedor
 //ej8(); // Objs Alumnos
 //ej9(); // Objs Cliente y Factura
 
@@ -411,6 +411,42 @@ function ej6(){
 
 // Ej 7 - Artículo y Proveedor // return de obj
 function ej7(){
+    class Proveedor{
+        constructor(
+            nombre = "Tecnoshop",
+            telefono = "(+34) 123 456 789",
+            email = "tcn@tecno.com"
+            )
+        {
+            this.nombre = nombre;
+            this.telefono = telefono;
+            this.email = email;
+        }
+        datos(){
+            return "-> El teléfono del " + this.nombre + " es " + this.telefono + " con email: " + this.email;
+        }
+    }
+    class Articulo{
+        constructor(
+            nombre = "Artículo por defecto", 
+            precio = 0.99, 
+            proveedor = new Proveedor("Proveedor por defecto", "123456789", "email@mail.com")
+            )
+        {
+            this.nombre = nombre;
+            this.precio = precio;
+            this.proveedor = proveedor;
+        }
+        datos(){
+            return "Artículo: " + this.nombre + "\nCon precio: " + this.precio + " €.";
+        }
+        telefono(){
+            return this.proveedor;
+        }
+        datosProveedor(){
+            return this.proveedor.datos();
+        }
+    }
     // let articuloPlantilla = {
     //     "nombreArticulo": "Producto 123",
     //     "precio": 100.00,
@@ -426,7 +462,8 @@ function ej7(){
     //         }
     //     }
     // }
-    let articulo = {
+    
+    /*let articulo = {
         "nombreArticulo": "Monitor",
         "precio": 200.00,
         "proveedor": {
@@ -441,15 +478,34 @@ function ej7(){
                 "telefonoProveedor": this.proveedor.telefono
             }
         },
-        "escribirTelefono": function(){
+        "datosProveedor": function(){
             return "XYZ El teléfono del " + this.proveedor.nombreProveedor + " es " + this.proveedor.telefono;
         }
     }
-    // let nombre = articulo.telefono().nombreProveedor;
-    // let tlf = articulo.telefono().telefonoProveedor;
-    // escribirResultado("Datos del Proveedor: ", "Teléfono de " + nombre + " es " + tlf)
+    */
 
-    escribirResultado("String formateado en método: ", articulo.escribirTelefono())
+    // Escribimos datos de un artículo por defecto
+    // escribirResultado("Artículo por defecto: ", new Articulo().datos())
+
+    // Escribimos un artículo por defecto con Proveedor personalizado (sobreescrito)
+    escribirResultado(
+        "Datos proveedor asignado (sobreescrito):", 
+        new Articulo(undefined, undefined, new Proveedor("Nuevo Proveedor", "098", "Email@test.com")).datosProveedor()
+    )
+
+    // Escribimos datos del Proveedor del artículo sobreescrito y Proveedor sobreescrito
+    /*
+    escribirResultado(
+        "Datos por defecto del proveedor asignado del artículo por defecto: ", 
+        new Articulo("nombre", 1, new Proveedor("pepito", "123", "mail")).datosProveedor()
+        )
+    */
+
+    // Escribimos datos de un artículo creado en la llamada de escribirResultado
+    // escribirResultado("String formateado en método: ", new Articulo("Mi Artículo #1121", 300).datos())
+
+    // Escribimos datos de un nuevo Proveedor
+    // escribirResultado("Datos del Proveedor: ", new Proveedor("Pepe", "1212", "email123").datos())
 }
 
 // Ej 8 - Alumnos
