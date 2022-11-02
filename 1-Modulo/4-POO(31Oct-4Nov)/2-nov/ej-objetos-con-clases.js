@@ -7,8 +7,8 @@
 //ej5(); // clase Ficha
 //ej6(); // Clases Bus y Conductor
 //ej7(); // Clases Artículo y Proveedor
-ej8(); // Clase Alumno
-//ej9(); // Objs Cliente y Factura
+//ej8(); // Clase Alumno
+ej9(); // Clases Cliente y Factura
 
 /* Ej 1 - Clase Alumno 
     Clase para guardar notas de alumno y método que promedia notas
@@ -608,6 +608,60 @@ function ej8(){
 
 // Ej 9 - Clientes y Factura
 function ej9(){
+    class Cliente {
+        constructor(
+            nombre = "Cliente",
+            apellido = "",
+            dni = "12345678A",
+            direccion = "Dirección",
+            email = "email@cliente.com",
+            telefono = "+34 123 456 789"
+            )
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.dni = dni;
+            this.direccion = direccion;
+            this.email = email;
+            this.telefono = telefono;
+            this.whatsapp = "123456789";
+        }
+    }
+    class Factura {
+        constructor(
+            idCliente = 1,
+            importeTotal = 0.00,
+            estado = "no emitida"
+            )
+        {
+            this.idCliente = idCliente;
+            this.importeTotal = importeTotal;
+            this.estado = estado;
+            this.clientesArray = [
+                new Cliente("Pepe", "Pérez", "12345678A", "Calle sin nombre 098", "juan@perez.com", "+34 123456789"), 
+                new Cliente("Carla", "Gómez", "12345589B", "Calle con nombre 100", "ana@perez.com", "586456789"), 
+                new Cliente("Ramiro", "Ramos", "47856985Z", "Av. del Manzanares 123", "maria@perez.com", "001-145-236-789")
+            ]
+        }
+        pagar(){
+            this.estado = "pagada";
+            return "La factura de " + this.importeTotal  + " está '" + this.estado + "'.";
+        }
+        imprimir(){
+            this.estado = "pendiente";
+            return "La factura está de " + this.importeTotal + " está '" + this.estado + "'";
+        }
+        datosClienteExt(clienteExt){
+            // Recibimos el cliente desde "fuera" del objeto
+            return "Nombre: " + clienteExt.nombre + ", " + "Apellido: " + clienteExt.apellido;
+        }
+        datosClienteInt(){
+            let clienteInt = this.clientesArray[this.idCliente];
+            return "Nombre: " + clienteInt.nombre + ", " + "Apellido: " + clienteInt.apellido;
+        }
+    }
+
+    /* Obj cliente 1-3
     let cliente1 = {
         "nombre": "Juan", 
         "apellido": "Pérez", 
@@ -632,10 +686,11 @@ function ej9(){
         "email": "maria@perez.com",
         "telefono": "+34 123456789"
     }
-    let arrayClientes = [cliente1, cliente2, cliente3]  // "lista" de clientes
-    // Factura
+    */
+
+    /* Obj Factura
     let factura = {
-        "idCliente": 1,       // 0, 1, 2
+        "idCliente": 1,         // 0, 1, 2
         "importeTotal": 100,    // Asignamos importe en cada caso
         "estado": "no emitida", // pendiente o pagada
         "pagar": function(){
@@ -653,12 +708,22 @@ function ej9(){
             return "La factura está '" + this.estado + "' de pago.";
         }
     }
-    escribirResultado("Emitimos factura ", factura.imprimir())
-    // escribirResultado("Pagamos factura: ", factura.pagar())
+    */
+    
+    let arrayClientes = [
+        new Cliente("Juan", "Pérez", "12345678A", "Calle sin nombre 098", "juan@perez.com", "+34 123456789"), 
+        new Cliente("Ana", "Gómez", "12345589B", "Calle con nombre 100", "ana@perez.com", "586456789"), 
+        new Cliente("María", "Ramos", "47856985Z", "Av. del Manzanares 123", "maria@perez.com", "001-145-236-789")
+    ]  // "lista" de clientes
+    
+
+    // escribirResultado("Emitimos factura ", new Factura(0).datosClienteExt(arrayClientes[2]))
+    // escribirResultado("Emitimos factura ", new Factura().datosClienteInt())
+    escribirResultado("Pagamos factura: ", new Factura(0, 300).pagar())
 }
 
 // Funciones auxiliares
-function escribirResultado(op, res){
+function escribirResultado(op = "No hay op", res = "No hay res"){
     let div = document.getElementById("resultado");
     let descripcion = "";
     let resultado = "";
