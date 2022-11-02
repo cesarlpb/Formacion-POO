@@ -1,7 +1,7 @@
 /* Ejercicios con Objetos en JS */
 
-ej1(); // Obj alumno y método que promedia notas
-//ej2(); // Obj para calcular el precio neto de un producto
+//ej1(); // clase Alumno
+ej2(); // Obj para calcular el precio neto de un producto
 //ej3(); // Obj para calcular la densidad de una piedra en kg/m3 y en g/cc
 //ej4(); // Obj que representa a una cuenta bancaria
 //ej5(); // Obj ficha de entrenamiento
@@ -59,15 +59,33 @@ function ej1(){
 
 // Ej 2 - Cálculo del precio neto de un producto aplicando descuento
 function ej2(){
-    let producto = {
+    class Producto {
+        // Ejemplo de parámetros por defecto en constructor
+        constructor(precio = 100, descuento = 0){
+            this.precio = precio;
+            this.descuento = descuento;
+        }
+        calcularPrecioNeto(){
+            let valorDescontado = (this.descuento / 100) * this.precio; // €
+            return this.precio - valorDescontado;
+        }
+    }
+
+    /* let producto = {
         "precio": 200,      // €
         "descuento": 30,    // Esto es un % -> tanto por ciento
         "calcularPrecioNeto": function(){
             let valorDescontado = (this.descuento / 100) * this.precio; // €
             return this.precio - valorDescontado;
         }
-    }
-    escribirResultado("Calculamos precio neto", producto.calcularPrecioNeto() + " €")
+    }*/
+    
+    /* Objetos producto */
+    let producto = new Producto()           // 100€     0% dto
+    let producto2 = new Producto(200)       // 200€     0% dto 
+    let producto3 = new Producto(300, 30)   // 300€     30%
+    
+    escribirResultado("Calculamos precio neto", producto3.calcularPrecioNeto() + " €")
 }
 
 // Ej 3 - Objeto piedra que tiene masa y volumen a partir de lo cual de calcula densidad
