@@ -3,8 +3,8 @@
 //ej1(); // clase Alumno
 //ej2(); // clase Producto
 //ej3(); // clase Piedra
-ej4(); // clase Cuenta
-//ej5(); // Obj ficha de entrenamiento
+//ej4(); // clase Cuenta
+ej5(); // clase Ficha
 //ej6(); // Objs bus y conductor
 //ej7(); // Objs Artículo y Proveedor
 //ej8(); // Objs Alumnos
@@ -165,7 +165,7 @@ function ej4(){
             return cantidad.toFixed(2);
         }
         consultarBalance(){
-            return this.balance + " €";
+            return this.balance.toFixed(2) + " €";
         }
     }
     /*let cuenta = {
@@ -194,18 +194,61 @@ function ej4(){
     
     /* Objetos cuenta de clase Cuenta */
     let cuenta = new Cuenta();
+    // Operaciones con la cuenta
+    cuenta.ingresar(120)
+    cuenta.retirar(1)
+    cuenta.retirar(3.5)
+    cuenta.retirar(100)
+    cuenta.ingresar(19.98)
 
     // escribirResultado("Retirar 200 €: ", cuenta.retirar(200));
     // escribirResultado("Retirar -1 €: ", cuenta.retirar(-1));
-    cuenta.ingresar(100)
     // escribirResultado("Retirar 50 €: ", "Balance retirado: " + cuenta.retirar(50) + " €");
     // escribirResultado("Ingresamos una cantidad con decimales €: ", cuenta.ingresar(10.12345));
-    
+
+    escribirResultado("Balance actual: ", cuenta.consultarBalance())
 }
 
 // Ej 5 - Ficha de entrenamiento
 function ej5(){
-    let ficha = {
+    class Ficha{
+        constructor(
+            nombre = "", 
+            apellido = "",
+            sesiones = 0.0,
+            numSesiones = 0, 
+            )
+        {
+            // Intentad con atajos: escribir lista, clic + Alt clic en cada línea (principio)
+            // Fin -> shift Inicio -> Ctrl C -> Fin = espacios 
+            //-> Ctrl V -> Fin ";" -> Inicio "this."
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.sesiones = sesiones;
+            this.numSesiones = numSesiones;
+        }
+        anotarSesion(kms){
+            // Deberíamos validar que kms no sea negativo
+            if( kms < 0 ){
+                let msj = "No se pueden registrar valores negativos";
+                alert(msj);
+                return msj;
+            }
+            this.sesiones += kms;   // Guardamos los km de todas sesiones
+            this.numSesiones += 1;  // Incrementamos el contador de sesiones
+            return this.sesiones + " km"
+        }
+        calcMedia(){
+            // Hay que evitar división por cero
+            if( this.sesiones == 0 ){ 
+                alert("¡Aún no hay realizado una sesión!"); 
+                return "No hay sesiones registradas"
+            }
+            return (this.sesiones / this.numSesiones).toFixed(2) + " km por sesión";
+        }
+    }
+
+    /*let ficha = {
         "nombre": "Pepe",
         "apellido": "Grande",
         "sesiones": 0,      // float de km -> 1.56
@@ -229,13 +272,19 @@ function ej5(){
             }
             return (this.sesiones / this.numSesiones).toFixed(2) + " km por sesión";
         }
-    }
-    // escribirResultado("Anotar -1 km: ", ficha.anotarSesion(-1));    // Debe arrojar alert
-    // escribirResultado("Media con 0 sesiones: ", ficha.calcMedia())  // Debe arrojar alert
-    escribirResultado("Anotar +10 km: ", ficha.anotarSesion(10));   // Debe retornar '10 km'
+    }*/
+
+    /* Objeto ficha de la clase Ficha */
+    let ficha = new Ficha()
+    // Añadimos sesiones -> 100km y 3 sesiones -> 33.33 km / sesión
     ficha.anotarSesion(20);
     ficha.anotarSesion(70);
-    escribirResultado("Calculamos media en ficha de " + ficha.nombre, ficha.calcMedia());     // Debe retornar '10 km por sesión'
+    ficha.anotarSesion(10);
+    
+    // escribirResultado("Anotar -1 km: ", ficha.anotarSesion(-1));    // Debe arrojar alert
+    // escribirResultado("Media con 0 sesiones: ", ficha.calcMedia())  // Debe arrojar alert
+    // escribirResultado("Anotar +10 km: ", ficha.anotarSesion(10));   // Debe retornar '10 km'
+    escribirResultado("Calculamos media en ficha de " + ficha.nombre, ficha.calcMedia());     // Debe retornar '33.33 km por sesión'
 }
 
 // Ej 6 - Objs Bus y Conductor
