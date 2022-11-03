@@ -145,6 +145,18 @@ function ej2(){
 
     // 8. Similar pero solo aceptamos pares. Si impar -> break;
         // Devolvemos númer de pares recibidos
+        function ej8(){
+            let el = document.getElementById("ej-8-resultados");
+            let num = 0;
+            let pares = 0;
+            do{
+                num = Number(prompt("Ingresa un número par:"));
+                if(num % 2 == 0 ){
+                    pares++;
+                }
+            } while( num % 2 == 0 )
+            el.innerText = "Pares: " + pares;
+        }    
 
     // 9. Pedimos número y mostramos menú
         // Mostramos opción recibida del 1 a la N (según menú)
