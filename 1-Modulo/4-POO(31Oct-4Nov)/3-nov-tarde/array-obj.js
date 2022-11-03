@@ -1,0 +1,1 @@
+/* Script para resolver ejercicios de Array objeto */
