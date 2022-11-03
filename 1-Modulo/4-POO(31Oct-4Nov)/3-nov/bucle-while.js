@@ -48,7 +48,27 @@ function ej2(){
     }
 // 4. Determinar si el número introducido por usuario es primo
     // Número primo = divisible por si mismo y 1
-
+    function ej4(){
+        // Solución con IF
+        let el = document.getElementById("ej-4-resultados");
+        let num = document.getElementById("input-4").valueAsNumber;
+        let i = 2;
+        let esPrimo = true; // suponemos sea primo de entrada
+        while( i <= Math.floor(num/2) ){
+            console.log(i, num % i)
+            if( num % i == 0 ){
+                esPrimo = false;
+                break;
+            }
+            i++;
+        }
+        if(esPrimo){
+            el.innerText = "Es número primo."
+        } else {
+            el.innerText = "El número no es primo"
+        }
+        
+    }
 // 5. Pide una contraseña y si:
     // Coincide -> Acceso concedido
     // No coincide -> 3 intentos
