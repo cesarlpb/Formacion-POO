@@ -66,10 +66,15 @@ function ej2(){
             el.innerText = "Es número primo."
         } else {
             el.innerText = "El número no es primo"
-        }
-        
+        } 
     }
 // 5. Pide una contraseña y si:
     // Coincide -> Acceso concedido
     // No coincide -> 3 intentos
-    // Después, mensaje de alerta
+        // Después, mensaje de alerta
+    function ej5(){
+        let pwd = document.getElementById("input-5a").value;     // contraseña
+        let pwd2 = document.getElementById("input-5b").value;     // repetida
+        let res = document.getElementById("ej-5-resultados");    
+        
+    }
