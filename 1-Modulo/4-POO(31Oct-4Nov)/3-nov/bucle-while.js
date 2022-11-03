@@ -7,13 +7,35 @@ function ej1(){
     let i = 0;
     let res = "";
     while( i < n ){
-        res += i + " ";
+        res += i + ", ";
         i++;
     }
+    res = res.slice(0,-2) // para quitar el último ", "
     el.innerText = res;
 }
 // 2. Se pide número en rango y se sigue pidiendo hasta recibirlo
+function ej2(){
+    // Solución con IF
+    let el = document.getElementById("ej-2-resultados");
+    let num = document.getElementById("input-2").valueAsNumber;
+    let i = 0;
+    let rango = 10;
+    let res = "";
+    if(num < rango){
+        res = "Número en rango"
+    } else {
+        res = "Número no está en rango"
+    }
+    el.innerText = res;
 
+    // Solución con WHILE
+    
+    // let rango = 10;
+    // let num = 11;
+    // while(num > rango){
+    //     num = Number(prompt("Ingresa un número menor que 10"))
+    // }
+}
 // 3. Se pregunta si continuamos programa -> n o N cierran bucle
 
 // 4. Determinar si el número introducido por usuario es primo
