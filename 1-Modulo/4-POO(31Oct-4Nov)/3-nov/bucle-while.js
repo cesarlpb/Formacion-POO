@@ -76,5 +76,17 @@ function ej2(){
         let pwd = document.getElementById("input-5a").value;     // contraseña
         let pwd2 = document.getElementById("input-5b").value;     // repetida
         let res = document.getElementById("ej-5-resultados");    
-        
+        let i = 0;
+        while( pwd != pwd2 && i < 3 ){
+            res.innerText = "Las contraseñas no coinciden";
+            // Idea 1: usar <dialog> con input type=password
+            pwd2 = prompt("Introduce la contraseña repetida:") 
+            // Idea 2: Actualizar value en input-5b de pwd2
+            i++;
+        }
+        if(pwd == pwd2){
+            res.innerText = "Las contraseñas coinciden."
+        } else {
+            res.innerText = "Las contraseñas NO coinciden."
+        }
     }
