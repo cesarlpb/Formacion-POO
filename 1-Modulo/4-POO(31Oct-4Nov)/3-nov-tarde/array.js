@@ -25,7 +25,17 @@ function ej2(){
 }
 // 3. fn sumaLista(arr) -> return de suma de Numbers
 function ej3(){
-
+    let el = document.getElementById("ej-3-resultados")
+    let num = 0;
+    let arr = [];
+    let suma = 0;
+    do{
+        num = Number(prompt("Introduce número. \n\n0 para terminar"));
+        // Comprobar que no es NaN
+        arr.push(num);
+        suma += num;
+    } while( num != 0 )
+    el.innerText = "Suma: " + suma;
 }
 // 4. Guardar números en array
     // Entrada de datos acaba con 0 o char alfanumérico -> ç r /
