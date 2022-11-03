@@ -88,5 +88,24 @@ function ej2(){
             res.innerText = "Las contraseñas coinciden."
         } else {
             res.innerText = "Las contraseñas NO coinciden."
+            // alert("Se han usado los 3 intentos!")
         }
     }
+
+    // 6. Pedimos número con prompt hasta recibir 0 y devolvemos suma
+
+
+    // 7. Similar pero calculamos min y max de la lista de números
+
+    // 8. Similar pero solo aceptamos pares. Si impar -> break;
+        // Devolvemos númer de pares recibidos
+
+    // 9. Pedimos número y mostramos menú
+        // Mostramos opción recibida del 1 a la N (según menú)
+        // Cualquier número (en rango) muestra la opción
+            // Si no está en rango -> ERROR
+        // N acaba el programa
+
+    // 10. Pedimos números hasta recibir un 0
+        // Si suma par (0 cuenta como par) -> repite
+        // Si suma impar -> acaba el programa
