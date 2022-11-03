@@ -2,7 +2,13 @@
 
 // 1. Array para guardar dias de la semana y al pedir 0-6 lo escribe
 function ej1(){
-
+    let el = document.getElementById("ej-1-resultados")
+    let input = document.getElementById("input-1").valueAsNumber;
+    let dias = [
+        "Domingo","Lunes", "Martes", "Miércoles", "Jueves", 
+        "Viernes", "Sábado"
+    ]
+    el.innerText = dias[input]
 }
 // 2. Array con booleans -> "V" o "F" 
     // si recibimos 0-9 -> true o "V"
