@@ -18,7 +18,6 @@ function ej2(){
     // Solución con IF
     let el = document.getElementById("ej-2-resultados");
     let num = document.getElementById("input-2").valueAsNumber;
-    let i = 0;
     let rango = 10;
     let res = "";
     if(num < rango){
@@ -29,7 +28,7 @@ function ej2(){
     el.innerText = res;
 
     // Solución con WHILE
-    
+
     // let rango = 10;
     // let num = 11;
     // while(num > rango){
@@ -37,7 +36,16 @@ function ej2(){
     // }
 }
 // 3. Se pregunta si continuamos programa -> n o N cierran bucle
-
+    function ej3(){
+        let el = document.getElementById("ej-3-resultados");
+        let bool = true; // implica continuar el programa
+        while(bool){
+            
+            bool = confirm("¿Quieres continuar el programa?");
+            console.log(bool);
+        }
+        el.innerText = "Has terminado el programa.";
+    }
 // 4. Determinar si el número introducido por usuario es primo
     // Número primo = divisible por si mismo y 1
 
