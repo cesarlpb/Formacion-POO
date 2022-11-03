@@ -93,7 +93,16 @@ function ej2(){
     }
 
     // 6. Pedimos número con prompt hasta recibir 0 y devolvemos suma
-
+    function ej6(){
+        let el = document.getElementById("ej-6-resultados");
+        let suma = 0;
+        let num = 0;
+        do{
+            num = Number(prompt("Ingresa un número:"));
+            suma += num;
+        } while( num != 0 )
+        el.innerText = "Suma: " + suma;
+    }
 
     // 7. Similar pero calculamos min y max de la lista de números
 
