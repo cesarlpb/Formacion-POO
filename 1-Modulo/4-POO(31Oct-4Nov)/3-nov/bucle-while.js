@@ -204,3 +204,13 @@ function ej2(){
     // 10. Pedimos números hasta recibir un 0
         // Si suma par (0 cuenta como par) -> repite
         // Si suma impar -> acaba el programa
+    function ej10(){
+        let el = document.getElementById("ej-10-resultados");
+        let num = 0;
+        let suma = 0;
+        do{
+            num = Number(prompt("Introduce un número:"))
+            suma += num;
+        } while( suma % 2 == 0 )
+        el.innerText = "Suma: " + suma;
+    }
