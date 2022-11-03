@@ -123,6 +123,9 @@ function ej2(){
         // Buscamos mínimo
         min = arr[0];
         max = arr[0]; 
+        // Observación: arrojar alert cuando no haya 2 elementos en array
+            // Idea: si no hay elemento en arr -> alert "no se pude calcular min o max"
+            // Idea: si hay 1 elemento -> o bien mismo alert o bien min = max = arr[0]
         for(let i = 1; i<arr.length; i++){
             if( arr[i] < min ){
                 min = arr[i] 
@@ -131,7 +134,13 @@ function ej2(){
                 max = arr[i]
             }
         }
-        el.innerText = "";
+
+        // Math.max() y Math.min()
+            // Usando Math y el operador spread "..." conseguimos lo mismo:
+        //max = Math.max(...arr)
+        //min = Match.min(...arr)
+
+        el.innerText = "Mín: " + min + " y Máx: " + max;
     }
 
     // 8. Similar pero solo aceptamos pares. Si impar -> break;
