@@ -42,6 +42,24 @@ function ej3(){
     // Se muestra el array, cuántos pares, impares
     // No guardar cosas que no sean Number
 function ej4(){
+    let el = document.getElementById("ej-4-resultados")
+    let num = 0;
+    let arr = [];
+    let esInt = false;
+    let par = 0;
+    let impar = 0;
+    do{
+        num = Number(prompt("Introduce número. \n\n0 para terminar"));
+        esInt = Number.isInteger(num);
+        if( esInt && num != 0 ){
+            arr.push(num)
+            if( num % 2 == 0 ){ par++; }
+            else { impar++; }
+        }
+    } while( esInt && num != 0 )
+    el.innerText = `Array: [${arr.toString()}]
+                    Par: ${par}
+                    Impar: ${impar}`;
 
 }
 // 5. Devolvemos min o índice del mínimo controlando "v" o "i" como segundo param
