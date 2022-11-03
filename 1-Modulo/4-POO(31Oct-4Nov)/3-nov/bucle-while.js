@@ -1,7 +1,9 @@
 // Script para hacer ejercicios de bucle While
 
 // 1. Imprimir lista de números de 0 o 1 a N (número introducido por usuario)
+function ej1(){
 
+}
 // 2. Se pide número en rango y se sigue pidiendo hasta recibirlo
 
 // 3. Se pregunta si continuamos programa -> n o N cierran bucle
