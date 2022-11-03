@@ -105,6 +105,34 @@ function ej2(){
     }
 
     // 7. Similar pero calculamos min y max de la lista de números
+        // con 0 se para el programa
+    function ej7(){
+        let el = document.getElementById("ej-7-resultados");
+        let arr = [];
+        let min = 0;
+        let max = 0;
+        let num = 0;
+        do{
+            num = Number(prompt("Ingresa un número:"));
+            if(num != 0 ){
+                arr.push(num)
+            }
+            console.log(arr)
+        } while( num != 0 )
+
+        // Buscamos mínimo
+        min = arr[0];
+        max = arr[0]; 
+        for(let i = 1; i<arr.length; i++){
+            if( arr[i] < min ){
+                min = arr[i] 
+            }
+            if( arr[i] > max ){
+                max = arr[i]
+            }
+        }
+        el.innerText = "";
+    }
 
     // 8. Similar pero solo aceptamos pares. Si impar -> break;
         // Devolvemos númer de pares recibidos
