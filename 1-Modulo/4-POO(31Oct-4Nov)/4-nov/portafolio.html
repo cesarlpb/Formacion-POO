@@ -28,10 +28,13 @@
                   <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item mx-5">
-                  <a class="nav-link" href="#">Portafolio</a>
+                    <a class="nav-link" href="#about-me">Acerca de</a>
+                  </li>
+                <li class="nav-item mx-5">
+                  <a class="nav-link" href="#portfolio">Portafolio</a>
                 </li>
                 <li class="nav-item mx-5">
-                  <a class="nav-link">Contacto</a>
+                  <a class="nav-link" href="#contact">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -59,11 +62,40 @@
         </div>
     </section>
     <!-- About me ? -->
-
+    <section id="about-me">
+        <div class="container py-5">
+            <div class="row justify-content-center pb-5 border-bottom">
+                <div class="col-sm col-lg-6 col-xl-4">
+                    <img class="img-fluid rounded" src="img/avatar.png" width="300" alt="avatar">
+                </div>
+                <div class="col-sm col-lg-6 col-xl-4 text-end">
+                    <h2 class="pb-3 display-5">Acerca de mí</h2>
+                    <p class="lead fw-bold fs-4">Desarrollador full-stack</p>
+                    <p class="lead">Llevo más de una década creando web con diversas tecnologías.</p>
+                    <p class="lead">He utilizado varios frameworks de PHP y C#, como Laravel, CodeIgniter, .NET, etc. </p>
+                    <p class="lead">Más reciemtemente, uso React JS y TS con Next para hacer páginas web.</p>
+                </div>
+                <p class="text-center mt-3 lead fw-bold fs-4">Tecnologías que he usado:</p>
+                <div class="col-8 mt-2 py-2 d-flex justify-content-around">
+                    <span class="badge text-bg-primary">HTML 5</span>
+                    <span class="badge text-bg-primary">CSS 3</span>
+                    <span class="badge text-bg-warning">JS</span>
+                    <span class="badge text-bg-success">SQL</span>
+                    <span class="badge text-bg-info">SASS</span>
+                    <span class="badge text-bg-info">Typescript</span>
+                    <span class="badge text-bg-primary">Python</span>
+                    <span class="badge text-bg-info">React</span>
+                    <span class="badge text-bg-success">.Net</span>
+                    <span class="badge text-bg-info">C#</span>
+                    <span class="badge bg bg-dark text-light">PHP</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Cols o Divs o Grid -> Proyectos -->
-    <section id="proyectos">
-        <div class="container px-4 py-5" id="custom-cards">
-            <h2 class="pb-2 border-bottom">Proyectos</h2>
+    <section id="portfolio">
+        <div class="container px-4 pt-0 pb-5 border-bottom" id="custom-cards">
+            <h2 class="pb-2">Proyectos</h2>
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
               
                 <div class="col">
@@ -84,7 +116,7 @@
                     </div>
                     </div>
                     <div class="row col-6 my-3 mx-auto">
-                        <a href="#" class="btn btn-primary px-2 mx-auto">Link</a>
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a>
                     </div>
                     
                 </div>
@@ -106,6 +138,9 @@
                     </ul>
                     </div>
                 </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a>
+                    </div>
                 </div>
         
                 <div class="col">
@@ -125,14 +160,22 @@
                     </ul>
                     </div>
                 </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 3</a>
+                    </div>
                 </div>
 
             </div>
           </div>
     </section>
     <!-- Contacto (form) -->
-    
+    <section id="contact">
+        Contacto
+    </section>
     <!-- Footer -->
+    <footer>
+        Footer
+    </footer>
     
 
     <script src="script.js"></script>
