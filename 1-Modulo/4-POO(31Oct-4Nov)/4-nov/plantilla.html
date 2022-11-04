@@ -12,14 +12,15 @@
       <div class="container my-3 mx-auto">
         <h1 class="text-center">Ejemplos de Bootstrap 5.2</h1>
         <p class="text-center">Algunos ejemplos de Boostrap</p>
-        <ul>
-            <li><a href="#navbar-simple" class="">Header Simple</a></li>
+        <ul class="nav border-bottom my-3">
+            <li class="nav-item"><a class="nav-link" href="#navbar-simple">Header Simple</a></li>
+            <li class="nav-item"><a class="nav-link" href="#navbar-responsive">Navbar Responsive</a></li>
         </ul>
     
         <section id="navbar-simple">
             <div class="container">
                 <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                     <img class="bi me-2" src="logo.png" width="40" height="40" alt="logo">
                     <span class="fs-4">HTML</span>
                 </a>
@@ -28,13 +29,44 @@
                     <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">HTML 5</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Etiquetas</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Ejemplos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Saber más</a></li>
                 </ul>
                 </header>
             </div>
         </section>
-      </div>
+        
+        <section id="navbar-responsive">
+            <header>
+                <!-- Fixed navbar -->
+                <nav class="navbar navbar-expand-md navbar-dark fixed bg-dark"> <!-- fixed-top para navbar y fixed-bottom para footer -->
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar Responsive</a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Enlace</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled">Página deshabilitada</a>
+                        </li>
+                      </ul>
+                      <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form> -->
+                    </div>
+                  </div>
+                </nav>
+              </header>
+        </section>
+    </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
