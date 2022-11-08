@@ -1,12 +1,10 @@
-// Script para convertir números decimales a romanos - editado con maps
+// Script para convertir números decimales a romanos - editado con maps, op ternario y ...
 
 function convertir(){
-    // Leemos el campo del input y llamamos a convertir()
     let numDecimal = document.getElementById("myInputA").valueAsNumber, resultados = document.getElementById("resultados");
     let esNumDecimalValido = false, msj1 = "Debes ingresar un número positivo", msj2 = "No podemos representar este número.\nIngresa un número inferior a 4000.";
 
     // Validamos que num esté entre 1 y 3999
-        // Para evitar que salga NaN ponemos un valor por defecto para el input
     numDecimal < 1 ? alert(msj1) : numDecimal > 3999 ? alert(msj2) : esNumDecimalValido = true
     
     // Recibe número decimal entero
@@ -16,7 +14,7 @@ function convertir(){
      * 3. Escribir el string en div
      */
     // Equivalencia con símbolos en numeración romana
-    // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
+        // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
 
     return esNumDecimalValido ? ( resultados.innerText = procesarArray(descomponer(numDecimal)) ) : resultados.innerText = "" // 1234 -> [1, 2, 3, 4] -> "M CC XXX IV"
 }
