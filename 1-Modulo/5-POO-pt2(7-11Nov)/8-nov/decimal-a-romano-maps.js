@@ -43,10 +43,14 @@ function simboloRomano(num) {
     else { return NaN; }
 }
 
-function calcularChar(num, unidad) {
+function calcularChar(num, unidad, map) {
     // op ternario
-        // num -> 0-9 // miles -> 0-3
-        // unidad -> 1, 10, 100, 1000 
+        // Number num -> 0-9 // miles -> 0-3
+        // str unidad -> 1, 10, 100, 1000 
+        let char = (num >= 0 && num <= 3) ? map.get(unidad).repeat(num) :     // "", "C", "CC", "CCC"
+        (num == 4 ) ? map.get(unidad) + map.get(String(5*unidad)) :               // "CD"
+        (num >= 5 && num <= 8) ? map.get(String(5*unidad)) + map.get(unidad).repeat(Number(num) - 5) : // "D", "DC", "DCC", "DCCC"
+        (num == 9) ? map.get(unidad) + map.get(String(10*unidad)) : ""    // "CM"
     return char;    // 7*1 -> VII, 5*10 -> L, 4*100 -> CD, 2*1000 -> MM
 }
 
@@ -63,34 +67,12 @@ function procesarArray(arr) {
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
-// Miles: 0, 1, 2, 3
-    // Opcion A: milesMap y operador ternario
-    // milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
-// Opción B: map y repeat(char0)
-char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : "" // -> "", "M", "MM", "MMM"
-
-// Centenas: 0, 1, ..., 9
-char1 = (char1 >= 0 && char1 <= 3) ? map.get('100').repeat(char1) :     // "", "C", "CC", "CCC"
-        (char1 == 4 ) ? map.get('100') + map.get('500') :               // "CD"
-        (char1 >= 5 && char1 <= 8) ? map.get('500') + map.get('100').repeat(Number(char1) - 5) : // "D", "DC", "DCC", "DCCC"
-        (char1 == 9) ? map.get('100') + map.get('1000') : ""    // "CM"
-
-// Decenas: 0, 1 ... 9
-char2 = (char2 >= 0 && char2 <= 3) ? map.get('10').repeat(char2) :     // "", "X", "XX", "XXX"
-        (char2 == 4 ) ? map.get('10') + map.get('50') :                // "XL"
-        (char2 >= 5 && char2 <= 8) ? map.get('50') + map.get('10').repeat(Number(char2) - 5) : // "L", "LX", "LXX", "LXXX"
-        (char2 == 9) ? map.get('10') + map.get('100') : ""              // "XC"
+char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : "" // Miles: 0, 1, 2, 3 -> "", "M", "MM", "MMM"
+char1 = calcularChar(char1, '100', map) // Centenas: 0, 1, ..., 9 -> "", "C", ... "CM"
+char2 = calcularChar(char2, '10', map)  // Decenas:  0, 1 ... 9   -> "", "X", ... "XC"
+char3 = calcularChar(char3, '1', map)   // Unidades: 0, ... 9     -> "", "I", ... "IX"
     
-// Unidades: 0, ... 9
-char3 = (char3 >= 0 && char3 <= 3) ? map.get('1').repeat(char3) :     // "", "I", "II", "III"
-        (char3 == 4 ) ? map.get('1') + map.get('5') :                // "IV"
-        (char3 >= 5 && char3 <= 8) ? map.get('5') + map.get('1').repeat(Number(char3) - 5) : // "V", "VI", "VII", "VIII"
-        (char3 == 9) ? map.get('1') + map.get('10') : ""              // "IX"    
-    
-    // Si es cualquier otro valor, ej. 4, 9... 
-        // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
-    
-    return char0 + char1 + char2 + char3; // str como concatenación de estos chars
+return char0 + char1 + char2 + char3; // str como concatenación de estos chars
 }
 
 //  Descomposición del número en sumandos 
