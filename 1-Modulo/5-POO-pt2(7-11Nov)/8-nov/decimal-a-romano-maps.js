@@ -2,7 +2,7 @@
 
 function convertir(){
     // Leemos el campo del input y llamamos a convertir()
-    let numDecimal = document.getElementById("myInputA").valueAsNumber; 
+    let numDecimal = document.getElementById("myInputA").valueAsNumber, resultados = document.getElementById("resultados");
     let esNumDecimalValido = false, msj1 = "Debes ingresar un número positivo", msj2 = "No podemos representar este número.\nIngresa un número inferior a 4000.";
 
     // Validamos que num esté entre 1 y 3999
@@ -18,8 +18,7 @@ function convertir(){
     // Equivalencia con símbolos en numeración romana
     // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
 
-    return esNumDecimalValido ? ( document.getElementById("resultados").innerText = procesarArray(descomponer(numDecimal)) ) // 1234 -> [1, 2, 3, 4] -> "M CC XXX IV"
-    : document.getElementById("resultados").innerText = ""
+    return esNumDecimalValido ? ( resultados.innerText = procesarArray(descomponer(numDecimal)) ) : resultados.innerText = "" // 1234 -> [1, 2, 3, 4] -> "M CC XXX IV"
 }
 
 // Recibe un número (1, 5, 10, 50, 100, 1000) y 
@@ -48,23 +47,18 @@ function simboloRomano(num) {
 // Recibe array de descomponer(num) -> [1, 9, 8, 9]
 // Devuelve string de caracteres
 function procesarArray(arr) {
-    let char0, char1, char2, char3;
-    let str;
-
-    // 3. Definir map que recibe el num
-    char0 = String(arr[0]); // miles -> 0, 1, 2, 3
-    char1 = String(arr[1]); // centenas
-    char2 = String(arr[2]); // decenas
-    char3 = String(arr[3]); // unidades
+    let [char0, char1, char2, char3] = [...arr]; // char0 -> miles | char1 -> centenas | char2 -> decenas | char3 -> unidades
 
     // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
-    let milRom = simboloRomano(1000)
-    let quinientosRom = simboloRomano(500)
-    let cienRom = simboloRomano(100)
-    let cincuentaRom = simboloRomano(50)
-    let diezRom = simboloRomano(10)
-    let cincoRom = simboloRomano(5)
-    let unoRom = simboloRomano(1)
+    let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
+    
+    let milRom = map.get('1000')
+    let quinientosRom = map.get('500')
+    let cienRom = map.get('100')
+    let cincuentaRom = map.get('50')
+    let diezRom = map.get('10')
+    let cincoRom = map.get('5')
+    let unoRom = map.get('1')
 
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
@@ -106,13 +100,11 @@ function procesarArray(arr) {
     else if( char3 == 9 ){ char3 = unoRom + diezRom }           // IX
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
-    simbolosValidos = [1, 5, 10, 50, 100, 500, 1000] // 0. Borrar variables no usadas
     
     // Si es cualquier otro valor, ej. 4, 9... 
         // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
     
-    str = char0 + char1 + char2 + char3; 
-    return str; // 5. Decolver el str a partir del segundo Map que creamos
+    return char0 + char1 + char2 + char3; // str como concatenación de estos chars
 }
 
 //  Descomposición del número en sumandos 
@@ -154,10 +146,10 @@ function descomponer(num){
     else if( len === 3) { numStr = '0' + numStr }
 
     // Estas asignaciones funciona cuando son 4 dígitos
-    arr[0] = Number(numStr[0])
-    arr[1] = Number(numStr[1])
-    arr[2] = Number(numStr[2])
-    arr[3] = Number(numStr[3])
+    arr[0] = numStr[0]
+    arr[1] = numStr[1]
+    arr[2] = numStr[2]
+    arr[3] = numStr[3]
 
     return arr; // 1. retornar string ?
 }
