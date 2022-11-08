@@ -3,13 +3,11 @@
 function convertir(){
     // Leemos el campo del input y llamamos a convertir()
     let numDecimal = document.getElementById("myInputA").valueAsNumber; 
-    let esNumDecimalValido = true;
+    let esNumDecimalValido = false, msj1 = "Debes ingresar un número positivo", msj2 = "No podemos representar este número.\nIngresa un número inferior a 4000.";
 
     // Validamos que num esté entre 1 y 3999
         // Para evitar que salga NaN ponemos un valor por defecto para el input
-        ( numDecimal < 1 )    ? (alert("Debes ingresar un número positivo"), esNumDecimalValido = false)
-    : ( numDecimal > 3999 ) ? (alert("No podemos representar este número.\nIngresa un número inferior a 4000."), esNumDecimalValido = false)
-    : NaN
+    numDecimal < 1 ? alert(msj1) : numDecimal > 3999 ? alert(msj2) : esNumDecimalValido = true
     
     // Recibe número decimal entero
     /*
