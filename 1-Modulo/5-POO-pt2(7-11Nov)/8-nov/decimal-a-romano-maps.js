@@ -21,33 +21,11 @@ function convertir(){
     return esNumDecimalValido ? ( resultados.innerText = procesarArray(descomponer(numDecimal)) ) : resultados.innerText = "" // 1234 -> [1, 2, 3, 4] -> "M CC XXX IV"
 }
 
-// Recibe un número (1, 5, 10, 50, 100, 1000) y 
-// devuelve el caracter en numeración romana
-function simboloRomano(num) {
-    /* 
-    1       ->  I 
-    5       ->  V
-    10      ->  X
-    50      ->  L
-    100     ->  C
-    500     ->  D
-    1000    ->  M
-    */
-    if( num === 1 ) { return "I" } 
-    else if ( num === 5 )   { return "V"; } 
-    else if ( num === 10 )  { return "X"; } 
-    else if ( num === 50 )  { return "L"; }
-    else if ( num === 100 ) { return "C"; }
-    else if ( num === 500 ) { return "D"; }
-    else if ( num === 1000 ){ return "M"; }
-    else { return NaN; }
-}
-
 function calcularChar(num, unidad, map) {
     // op ternario ? : 
         // Number num -> 0-9 // miles -> 0-3
         // str unidad -> 1, 10, 100, 1000 
-        let char;
+    let char;
     if(unidad != '1000'){
 char = (num >= 0 && num <= 3) ? map.get(unidad).repeat(num) :                     // "", "C", "CC", "CCC"
        (num == 4 )            ? map.get(unidad) + map.get(String(5*unidad)) :     // "CD"
@@ -75,16 +53,14 @@ function procesarArray(arr) {
 return char0 + char1 + char2 + char3; // str como concatenación de estos chars
 }
 
-//  Descomposición del número en sumandos 
-//  Recibe num de entre 1 y 4 digitos, 
-//  Devuelve array de 4 dígitos
-/*
+/*  Descomposición del número en sumandos 
+    Recibe num de entre 1 y 4 digitos, 
+    Devuelve array de 4 dígitos
     Ejemplos:    
     -> 120 -> 100 + 20 -> 1*100 + 2*10
     Calcula los sumandos de un número determinado 
     -> 1, 10, 100, 1000   
 */
-
 function descomponer(num){
     /* Ejemplos de descomposición:
     2022 -> 2*1000 + 2*10 + 2*1 -> [M, C, X, I] -> [2, 0, 2, 2]
