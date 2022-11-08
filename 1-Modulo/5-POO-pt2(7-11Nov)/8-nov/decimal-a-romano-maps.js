@@ -51,21 +51,22 @@ function procesarArray(arr) {
 
     // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
     let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
+    let milesMap = new Map( Object.entries( {0:"", 1:"M", 2: "MM", 3: "MMM"} ) )
 
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
     // Miles: 0, 1, 2, 3
+    milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
+    // char0 == 0 ? char0 = map.get('1000').repeat(0) : 
+    // char0 == 1 ? char0 = map.get('1000').repeat(1) : 
+    // char0 == 2 ? char0 = map.get('1000').repeat(2) :
+    // char0 == 3 ? char0 = map.get('1000').repeat(3) : ""
 
-    char0 == 0 ? char0 = map.get('1000').repeat(0) : 
-    char0 == 1 ? char0 = map.get('1000').repeat(1) : 
-    char0 == 2 ? char0 = map.get('1000').repeat(2) :
-    char0 == 3 ? char0 = map.get('1000').repeat(3) : ""
-
-    if( char0 == 0 ){ char0 = "" }                                  // ""
-    else if( char0 == 1 ){ char0 = map.get('1000') }            // M
-    else if( char0 == 2 ){ char0 = map.get('1000').repeat(2) }  // MM
-    else if( char0 == 3 ){ char0 = map.get('1000').repeat(3) }  // MMM
+    // if( char0 == 0 ){ char0 = "" }                                  // ""
+    // else if( char0 == 1 ){ char0 = map.get('1000') }            // M
+    // else if( char0 == 2 ){ char0 = map.get('1000').repeat(2) }  // MM
+    // else if( char0 == 3 ){ char0 = map.get('1000').repeat(3) }  // MMM
 
     // Centenas: 0, 1, ..., 9
     if( char1 == 0 ){ char1 = "" }                                  // ""
@@ -101,7 +102,7 @@ function procesarArray(arr) {
     // Si es cualquier otro valor, ej. 4, 9... 
         // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
     
-    return char0; // str como concatenación de estos chars
+    return char0 + char1 + char2 + char3; // str como concatenación de estos chars
 }
 
 //  Descomposición del número en sumandos 
