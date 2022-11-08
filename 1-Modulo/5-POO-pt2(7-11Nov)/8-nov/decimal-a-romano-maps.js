@@ -1,4 +1,4 @@
-// Script para convertir números decimales a romanos
+// Script para convertir números decimales a romanos - editado con maps
 
 function convertir(){
     // Leemos el campo del input y llamamos a convertir()
@@ -24,7 +24,7 @@ function convertir(){
     // Ordenación y eliminación de símbolos no necesarios -> procesarArray()
 
     let arr = descomponer(numDecimal);      // [1, 2, 3, 4]
-    let numRomano = procesarArray(arr);     // "M CC XXX IV"
+    let numRomano = procesarArray(arr);     // "M CC XXX IV" // 2. Pasar arr de numbers a procesarArray()
     document.getElementById("resultados").innerText = numRomano;
 }
 
@@ -57,11 +57,13 @@ function procesarArray(arr) {
     let char0, char1, char2, char3;
     let str;
 
+    // 3. Definir map que recibe el num
     char0 = String(arr[0]); // miles -> 0, 1, 2, 3
     char1 = String(arr[1]); // centenas
     char2 = String(arr[2]); // decenas
     char3 = String(arr[3]); // unidades
 
+    // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
     let milRom = simboloRomano(1000)
     let quinientosRom = simboloRomano(500)
     let cienRom = simboloRomano(100)
@@ -73,6 +75,7 @@ function procesarArray(arr) {
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
+    //6. Rehacer if elses con map.get() // milesMap, centMap, decMap, unitMap
     // Miles: 0, 1, 2, 3
     if( char0 == 0 ){ char0 = "" }                                  // ""
     else if( char0 == 1 ){ char0 = milRom }            // M
@@ -109,13 +112,13 @@ function procesarArray(arr) {
     else if( char3 == 9 ){ char3 = unoRom + diezRom }           // IX
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
-    simbolosValidos = [1, 5, 10, 50, 100, 500, 1000]
+    simbolosValidos = [1, 5, 10, 50, 100, 500, 1000] // 0. Borrar variables no usadas
     
     // Si es cualquier otro valor, ej. 4, 9... 
         // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
     
     str = char0 + char1 + char2 + char3; 
-    return str;
+    return str; // 5. Decolver el str a partir del segundo Map que creamos
 }
 
 //  Descomposición del número en sumandos 
@@ -162,5 +165,5 @@ function descomponer(num){
     arr[2] = Number(numStr[2])
     arr[3] = Number(numStr[3])
 
-    return arr;
+    return arr; // 1. retornar string ?
 }
