@@ -69,14 +69,10 @@ char1 = (char1 >= 0 && char1 <= 3) ? map.get('100').repeat(char1) :     // "", "
         (char1 == 9) ? map.get('100') + map.get('1000') : ""    // "CM"
 
 // Decenas: 0, 1 ... 9
-    if( char2 == 0 ){ char2 = ""}
-    else if( char2 >= 1 & char2 <= 3 ){ char2 = map.get('10').repeat(char2) }   // X, XX, XXX
-    else if( char2 == 4 ){ char2 = map.get('10') + map.get('50') }               // XL
-    else if( char2 == 5 ){ char2 = map.get('50') }                         // L
-    else if( char2 >= 6 & char2 <= 8 ){
-        char2 = map.get('50') + map.get('10').repeat(Number(char2) - 5)          // LX, LXX, LXXX
-    }
-    else if( char2 == 9 ){ char2 = map.get('10') + map.get('100') }                    // XC
+char2 = (char2 >= 0 && char2 <= 3) ? map.get('10').repeat(char2) :     // "", "X", "XX", "XXX"
+        (char2 == 4 ) ? map.get('10') + map.get('50') :                // "XL"
+        (char2 >= 5 && char2 <= 8) ? map.get('50') + map.get('10').repeat(Number(char2) - 5) : // "L", "LX", "LXX", "LXXX"
+        (char2 == 9) ? map.get('10') + map.get('100') : ""    // "XC"
     
     // Unidades: 0, ... 9
     if( char3 == 0 ){ char3 = "" }
@@ -87,8 +83,6 @@ char1 = (char1 >= 0 && char1 <= 3) ? map.get('100').repeat(char1) :     // "", "
         char3 = map.get('5') + map.get('1').repeat( Number(char3) - 5 )     // VI, VII, VIII
     }
     else if( char3 == 9 ){ char3 = map.get('1') + map.get('10') }           // IX
-
-    // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
     
     // Si es cualquier otro valor, ej. 4, 9... 
         // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
