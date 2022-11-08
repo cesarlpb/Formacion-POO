@@ -51,37 +51,24 @@ function procesarArray(arr) {
 
     // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
     let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
-    let milesMap = new Map( Object.entries( {0:"", 1:"M", 2: "MM", 3: "MMM"} ) )
+    // let milesMap = new Map( Object.entries( {0:"", 1:"M", 2: "MM", 3: "MMM"} ) )
 
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
-    // Miles: 0, 1, 2, 3
+// Miles: 0, 1, 2, 3
     // Opcion A: milesMap y operador ternario
     // milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
-    // Opción B: map y repeat(char0)
-    char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : ""
+// Opción B: map y repeat(char0)
+char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : "" // -> "", "M", "MM", "MMM"
 
-    // char0 == 0 ? char0 = map.get('1000').repeat(0) : 
-    // char0 == 1 ? char0 = map.get('1000').repeat(1) : 
-    // char0 == 2 ? char0 = map.get('1000').repeat(2) :
-    // char0 == 3 ? char0 = map.get('1000').repeat(3) : ""
+// Centenas: 0, 1, ..., 9
+char1 = (char1 >= 0 && char1 <= 3) ? map.get('100').repeat(char1) :     // "", "C", "CC", "CCC"
+        (char1 == 4 ) ? map.get('100') + map.get('500') :               // "CD"
+        (char1 >= 5 && char1 <= 8) ? map.get('500') + map.get('100').repeat(Number(char1) - 5) : // "D", "DC", "DCC", "DCCC"
+        (char1 == 9) ? map.get('100') + map.get('1000') : ""    // "CM"
 
-    // if( char0 == 0 ){ char0 = "" }                                  // ""
-    // else if( char0 == 1 ){ char0 = map.get('1000') }            // M
-    // else if( char0 == 2 ){ char0 = map.get('1000').repeat(2) }  // MM
-    // else if( char0 == 3 ){ char0 = map.get('1000').repeat(3) }  // MMM
-
-    // Centenas: 0, 1, ..., 9
-    if( char1 == 0 ){ char1 = "" }                                  // ""
-    else if( char1 >= 1 & char1 <= 3 ){ char1 = map.get('100').repeat(char1) } // C, CC, CCC
-    else if( char1 == 4 ){ char1 = map.get('100') + map.get('500') }       // CD
-    else if( char1 == 5 ){ char1 = map.get('500') }                            // D
-    else if( char1 >= 6 & char1 <= 8 ){ 
-        char1 = map.get('500') + map.get('100').repeat(Number(char1) - 5)  // 6 DC, 7 DCC, 8 DCCC 
-    } else if ( char1 == 9 ){ char1 = map.get('100') + map.get('1000') }   // 9 CM
-
-    // Decenas: 0, 1 ... 9
+// Decenas: 0, 1 ... 9
     if( char2 == 0 ){ char2 = ""}
     else if( char2 >= 1 & char2 <= 3 ){ char2 = map.get('10').repeat(char2) }   // X, XX, XXX
     else if( char2 == 4 ){ char2 = map.get('10') + map.get('50') }               // XL
