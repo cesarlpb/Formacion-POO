@@ -1,0 +1,118 @@
+/* Hoja de estilos para el conversor de decimales a romano */
+
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+/****************************************/
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#operadores, #asignacion, #tipos {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#calc-container {
+    display: flex;
+    justify-content: space-around;
+}
+#calc-container div {
+    border: 2px solid brown;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Calculadora con botones */
+#calc-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#calc-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: lightgray;
+}
+#calc-container div {
+    max-width: 50vw;
+    margin: 0 auto;
+    background-color: rgba(222, 184, 135, 0.865);
+}
+#calc-container p,
+#calc-container div,
+#calc-container input,
+#calc-container select,
+#calc-btn {
+    display: block;
+    margin: 10px auto;
+    width: 95%;
+    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    padding: 3px 0;
+    text-align: center;
+}
+#calc-container input {
+    padding: 0;
+}
+#calc-container textarea {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+#calc-container, 
+#calc-container div {
+    padding: 15px 5px;
+}
+#calc-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: white;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px auto 10px;
+}
+#resultados-div {
+    background-color: rgb(233, 229, 229)!important;
+    color: black;
+    /* max-height: 1.5em; */
+}
+
+/* <p> */
+#resultados {
+    font-size: 3em;
+    display: inline-block;
+    align-self: center;
+}
