@@ -57,7 +57,11 @@ function procesarArray(arr) {
     // Si es cero -> nada -> ""
     
     // Miles: 0, 1, 2, 3
-    milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
+    // Opcion A: milesMap y operador ternario
+    // milesMap.has(char0) ? char0 = milesMap.get(char0) : char0 = "";
+    // Opción B: map y repeat(char0)
+    char0 = (char0 >= 0 && char0 <= 3) ? map.get('1000').repeat(char0) : ""
+
     // char0 == 0 ? char0 = map.get('1000').repeat(0) : 
     // char0 == 1 ? char0 = map.get('1000').repeat(1) : 
     // char0 == 2 ? char0 = map.get('1000').repeat(2) :
