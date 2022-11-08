@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Convertidor Números Decimales a Romanos con Maps</title>
+</head>
+<body>
+    <h1>Convertidor Números Decimales a Romanos con Maps</h1>
+    <main>
+        <div id="conversor-container">
+            <p>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</p>
+            <p>Este conversor solo admite números del <code>1</code> al <code>3999</code>.</p>
+            <div id="resultados-wrapper">
+                <label for="resultados">Número en representación romana:</label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+
+                <label for="myInputA">Introduce el número en base 10 a convertir:</label>
+                <input id="myInputA" type="number"  placeholder="1">
+
+                <button id="conversor-btn" onclick="convertir()">Convertir</button>  
+            </div>
+        </div>
+    </main>
+    <script src="decimal-a-romano-maps.js"></script>
+</body>
+</html>
