@@ -51,60 +51,57 @@ function procesarArray(arr) {
 
     // 4. Rehacer con map -> prescindimos de simboloRomano() ---> map
     let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
-    
-    let milRom = map.get('1000')
-    let quinientosRom = map.get('500')
-    let cienRom = map.get('100')
-    let cincuentaRom = map.get('50')
-    let diezRom = map.get('10')
-    let cincoRom = map.get('5')
-    let unoRom = map.get('1')
 
     // -- Repetir para cada char --
     // Si es cero -> nada -> ""
     
-    //6. Rehacer if elses con map.get() // milesMap, centMap, decMap, unitMap
     // Miles: 0, 1, 2, 3
+
+    char0 == 0 ? char0 = map.get('1000').repeat(0) : 
+    char0 == 1 ? char0 = map.get('1000').repeat(1) : 
+    char0 == 2 ? char0 = map.get('1000').repeat(2) :
+    char0 == 3 ? char0 = map.get('1000').repeat(3) : ""
+
     if( char0 == 0 ){ char0 = "" }                                  // ""
-    else if( char0 == 1 ){ char0 = milRom }            // M
-    else if( char0 == 2 ){ char0 = milRom.repeat(2) }  // MM
-    else if( char0 == 3 ){ char0 = milRom.repeat(3) }  // MMM
+    else if( char0 == 1 ){ char0 = map.get('1000') }            // M
+    else if( char0 == 2 ){ char0 = map.get('1000').repeat(2) }  // MM
+    else if( char0 == 3 ){ char0 = map.get('1000').repeat(3) }  // MMM
 
     // Centenas: 0, 1, ..., 9
     if( char1 == 0 ){ char1 = "" }                                  // ""
-    else if( char1 >= 1 & char1 <= 3 ){ char1 = cienRom.repeat(char1) } // C, CC, CCC
-    else if( char1 == 4 ){ char1 = cienRom + quinientosRom }       // CD
-    else if( char1 == 5 ){ char1 = quinientosRom }                            // D
+    else if( char1 >= 1 & char1 <= 3 ){ char1 = map.get('100').repeat(char1) } // C, CC, CCC
+    else if( char1 == 4 ){ char1 = map.get('100') + map.get('500') }       // CD
+    else if( char1 == 5 ){ char1 = map.get('500') }                            // D
     else if( char1 >= 6 & char1 <= 8 ){ 
-        char1 = quinientosRom + cienRom.repeat(Number(char1) - 5)  // 6 DC, 7 DCC, 8 DCCC 
-    } else if ( char1 == 9 ){ char1 = cienRom + milRom }   // 9 CM
+        char1 = map.get('500') + map.get('100').repeat(Number(char1) - 5)  // 6 DC, 7 DCC, 8 DCCC 
+    } else if ( char1 == 9 ){ char1 = map.get('100') + map.get('1000') }   // 9 CM
 
     // Decenas: 0, 1 ... 9
     if( char2 == 0 ){ char2 = ""}
-    else if( char2 >= 1 & char2 <= 3 ){ char2 = diezRom.repeat(char2) }   // X, XX, XXX
-    else if( char2 == 4 ){ char2 = diezRom + cincuentaRom }               // XL
-    else if( char2 == 5 ){ char2 = cincuentaRom }                         // L
+    else if( char2 >= 1 & char2 <= 3 ){ char2 = map.get('10').repeat(char2) }   // X, XX, XXX
+    else if( char2 == 4 ){ char2 = map.get('10') + map.get('50') }               // XL
+    else if( char2 == 5 ){ char2 = map.get('50') }                         // L
     else if( char2 >= 6 & char2 <= 8 ){
-        char2 = cincuentaRom + diezRom.repeat(Number(char2) - 5)          // LX, LXX, LXXX
+        char2 = map.get('50') + map.get('10').repeat(Number(char2) - 5)          // LX, LXX, LXXX
     }
-    else if( char2 == 9 ){ char2 = diezRom + cienRom }                    // XC
+    else if( char2 == 9 ){ char2 = map.get('10') + map.get('100') }                    // XC
     
     // Unidades: 0, ... 9
     if( char3 == 0 ){ char3 = "" }
-    else if( char3 >= 1 & char3 <= 3 ){ char3 = unoRom.repeat(char3) }    // I, II, III
-    else if( char3 == 4 ){ char3 = unoRom + cincoRom }            // IV
-    else if( char3 == 5 ){ char3 = cincoRom }                               // V
+    else if( char3 >= 1 & char3 <= 3 ){ char3 = map.get('1').repeat(char3) }    // I, II, III
+    else if( char3 == 4 ){ char3 = map.get('1') + map.get('5') }            // IV
+    else if( char3 == 5 ){ char3 = map.get('5') }                               // V
     else if( char3 >= 6 & char3 <= 8){ 
-        char3 = cincoRom + unoRom.repeat( Number(char3) - 5 )     // VI, VII, VIII
+        char3 = map.get('5') + map.get('1').repeat( Number(char3) - 5 )     // VI, VII, VIII
     }
-    else if( char3 == 9 ){ char3 = unoRom + diezRom }           // IX
+    else if( char3 == 9 ){ char3 = map.get('1') + map.get('10') }           // IX
 
     // Si es 1, 5, 10, 50, 100, 500, 1000 -> simboloRomano(num)
     
     // Si es cualquier otro valor, ej. 4, 9... 
         // -> lógica para pedir 5 - 1 -> IV o 10 - 1 -> IX
     
-    return char0 + char1 + char2 + char3; // str como concatenación de estos chars
+    return char0; // str como concatenación de estos chars
 }
 
 //  Descomposición del número en sumandos 
