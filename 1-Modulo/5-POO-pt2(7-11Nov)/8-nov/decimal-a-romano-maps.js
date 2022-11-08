@@ -54,7 +54,7 @@ char = (num >= 0 && num <= 3) ? map.get(unidad).repeat(num) :                   
        (num >= 5 && num <= 8) ? map.get(String(5*unidad)) + map.get(unidad).repeat(Number(num) - 5) : // "D", "DC", "DCC", "DCCC"
        (num == 9)             ? map.get(unidad) + map.get(String(10*unidad)) : "" // "CM"
     } else {
-            char = (char >= 0 && char <= 3) ? map.get('1000').repeat(char) : ""
+            char = (num >= 0 && num <= 3) ? map.get('1000') .repeat(Number(num)) : ""
         }
         
     return char;    // 7*1 -> VII, 5*10 -> L, 4*100 -> CD, 2*1000 -> MM
@@ -95,7 +95,7 @@ function descomponer(num){
     */
 
     //         M  C  D  U
-    let arr = [0, 0, 0, 0];
+    // let arr = [0, 0, 0, 0];
 
     // Abordar casos en los que recibimos 1, 2, o 3 dígitos
         // Usando str.length determinamos si le faltan ceros al num
@@ -107,18 +107,13 @@ function descomponer(num){
          * 2. Asignamos a cada posición del array el caracter correspondiente
          *  2.5. Cambiamos el tipo a Number
          */
-    let numStr = String(num)
-     
-    let len = numStr.length // 1, 2, 3, 4
-    if( len === 1 )     { numStr = '000' + numStr }
-    else if( len === 2) { numStr = '00' + numStr }
-    else if( len === 3) { numStr = '0' + numStr }
+    let numStr = String(num), len = numStr.length // 1, 2, 3, 4
 
-    // Estas asignaciones funciona cuando son 4 dígitos
-    arr[0] = numStr[0]
-    arr[1] = numStr[1]
-    arr[2] = numStr[2]
-    arr[3] = numStr[3]
-
-    return arr;
+    // Ejercicio: concaternar 0s si hace falta para tener 4 chars
+numStr =  len === 1 ? '000' + numStr :
+          len === 2 ? '00' + numStr : 
+          len === 3 ? '0' + numStr : 
+          "" + numStr
+        
+    return [...numStr]; // arr de chars de numStr
 }
