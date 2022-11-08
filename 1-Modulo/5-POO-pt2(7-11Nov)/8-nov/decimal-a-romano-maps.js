@@ -43,6 +43,13 @@ function simboloRomano(num) {
     else { return NaN; }
 }
 
+function calcularChar(num, unidad) {
+    // op ternario
+        // num -> 0-9 // miles -> 0-3
+        // unidad -> 1, 10, 100, 1000 
+    return char;    // 7*1 -> VII, 5*10 -> L, 4*100 -> CD, 2*1000 -> MM
+}
+
 // Fn que procesa el array del número 
 // Recibe array de descomponer(num) -> [1, 9, 8, 9]
 // Devuelve string de caracteres
