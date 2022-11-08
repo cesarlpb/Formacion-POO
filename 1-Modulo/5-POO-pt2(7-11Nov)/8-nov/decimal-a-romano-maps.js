@@ -44,7 +44,7 @@ function simboloRomano(num) {
 }
 
 function calcularChar(num, unidad, map) {
-    // op ternario
+    // op ternario ? : 
         // Number num -> 0-9 // miles -> 0-3
         // str unidad -> 1, 10, 100, 1000 
         let char;
@@ -61,8 +61,8 @@ char = (num >= 0 && num <= 3) ? map.get(unidad).repeat(num) :                   
 }
 
 // Fn que procesa el array del número 
-// Recibe array de descomponer(num) -> [1, 9, 8, 9]
-// Devuelve string de caracteres
+    // Recibe array de descomponer(num) -> [1, 9, 8, 9]
+    // Devuelve string de caracteres
 function procesarArray(arr) {
     let [char0, char1, char2, char3] = [...arr]; // char0 -> miles | char1 -> centenas | char2 -> decenas | char3 -> unidades
     let map = new Map( Object.entries( {1:"I", 5:"V", 10: "X", 50: "L", 100: "C", 500: "D", 1000: "M"} ) )
@@ -84,36 +84,24 @@ return char0 + char1 + char2 + char3; // str como concatenación de estos chars
     Calcula los sumandos de un número determinado 
     -> 1, 10, 100, 1000   
 */
-// Ejercicio: refactorizar descomponer()
+
 function descomponer(num){
     /* Ejemplos de descomposición:
     2022 -> 2*1000 + 2*10 + 2*1 -> [M, C, X, I] -> [2, 0, 2, 2]
+    //       M  C  D  U
     1989 -> [1, 9, 8, 9] 
     147  -> [0, 1, 4, 7]
     65  ->  [0, 0, 6, 5]
     8   ->  [0, 0, 0, 8]
     */
-
-    //         M  C  D  U
-    // let arr = [0, 0, 0, 0];
-
-    // Abordar casos en los que recibimos 1, 2, o 3 dígitos
-        // Usando str.length determinamos si le faltan ceros al num
-            // añadimos los ceros a la izq
          
     // Algoritmo
         /* 0. Recibimos número num
-         * 1. Cambiamos a tipo string -> String(num)
-         * 2. Asignamos a cada posición del array el caracter correspondiente
-         *  2.5. Cambiamos el tipo a Number
+         * 1. Cambiamos a tipo string -> String(num) + tomamos longitud con length
+         * 2. Asignamos a cada posición del array el caracter correspondiente con ...
          */
     let numStr = String(num), len = numStr.length // 1, 2, 3, 4
-
-    // Ejercicio: concaternar 0s si hace falta para tener 4 chars
-numStr =  len === 1 ? '000' + numStr :
-          len === 2 ? '00' + numStr : 
-          len === 3 ? '0' + numStr : 
-          "" + numStr
+    numStr = '0'.repeat(4-len) + numStr           // Añadimos 0s a la izq hasta 4 dígitos
         
     return [...numStr]; // arr de chars de numStr
 }
