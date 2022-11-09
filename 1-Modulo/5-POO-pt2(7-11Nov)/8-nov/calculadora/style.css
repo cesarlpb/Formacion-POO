@@ -108,3 +108,8 @@ ul {
 #grid-item-2{
     grid-column: 2 / 3;
 }
+
+#form-container{
+    border: 1px solid black!important;
+    /*ej: reducir el anocho de los el hijos de este contenedor*/
+}
