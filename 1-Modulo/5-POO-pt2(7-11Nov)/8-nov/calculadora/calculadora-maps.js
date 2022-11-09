@@ -2,18 +2,17 @@
 
 function calc(){
     let numA = document.getElementById("myInputA").valueAsNumber, numB = document.getElementById("myInputB").valueAsNumber; // Number
-    // Tomar valores del select cuando se llame calc()
-    let operacionesSel = document.getElementById("operaciones") // select
-    let posicion = operacionesSel.options.selectedIndex         // índice seleccionado
+    let operacionesSel = document.getElementById("operaciones"), res = document.getElementById("resultados") // select y resultados
+    let pos = operacionesSel.options.selectedIndex; // índice seleccionado
     
     // Llamar a la fn seleccionada
         // posicion -> 0 es Suma, 1 es Resta ... 6 es Logaritmo 10
-    if( posicion === 0 )     {  escribirResultado(suma(numA, numB))     } 
-    else if( posicion === 1 ){  escribirResultado(resta(numA, numB))    } 
-    else if( posicion === 2 ){  escribirResultado(producto(numA, numB)) } 
-    else if( posicion === 3 ){  escribirResultado(division(numA, numB)) } 
-    else if( posicion === 4 ){  escribirResultado(raizCuadrada(numA))   } 
-    else if( posicion === 5 ){  escribirResultado(potencia(numA, numB)) }
+    if( pos === 0 )     {  res.innerText = (numA + numB) } 
+    else if( pos === 1 ){  escribirResultado(resta(numA, numB))    } 
+    else if( pos === 2 ){  escribirResultado(producto(numA, numB)) } 
+    else if( pos === 3 ){  escribirResultado(division(numA, numB)) } 
+    else if( pos === 4 ){  escribirResultado(raizCuadrada(numA))   } 
+    else if( pos === 5 ){  escribirResultado(potencia(numA, numB)) }
     else                     {  escribirResultado(log10(numA))          }
 }
 // Fn para escribir un dato en el textarea
