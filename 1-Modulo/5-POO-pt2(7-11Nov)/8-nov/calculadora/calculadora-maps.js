@@ -10,9 +10,9 @@ function calc(){
     if( pos === 0 )     {  res.innerText = (numA + numB) } 
     else if( pos === 1 ){  res.innerText = (numA - numB) } 
     else if( pos === 2 ){  res.innerText = (numA * numB) } 
-    else if( pos === 3 ){  res.innerText = ( () => {if( numB === 0 ){ alert("No se puede dividir por cero"); return NaN;} 
-                                                    else { return numA / numB } })(numA, numB) } 
-    else if( pos === 4 ){  res.innerText = (() => {if(numA < 0){alert("No se puede calcular la raíz de un número negativo"); return NaN;} 
+    else if( pos === 3 ){  res.innerText = (() => { return (numB === 0) ? (alert("No se puede dividir por cero"), NaN) : numA / numB })(numA, numB) } 
+    else if( pos === 4 ){  res.innerText = (() => { // Ej: poner los ternarios
+                                                   if(numA < 0){alert("No se puede calcular la raíz de un número negativo"); return NaN;} 
                                                    else { return Math.sqrt(numA)}})(numA)} 
     else if( pos === 5 ){  res.innerText = (() => {if(numA === 0 || numB === 0){alert("0 elevado a 0 es indeterminado!"); return NaN;} 
                                                    else {return Math.pow(numA, numB)}})(numA, numB)}
