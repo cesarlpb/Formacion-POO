@@ -8,9 +8,10 @@ function calc(){
     // Llamar a la fn seleccionada
         // posicion -> 0 es Suma, 1 es Resta ... 6 es Logaritmo 10
     if( pos === 0 )     {  res.innerText = (numA + numB) } 
-    else if( pos === 1 ){  escribirResultado(resta(numA, numB))    } 
-    else if( pos === 2 ){  escribirResultado(producto(numA, numB)) } 
-    else if( pos === 3 ){  escribirResultado(division(numA, numB)) } 
+    else if( pos === 1 ){  res.innerText = (numA - numB) } 
+    else if( pos === 2 ){  res.innerText = (numA * numB) } 
+    else if( pos === 3 ){  res.innerText = ( () => {if( numB === 0 ){ alert("No se puede dividir por cero"); return NaN;} 
+                                                    else { return numA / numB } })(numA, numB) } 
     else if( pos === 4 ){  escribirResultado(raizCuadrada(numA))   } 
     else if( pos === 5 ){  escribirResultado(potencia(numA, numB)) }
     else                     {  escribirResultado(log10(numA))          }
