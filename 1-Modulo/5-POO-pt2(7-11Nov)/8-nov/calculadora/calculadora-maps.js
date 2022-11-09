@@ -10,17 +10,21 @@ function calc(){
 
     // Idea: pasar a un Map con llaves Number y keys Funciones -> 0 => a+b // map.get(0)(a,b)
     // Ej: pasar estos if else a ternario
-    (pos === 0) ? "" : 
-    (pos === 1) ? ""  
-    : ""
+    (pos === 0) ? res.innerText = (numA + numB) : 
+    (pos === 1) ? res.innerText = (numA - numB) :
+    (pos === 2) ? res.innerText = (numA * numB) :
+    (pos === 3) ? res.innerText = (() => { return (numB === 0) ? (alert("No se puede dividir por cero"), NaN) : numA / numB })(numA, numB) :
+    (pos === 4) ? res.innerText = (() => { return (numA < 0) ? (alert("No se puede calcular la raíz de un número negativo"), NaN) : Math.sqrt(numA)})(numA) :
+    (pos === 5) ? res.innerText = (() => { return (numA === 0 || numB === 0) ? (alert("0 elevado a 0 es indeterminado!"), NaN) : Math.pow(numA, numB)})(numA, numB)  
+    : res.innerText = (() => { return (numA <= 0) ? (alert("No se puede calcular log10 de números no positivos!"), NaN) : Math.log10(numA)})(numA)
 
-    if( pos === 0 )     {  res.innerText = (numA + numB) } 
-    else if( pos === 1 ){  res.innerText = (numA - numB) } 
-    else if( pos === 2 ){  res.innerText = (numA * numB) } 
-    else if( pos === 3 ){  res.innerText = (() => { return (numB === 0) ? (alert("No se puede dividir por cero"), NaN) : numA / numB })(numA, numB) } 
-    else if( pos === 4 ){  res.innerText = (() => { return (numA < 0) ? (alert("No se puede calcular la raíz de un número negativo"), NaN) : Math.sqrt(numA)})(numA)} 
-    else if( pos === 5 ){  res.innerText = (() => { return (numA === 0 || numB === 0) ? (alert("0 elevado a 0 es indeterminado!"), NaN) : Math.pow(numA, numB)})(numA, numB)}
-    else                {  res.innerText = (() => { return (numA <= 0) ? (alert("No se puede calcular log10 de números no positivos!"), NaN) : Math.log10(numA)})(numA)}
+    // if( pos === 0 )     {  res.innerText = (numA + numB) } 
+    // else if( pos === 1 ){  res.innerText = (numA - numB) } 
+    // else if( pos === 2 ){  res.innerText = (numA * numB) } 
+    // else if( pos === 3 ){  res.innerText = (() => { return (numB === 0) ? (alert("No se puede dividir por cero"), NaN) : numA / numB })(numA, numB) } 
+    // else if( pos === 4 ){  res.innerText = (() => { return (numA < 0) ? (alert("No se puede calcular la raíz de un número negativo"), NaN) : Math.sqrt(numA)})(numA)} 
+    // else if( pos === 5 ){  res.innerText = (() => { return (numA === 0 || numB === 0) ? (alert("0 elevado a 0 es indeterminado!"), NaN) : Math.pow(numA, numB)})(numA, numB)}
+    // else                {  res.innerText = (() => { return (numA <= 0) ? (alert("No se puede calcular log10 de números no positivos!"), NaN) : Math.log10(numA)})(numA)}
 }
 // Fn para escribir un dato en el textarea
 function escribirResultado(num){
