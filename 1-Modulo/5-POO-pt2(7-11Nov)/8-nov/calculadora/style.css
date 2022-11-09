@@ -79,7 +79,8 @@ ul {
 #resultados-div {
     background-color: rgb(233, 229, 229)!important;
     color: black;
-    /* max-height: 1.5em; */
+    margin: 15px auto!important;
+    padding: 15px 0!important;
 }
 /* <div> */
 #resultados {
@@ -94,7 +95,16 @@ ul {
 #calc-container{
     display: grid;
     padding: 15px 5px;
+    grid-template-columns: 1fr 350px 1fr;
+    grid-template-rows: 75px 1fr;
     justify-content: center;
     align-content: center;
     border: 1px solid black; /*borrar*/
+}
+#grid-item-1{
+    flex-wrap: wrap;
+    grid-column: 2 / 3;
+}
+#grid-item-2{
+    grid-column: 2 / 3;
 }
