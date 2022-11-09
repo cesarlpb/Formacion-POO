@@ -12,9 +12,12 @@ function calc(){
     else if( pos === 2 ){  res.innerText = (numA * numB) } 
     else if( pos === 3 ){  res.innerText = ( () => {if( numB === 0 ){ alert("No se puede dividir por cero"); return NaN;} 
                                                     else { return numA / numB } })(numA, numB) } 
-    else if( pos === 4 ){  escribirResultado(raizCuadrada(numA))   } 
-    else if( pos === 5 ){  escribirResultado(potencia(numA, numB)) }
-    else                     {  escribirResultado(log10(numA))          }
+    else if( pos === 4 ){  res.innerText = (() => {if(numA < 0){alert("No se puede calcular la raíz de un número negativo"); return NaN;} 
+                                                   else { return Math.sqrt(numA)}})(numA)} 
+    else if( pos === 5 ){  res.innerText = (() => {if(numA === 0 || numB === 0){alert("0 elevado a 0 es indeterminado!"); return NaN;} 
+                                                   else {return Math.pow(numA, numB)}})(numA, numB)}
+    else                {  res.innerText = (() => {if(numA <= 0){alert("No se puede calcular log10 de números no positivos!"); return NaN;} 
+                                                   else { return Math.log10(numA)}})(numA)}
 }
 // Fn para escribir un dato en el textarea
 function escribirResultado(num){
