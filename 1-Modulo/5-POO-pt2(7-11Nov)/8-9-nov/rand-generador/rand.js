@@ -12,3 +12,14 @@ function generarRands(n){
     }
     return arr;
 }
+function generarRands2(n, max){
+    let arr = [];
+    for(let i = 1; i<=n; i++){
+        arr.push(Math.floor(Math.random()*max))
+    }
+    return arr;
+}
+// Ej: evitar la repetición
+    // - Sin Set
+    // - Con Set
+// Ej: vamos a cambiar esta función a arrow
