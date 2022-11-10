@@ -25,3 +25,9 @@
 #contact > div {
     max-width: 600px;
 }
+
+/* Proyectos */
+#see-more-btn{
+    min-width: 250px;
+    max-width: 325px;
+}
