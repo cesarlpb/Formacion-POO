@@ -243,237 +243,238 @@
             </button>
           </div>
       
-        <hr>
-        
-        <div id="see-more-btn" class="row col-3 col-md-4 col-sm my-5 mx-auto">
-          <a href="#proyectos" class="btn btn-success px-2 py-2 mx-auto">Ver todos los proyectos</a>
+        <!-- Toggler -->
+        <div class="border bg bg-light">
+          <div class="container">
+            <div id="see-more-btn" class="row col-3 col-md-4 col-sm my-5 mx-auto">
+              <!-- Recolocar estos elementos -->
+              <!-- Ej. Cambiar el formulario por botón de enviar mail + texto + foto -->
+                <h3>Mis Proyectos</h3>
+                <p class="lead">Los proyectos que he realizado en 2022.</p>
+                <a href="#see-more-btn" class="btn btn-success px-2 py-2 mx-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Mostrar proyectos">
+                Ver todos los proyectos</a>
+            </div>
+          </div>
         </div>
-
-        <!-- Ej. Colocar zona desplegable hacia abajo y usar el botón que ya tenemos -->
+        <!-- Área colapsable del toggler -> 9 proyectos -->
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-light p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div>
-        <div class="navbar border bg bg-light">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              <a href="#">Botón</a>
-            </button>
-          </div>
-        </div>
 
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-5 py-5">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 align-items-center g-5 py-5">
           
-          <!-- Proyecto 1 -->
-          <div id="proyecto-1" class="col mb-5">
+              <!-- Proyecto 1 -->
+              <div id="proyecto-1" class="col mb-5">
+                  <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 1</h3>
+                      <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                          <li class="d-flex me-2">
+                              <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                          </li>
+                          <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                              HTML
+                          </li>
+                          <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                              CSS
+                          </li>
+                      </ul>
+                  </div>
+                  </div>
+                  <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
+                      <a href="" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a>
+                  </div>
+                  
+              </div>
+    
+              <!-- Proyecto 2 -->
+              <div id="proyecto-2" class="col mb-5">
               <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 1</h3>
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 2</h3>
                   <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                      <li class="d-flex me-2">
-                          <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                      <li class="d-flex me-1">
+                      <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                       </li>
-                      <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
-                          HTML
+                      <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                          JS
                       </li>
-                      <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
-                          CSS
+                      <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                          Bootstrap
                       </li>
                   </ul>
+                  </div>
               </div>
+                  <div class="row project-btn col-6 my-3 mx-auto">
+                      <a href="" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a>
+                  </div>
               </div>
-              <div class="row col-6 my-3 mx-auto">
-                  <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a>
+        
+              <!-- Proyecto 3 -->
+              <div id="proyecto-3" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 3</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="row col-6 my-3 mx-auto">
+                    <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 3</a>
+                </div>
               </div>
-              
-          </div>
-
-          <!-- Proyecto 2 -->
-          <div id="proyecto-2" class="col mb-5">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 2</h3>
-              <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                  <li class="d-flex me-1">
-                  <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                  </li>
-                  <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                      JS
-                  </li>
-                  <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                      Bootstrap
-                  </li>
-              </ul>
-              </div>
-          </div>
-              <div class="row col-6 my-3 mx-auto">
-                  <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a>
-              </div>
-          </div>
     
-          <!-- Proyecto 3 -->
-          <div id="proyecto-3" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 3</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
+              <!-- Proyecto 4 -->
+              <div id="proyecto-4" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 4</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
                 </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 4</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 5 -->
+              <div id="proyecto-5" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 5</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 5</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 6 -->
+              <div id="proyecto-6" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 6</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 6</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 7 -->
+              <div id="proyecto-7" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 7</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 7</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 8 -->
+              <div id="proyecto-8" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 8</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 8</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 9 -->
+              <div id="proyecto-9" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 9</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 9</a>
+                    </div>
+              </div>
+    
             </div>
-            <div class="row col-6 my-3 mx-auto">
-                <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 3</a>
-            </div>
+            
           </div>
-
-          <!-- Proyecto 4 -->
-          <div id="proyecto-4" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 4</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 4</a>
-                </div>
-          </div>
-
-          <!-- Proyecto 5 -->
-          <div id="proyecto-5" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 5</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 5</a>
-                </div>
-          </div>
-
-          <!-- Proyecto 6 -->
-          <div id="proyecto-6" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 6</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 6</a>
-                </div>
-          </div>
-
-          <!-- Proyecto 7 -->
-          <div id="proyecto-7" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 7</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 7</a>
-                </div>
-          </div>
-
-          <!-- Proyecto 8 -->
-          <div id="proyecto-8" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 8</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 8</a>
-                </div>
-          </div>
-
-          <!-- Proyecto 9 -->
-          <div id="proyecto-9" class="col mb-5">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 9</h3>
-                <ul class="d-flex list-unstyled mt-auto justify-content-around">
-                    <li class="d-flex me-1">
-                    <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        SASS
-                    </li>
-                    <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
-                        JQuery
-                    </li>
-                </ul>
-                </div>
-            </div>
-                <div class="row col-6 my-3 mx-auto">
-                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 9</a>
-                </div>
-          </div>
-
         </div>
 
       </div>
