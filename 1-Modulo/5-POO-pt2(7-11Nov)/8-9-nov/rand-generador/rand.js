@@ -58,9 +58,21 @@ function generarRandsConSet(n, max){
     }
     return Array.from(set);
 }
-
-// Ej: vamos a cambiar esta función a arrow
-
+// Versión de generarRandConSet() usando arrow y ternario
+const fun = (n, max) => {
+    let set = new Set(), contador = 0;
+    while( contador < n ){
+        set.add(Math.ceil(Math.random()*max));
+        set.size > contador ? contador++ : null;
+    }
+    return Array.from(set);
+}
+// Notas y promedios
+const notas = fun(20, 10);
 // Ej: función para promediar notas -> recibe arr y calcula num
+function promediarNotas(arr){
+    //
+    return nota;
+}
     // promedio de notas con pesos -> pasamos notas y pesos (dos arr) -> salida: nota
 // Ej: recibe segundo param para colocar (1, 2) decimales -> string
