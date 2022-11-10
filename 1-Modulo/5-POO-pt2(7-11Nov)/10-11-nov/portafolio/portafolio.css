@@ -20,3 +20,8 @@
 #container-divs{
     min-height: 300px;
 }
+
+/* Contacto */
+#contact > div {
+    max-width: 600px;
+}
