@@ -105,5 +105,12 @@ function promediarNotasConPesos(notasArr, pesos){
     })
     return Number((media / pesoTotal).toFixed(2));
 }
-
-// Ej: recibe segundo param para colocar (1, 2) decimales -> string
+// Agregamos param para determinar toFixed(param)
+const fun4 = (notasArr, pesos, decimales) => {
+    let media = 0, pesoTotal = 0;
+    notasArr.forEach((v,k)=>{
+        media += v * pesos[k];
+        pesoTotal += pesos[k];
+    })
+    return Number((media / pesoTotal).toFixed(decimales)); // devuelve Number
+}
