@@ -19,7 +19,42 @@ function generarRands2(n, max){
     }
     return arr;
 }
-// Ej: evitar la repetición
-    // - Sin Set
-    // - Con Set
+// Sin que se puedan repetir datos, sin Set -> con bucle for y sin arr.contains()
+function generarRandsSinSet(n, max){
+    let arr = [], num = 0, contador = 0; estaEnArray = false;
+    while( contador < n ){
+        num = Math.round(Math.random()*max);
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] === num){ estaEnArray = true;}
+        }
+        if(!estaEnArray){ 
+            arr.push(num); 
+            contador++; 
+        }
+        estaEnArray = false;
+    }
+    return arr;
+}
+// Sin Set y usando arr.includes()
+function generarRandsSinSet2(n, max){
+    let arr = [], num = 0, contador = 0;
+    while( contador < n ){
+        num = Math.ceil(Math.random()*max);
+        if(arr.includes(num) == false){ 
+            arr.push(num); 
+            contador++; 
+        }
+    }
+    return arr;
+}
+function generarRandsConSet(n, max){
+    let set = new Set(), contador = 0;
+    while( contador < n ){
+        num = Math.ceil(Math.random()*max);
+        set.add(num);
+        if(set.size > contador){ contador++; }
+    }
+    return Array.from(set);
+}
+
 // Ej: vamos a cambiar esta función a arrow
