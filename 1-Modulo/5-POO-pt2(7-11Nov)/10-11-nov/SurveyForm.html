@@ -1,0 +1,75 @@
+<!-- 
+Ejercicio 1 de la Certificacion en FreeCodeCamp
+de (New) Responsive Web Design
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1 id="title">Encuesta de Prueba</h1>
+<p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
+
+<form id="survey-form">
+  
+  
+<label for="name" id="name-label">Nombre: *</label><br>
+<input id="name" type="text" value="" placeholder="Nombre Apellido" required>
+  
+<br>
+
+<label for="email" id="email-label">Tu Email: *</label><br>
+<input id="email" name="nombre" value="" type="email" placeholder="email@dominio.com" required>
+
+<br>  
+<br>
+
+<label id="number-label">Edad: *</label>
+<input id="number" type="number" min="1" max="200" step="1" placeholder="30" required>
+
+<br>
+<br>
+<!-- Dropdown o menu desplegable -->
+<label>Lenguaje de programación favorito:</label><br>
+<select id="dropdown">
+  <option>Javascript</option>
+  <option selected>Python</option>
+  <option disabled>Serpent</option>
+  <option>C++</option>
+  <option>C</option>
+</select>
+
+<br>
+<br>
+<!-- Radio buttons -->
+<label>¿Has usado VS Code alguna vez?</label><br>
+<input type="radio" name="vs-code" value="si"><label>Sí</label><br>
+<input type="radio" name="vs-code" value="no"><label>No</label><br>
+<input type="radio" name="vs-code" value="otro"><label>No lo sé</label>
+
+<br>
+<br>
+<!-- Checkboxes -->
+<label>¿Estás aprendiendo HTML?</label><br>
+<input type="checkbox" value="si"><label>Sí<label><br>
+<input type="checkbox" value="no"><label>No<label><br>
+<input type="checkbox" value="maybe"><label>Es posible<label>  
+  
+<br>
+<br>
+<label>comments<label><br>
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+Déjanos tus comentarios...
+</textarea>
+
+<br>
+<br>
+<input type="submit" id="submit" value="Envía tu formulario">
+</form>
+
+<body>
+</html>

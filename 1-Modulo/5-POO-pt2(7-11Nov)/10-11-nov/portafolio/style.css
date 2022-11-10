@@ -1,0 +1,22 @@
+/* Hoja de estilos para personalizar elementos */
+
+/* xs, sm */
+@media screen and (max-width: 768px){
+    .myDiv {
+        border: 2px dashed black;
+    }
+}
+
+/* md, lg, xl, xxl */
+@media screen and (min-width: 768px){
+    .myDiv {
+        display: inline-block;
+        width: 30%;
+        margin: 0 auto;
+        color: red;
+    }
+} 
+
+#container-divs{
+    min-height: 300px;
+}

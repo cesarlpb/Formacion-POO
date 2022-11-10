@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio</title>
+    <link rel="icon" href="favicon.png"> <!-- Colocad PNG con transparencia -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="bi me-2" src="img/logo-white.png" width="40" alt="logo">
+                <span>César Patiño</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
+                <li class="nav-item mx-5">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a class="nav-link" href="#about-me">Acerca de</a>
+                  </li>
+                <li class="nav-item mx-5">
+                  <a class="nav-link" href="#portfolio">Portafolio</a>
+                </li>
+                <li class="nav-item mx-5">
+                  <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <!-- Banner o Hero banner o Slider -->
+    <section id="hero-banner">
+        <div class="container col-xxl-8 px-4 py-5 border-bottom">
+            <div class="row flex-lg-row align-items-center g-5 pt-5 pb-2">
+                <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 my-3">Portafolio de César Patiño</h1>
+                <p class="lead my-5">El diseño web es una forma de arte digital en el mundo contemporáneo.</p>
+
+                <div class="justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-md px-md-2 me-md-2">Ver proyectos</button>
+                    <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
+                </div>
+                </div>
+                <div class="col-10 col-sm-10 col-lg-6 mx-auto">
+                    <img src="img/hero-banner.png" class="d-block mx-lg-auto img-fluid rounded" alt="hero-banner" width="700" height="500" loading="lazy">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- About me ? -->
+    <section id="about-me">
+        <div class="container py-5">
+            <div class="row justify-content-center pb-5 px-3 border-bottom">
+                <div class="col-10 col-sm-10 col-lg-6 mb-5 py-2">
+                    <img class="d-block mx-auto img-fluid rounded" src="img/avatar.png" width="300" alt="avatar">
+                </div>
+                <div class="col-sm-8 col-lg-6 col-xl-4 text-end">
+                    <h2 class="pb-3 display-5">Acerca de mí</h2>
+                    <p class="lead fw-bold fs-4">Desarrollador full-stack</p>
+                    <p class="lead">Llevo más de una década creando web con diversas tecnologías.</p>
+                    <p class="lead">He utilizado varios frameworks de PHP y C#, como Laravel, CodeIgniter, .NET, etc. </p>
+                    <p class="lead">Más reciemtemente, uso React JS y TS con Next para hacer páginas web.</p>
+                </div>
+                <p class="text-center mt-3 lead fw-bold fs-4">Tecnologías que he usado:</p>
+                <div class="col-8 mt-2 py-2 d-flex flex-wrap justify-content-around">
+                    <span class="my-1 badge text-bg-primary">HTML 5</span>
+                    <span class="my-1 badge text-bg-primary">CSS 3</span>
+                    <span class="my-1 badge text-bg-warning">JS</span>
+                    <span class="my-1 badge text-bg-success">SQL</span>
+                    <span class="my-1 badge text-bg-info">SASS</span>
+                    <span class="my-1 badge text-bg-info">Typescript</span>
+                    <span class="my-1 badge text-bg-primary">Python</span>
+                    <span class="my-1 badge text-bg-info">React</span>
+                    <span class="my-1 badge text-bg-success">.Net</span>
+                    <span class="my-1 badge text-bg-info">C#</span>
+                    <span class="my-1 badge bg bg-dark text-light">PHP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cols o Divs o Grid -> Proyectos -->
+    <section id="portfolio">
+        <div class="container px-4 pt-0 pb-5 border-bottom" id="custom-cards">
+            <h2 class="pb-2">Proyectos</h2>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+              
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 1</h3>
+                        <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                            <li class="d-flex me-2">
+                                <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                                HTML
+                            </li>
+                            <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                                CSS
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a>
+                    </div>
+                    
+                </div>
+        
+                <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 2</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            Bootstrap
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a>
+                    </div>
+                </div>
+        
+                <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 3</h3>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 3</a>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+    </section>
+    <!-- Contacto (form) -->
+    <section id="contact">
+        <div class="container col-4 col-sm-6 py-3 mt-3">
+            <form>
+                <h2 class="h3 mb-3 display-6 fw-normal">Contacto</h2>
+            
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="floatingInput1" placeholder="John Doe">
+                    <label for="floatingInput1">Nombre</label>
+                  </div>
+                <div class="form-floating my-3">
+                  <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                  <label for="floatingInput2">Email</label>
+                </div>
+                <form class="form-floating my-3">
+                    <input type="email" class="form-control" id="floatingInput3" placeholder="Escribe aquí tu mensaje..." value="">
+                    <label for="floatingInput3">Escribe tu mensaje aquí:</label>
+                  </form>
+            
+                <div class="checkbox mb-3 my-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Acepto los <a href="#">términos y condiciones</a>.
+                  </label>
+                </div>
+                <button class="w-20 btn btn-lg btn-primary my-3" type="submit">Enviar</button>
+                <p class="mt-5 mb-3 text-muted">© César Patiño 2022</p>
+              </form>
+        </div>
+        
+    </section>
+    <!-- Footer -->
+    <div class="container-fluid bg bg-dark py-3">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 mt-4">
+            <a href="#" class="nav-link px-5">
+                <img class="bi me-2" src="img/logo-white.png" width="40" alt="logo">
+                <span class="col-md-4 mb-0 text-muted">© 2022 César Patiño</span>
+            </a>
+      
+          <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm text-end">Diseño de páginas web a medida con diversos frameworks. Desarrollo Full-stack de platarformas web.</p>
+      
+          <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3 pt-2 border-top border-secondary">
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#about-me" class="nav-link px-2 text-muted">Acerca de</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#portfolio" class="nav-link px-2 text-muted">Portafolio</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#contact" class="nav-link px-2 text-muted">Contacto</a></li>
+          </ul>
+          <!-- Redes sociales -->
+          <!-- <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3">
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+          </ul> -->
+        </footer>
+      </div>
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Si vamos a usar Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
+  </body>
+</html>

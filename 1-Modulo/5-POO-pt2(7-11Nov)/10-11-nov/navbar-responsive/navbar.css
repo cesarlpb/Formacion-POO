@@ -1,0 +1,84 @@
+/* Hoja de estilos del Navbar Responsive */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: rgb(50, 50, 50); 
+}
+/* 
+    #menu para colocar el navbar en la página
+        #menu-items para estilar el bloque que contiene los enlaces
+            .menu-item para dar estilo a los enlaces
+        #bg-image para colocar una imagen de fondo
+*/
+#menu {
+    color: white;
+    border: 1px solid white;
+    width: 100vw;
+    height: 100vh;
+    /* Centrado */
+    /* text-align: center;
+    margin: 0 auto; */
+
+    /* Centrado con flex box */
+    display: flex;
+    
+    /* Vertical */
+    /*  Arriba -> flex-start
+        Abajo ->  flex-end
+    */
+    align-items: center;
+
+    /* Horizontal */
+    /*
+        Izq -> flex-start
+        Der -> flex-end
+    */
+    /*justify-content: center;*/
+    /* Centrado en ambos: center */
+}
+#menu-items {
+    border: 1px dashed lightgray;
+    margin-left: 15vw;
+    position: relative;
+    z-index: 2;
+}
+#menu-items a {
+    padding: 0 10vw;
+    font-weight: 600;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    z-index: 999;
+}
+.menu-item {
+    border: 1px solid green;
+    padding: 5vh 0;
+    margin: 2vh 0;
+}
+#dot-pattern {
+    background-image: white; /* radial gradient ? */
+    background-position: 0% 0%;
+    left: 0px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    
+}
+#bg-image {
+    border: 1px dotted red;
+    background-image: url(bg-5.jpeg);
+    background-position: center left;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    opacity: 0.5;
+    transition: none; /* animación */
+    width: 100vw;
+    z-index: -99;
+}
+
