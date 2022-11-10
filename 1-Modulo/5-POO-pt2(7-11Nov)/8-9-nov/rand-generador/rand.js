@@ -68,11 +68,42 @@ const fun = (n, max) => {
     return Array.from(set);
 }
 // Notas y promedios
-const notas = fun(20, 10);
+// Genera números aleatorios con 2 decimales
+const fun2 = (n, max) => {
+    let set = new Set(), contador = 0;
+    while( contador < n ){
+        set.add( Number((Math.random()*max).toFixed(2)) );
+        set.size > contador ? contador++ : null;
+    }
+    return Array.from(set); // arr de Numbers
+}
+const notas = fun2(20, 10);
 // Ej: función para promediar notas -> recibe arr y calcula num
 function promediarNotas(arr){
-    //
-    return nota;
+    let suma = 0; 
+    arr.forEach(v => suma += v);
+    return Number((suma / arr.length).toFixed(2));
 }
-    // promedio de notas con pesos -> pasamos notas y pesos (dos arr) -> salida: nota
+// Promedio de notas con pesos -> pasamos notas y pesos (dos arr) -> salida: nota
+const fun3 = (n, maxPeso) => {
+    let arr = [], contador = 0;
+    while( contador < n ){
+        arr.push( Math.ceil(Math.random()*maxPeso) );
+        contador++;
+    }
+    return arr; // arr de Numbers
+}
+const pesos1 = fun3(20, 1)
+const pesos2 = fun3(20, 2)
+const pesos3 = fun3(20, 3)
+
+function promediarNotasConPesos(notasArr, pesos){
+    let media = 0, pesoTotal = 0;
+    notasArr.forEach((v,k)=>{
+        media += v * pesos[k]
+        pesoTotal += pesos[k]
+    })
+    return Number((media / pesoTotal).toFixed(2));
+}
+
 // Ej: recibe segundo param para colocar (1, 2) decimales -> string
