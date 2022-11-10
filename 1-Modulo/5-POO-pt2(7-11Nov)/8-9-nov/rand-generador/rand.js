@@ -3,6 +3,7 @@
 *  - Aceptamos param para calcular N preguntas
 */
 
+// Genera n rands
 function generarRands(n){
     let arr = [];
     for(let i = 1; i <= n; i++){
@@ -12,6 +13,7 @@ function generarRands(n){
     }
     return arr;
 }
+// Recibe segundo param para acotar máximo
 function generarRands2(n, max){
     let arr = [];
     for(let i = 1; i<=n; i++){
@@ -58,3 +60,7 @@ function generarRandsConSet(n, max){
 }
 
 // Ej: vamos a cambiar esta función a arrow
+
+// Ej: función para promediar notas -> recibe arr y calcula num
+    // promedio de notas con pesos -> pasamos notas y pesos (dos arr) -> salida: nota
+// Ej: recibe segundo param para colocar (1, 2) decimales -> string
