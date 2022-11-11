@@ -8,7 +8,10 @@ body{
     background-color: rgba(81, 90, 160, 0.7);
     color: white;
   }
-  
+  hr{
+    margin: 30px auto;
+    width: 80%;
+  }
   /* Navbar */
   #li-right{
     margin-left: auto;
@@ -21,6 +24,39 @@ body{
    border: none;
    padding: 0 5px;
   }
+  #name, #email, #number {
+    width: 50%;
+  }
+  #comments {
+    width: 80%;
+    min-height: 200px;
+  }
+  /* #radio-1, #radio-2, #radio-3 {} */
+
+  /* Checkboxes */
+  /* .check-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .form-check{
+    display: block;
+  }
+  #label-1, #label-2, #label-3, 
+  #label-4, #label-5, #label-6 {
+    display: inline-block;
+    padding: 0;
+    padding-left: 3px;
+    margin: 0;
+    margin-top: 3px;
+    line-height: 1rem;
+    max-height: 1rem;
+  }
+  #check-1, #check-2, #check3 {
+    align-self: center;
+
+  }
+
   #survey-form {
     border: 3px solid rgba(81, 90, 160, 0.9);
     border-radius: 20px;
@@ -46,10 +82,18 @@ body{
   }
   form{
     margin: 0 auto;
-    min-width: 400px;
+    min-width: 300px;
     width: 70vw;
     max-width: 500px;
-    border: 0px solid black;
+    /* border: 0px solid black; */
+  }
+  @media (max-width: 400px){
+    #survey-form{
+      border: 0;
+    }
+    #form-container{
+      padding: 0;
+    }
   }
   select{
     display: block;
@@ -85,10 +129,10 @@ body{
     margin: 10px auto;
   }
   /* Corrección radio buttons */
-  input[type="radio"], input[type="checkbox"]{
+  /* input[type="radio"], input[type="checkbox"]{
     width: 20%;
     display: inline-block;
-  }
+  } */
   .label-inline{
     display: inline-block;
     width: 80%;
