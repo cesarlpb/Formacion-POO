@@ -1,0 +1,142 @@
+/* Hoja de estilos para aplicar Flex box y Grid en Ejercicios - Calculadora */
+
+/*** General ***/
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+/***************/
+
+/*** Calculadora con botones  - #calc-container children ***/
+#operadores, #asignacion, #tipos {
+    font-family: 'Open Sans', sans-serif;
+}
+#calc-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: lightgray;
+}
+#calc-container p,
+#calc-container input,
+#calc-container select,
+#calc-btn {
+    display: block;
+    margin: 10px auto;
+    width: 95%;
+    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    padding: 3px 0;
+    text-align: center;
+}
+#calc-container input {
+    padding: 0;
+}
+#calc-container textarea {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+} 
+#calc-container > div {
+    display: block;
+    width: 95%;
+    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    text-align: center;
+    max-width: 50vw;
+    padding: 15px 5px;
+    margin: 0 auto;
+    background-color: rgba(222, 184, 135, 0.865);
+    border: 2px solid brown;
+    border-radius: 10px;
+}
+#calc-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: white;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px auto 10px;
+}
+#resultados-div {
+    display: block;
+    width: 95%;
+    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    text-align: center;
+    max-width: 50vw;
+    border: 2px solid brown;
+    border-radius: 10px;
+    background-color: rgb(233, 229, 229);
+    color: black;
+    margin: 15px auto;
+    padding: 15px 0;
+}
+/* <div> */
+#resultados {
+    font-size: 3em;
+    display: inline-block;
+    align-self: center;
+}
+/******************/
+    /* Grid */
+/******************/
+/* #calc-container - parent */
+#calc-container{
+    display: grid;
+    padding: 15px 5px;
+    grid-template-columns: 1fr 350px 1fr;
+    grid-template-rows: 75px 1fr;
+    justify-content: center;
+    align-content: center;
+}
+#grid-item-1{
+    flex-wrap: wrap;
+    grid-column: 2 / 3;
+}
+#grid-item-2{
+    grid-column: 2 / 3;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid brown;
+    background-color: rgb(233, 229, 229);
+    width: 90%;
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+  
+#form-container input, 
+#form-container select, 
+#form-container button {
+    width: 70%;
+}
+#form-container label {
+    width: 80%;
+}

@@ -1,0 +1,140 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+/****************************************/
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#operadores, #asignacion, #tipos {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#conversor-container {
+    display: flex;
+    justify-content: space-around;
+}
+#conversor-container div {
+    border: 2px solid brown;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Calculadora con botones */
+#conversor-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#conversor-container code {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    background-color: lightgray;
+}
+/* #resultados-wrapper */
+#conversor-container div {
+    width: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(222, 184, 135, 0.865);
+}
+#conversor-container p,
+#conversor-container div,
+#conversor-container input,
+#conversor-container select,
+#conversor-btn {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    min-height: 1.25em; /* cambiado a 1.25em para mejor centrado del <p> */
+    padding: 3px 0;
+    text-align: center;
+}
+#conversor-container label {
+    padding: 10px 0;
+    display: block;
+    margin: 30px 0 10px;
+}
+#conversor-container input {
+    padding: 5px 0;
+    font-size: 1em;
+    width: 50%;
+}
+#conversor-container textarea {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+#conversor-container, 
+#conversor-container div {
+    padding: 15px 5px;
+}
+#conversor-btn {
+    background-color: rgba(33, 33, 164, 0.89);
+    color: white;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+    margin: 50px auto 10px;
+}
+#resultados-div {
+    background-color: rgb(233, 229, 229)!important;
+    color: black;
+}
+
+/* <p> */
+#resultados {
+    font-size: 3em;
+    display: inline-block;
+    align-self: center;
+}
+
+/* Media Query */
+
+@media (width > 800px){
+    #conversor-container div {
+        max-width: 450px;
+        padding: 15px;
+    }
+}
+@media (width < 800px){
+    #resultados {
+        font-size: 2em;
+    }
+}
