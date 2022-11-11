@@ -16,6 +16,29 @@ de (New) Responsive Web Design
      Footer similar al de portafolio
 -->
 <body>
+<!-- Navbar -->
+<header>
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="bi me-2" src="./img/logo-white.png" width="40" alt="logo">
+            <span>César Patiño</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
+            <li class="nav-item mx-5">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
 <h1 id="title">Survey Form</h1>
 <p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
 
@@ -76,5 +99,23 @@ Déjanos tus comentarios...
 <input type="submit" id="submit" value="Envía tu formulario">
 </form>
 
+<!-- Footer -->
+    <!-- Ej. Expandir footer en lateral y quitamos toggler -->
+<div class="container-fluid bg bg-dark pt-3 pb-5">
+        
+  <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
+      
+    <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+      <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Inicio</a></li>
+    </ul>
+
+    <a href="#" id="logo" class="nav-link px-5 mx-auto">
+      <img class="bi me-2" src="./img/logo-white.png" width="40" alt="logo">
+      <span class="col-md-4 mb-0 text-muted">© 2022 César Patiño</span>
+    </a>
+
+    <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm mx-auto">Diseño de páginas web a medida con diversos frameworks. Desarrollo Full-stack de platarformas web.</p>
+  </footer>
+</div>
 <body>
 </html>
