@@ -13,6 +13,9 @@
 .project-btn {
     min-width: 200px;
 }
+.card.card-cover {
+    background-image: url('./assets/img/dark-3.png');
+}
 
 /* Footer */
 footer .nav-link {
