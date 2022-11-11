@@ -10,6 +10,8 @@ de (New) Responsive Web Design
   <title>Survey Form</title>
   <link rel="icon" href="../../favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Fontawesome v5 -->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="stylesheet" href="./css/survey-form.css">
 </head>
 <!-- Ej. Añadir navbar que devuelva a la página principal (portafolio.html) sin target blank
@@ -19,94 +21,91 @@ de (New) Responsive Web Design
 <!-- Navbar -->
 <header>
   <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img class="bi me-2" src="./img/logo-white.png" width="40" alt="logo">
-            <span>César Patiño</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
-            <li class="nav-item mx-5">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="navbar navbar-dark fixed-top bg-dark py-2">
+      <a class="navbar-brand px-5 col-4"  href="#">
+          <img class="bi me-2" src="./img/logo-white.png" width="40" alt="logo">
+          <span>César Patiño</span>
+      </a>
+      <ul class="navbar-nav mb-2 mb-md-0 ml-auto mr-0 px-5 col-4">
+        <li class="nav-item mx-5 col-6 text-center" style="min-width: 150px;">
+          <a href="./../../portafolio.html" class="nav-link px-4 py-2 border border-secondary rounded text-muted">
+            <i class="fas fa-arrow-left"></i>&nbsp;Portafolio</a>
+        </li>
+      </ul>
     </nav>
 </header>
 
-<h1 id="title">Survey Form</h1>
-<p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
-
-<form id="survey-form">
+<div class="container">
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
   
+  <form id="survey-form">
+    
+    
+  <label for="name" id="name-label">Nombre: *</label><br>
+  <input id="name" type="text" value="" placeholder="Nombre Apellido" required>
+    
+  <br>
   
-<label for="name" id="name-label">Nombre: *</label><br>
-<input id="name" type="text" value="" placeholder="Nombre Apellido" required>
+  <label for="email" id="email-label">Tu Email: *</label><br>
+  <input id="email" name="nombre" value="" type="email" placeholder="email@dominio.com" required>
   
-<br>
-
-<label for="email" id="email-label">Tu Email: *</label><br>
-<input id="email" name="nombre" value="" type="email" placeholder="email@dominio.com" required>
-
-<br>  
-<br>
-
-<label id="number-label">Edad: *</label>
-<input id="number" type="number" min="1" max="200" step="1" placeholder="30" required>
-
-<br>
-<br>
-<!-- Dropdown o menu desplegable -->
-<label>Lenguaje de programación favorito:</label><br>
-<select id="dropdown">
-  <option>Javascript</option>
-  <option selected>Python</option>
-  <option disabled>Serpent</option>
-  <option>C++</option>
-  <option>C</option>
-</select>
-
-<br>
-<br>
-<!-- Radio buttons -->
-<label>¿Has usado VS Code alguna vez?</label><br>
-<input type="radio" name="vs-code" value="si"><label>Sí</label><br>
-<input type="radio" name="vs-code" value="no"><label>No</label><br>
-<input type="radio" name="vs-code" value="otro"><label>No lo sé</label>
-
-<br>
-<br>
-<!-- Checkboxes -->
-<label>¿Estás aprendiendo HTML?</label><br>
-<input type="checkbox" value="si"><label>Sí<label><br>
-<input type="checkbox" value="no"><label>No<label><br>
-<input type="checkbox" value="maybe"><label>Es posible<label>  
+  <br>  
+  <br>
   
-<br>
-<br>
-<label>comments<label><br>
-<textarea id="w3review" name="w3review" rows="4" cols="50">
-Déjanos tus comentarios...
-</textarea>
-
-<br>
-<br>
-<input type="submit" id="submit" value="Envía tu formulario">
-</form>
+  <label id="number-label">Edad: *</label>
+  <input id="number" type="number" min="1" max="200" step="1" placeholder="30" required>
+  
+  <br>
+  <br>
+  <!-- Dropdown o menu desplegable -->
+  <label>Lenguaje de programación favorito:</label><br>
+  <select id="dropdown">
+    <option>Javascript</option>
+    <option selected>Python</option>
+    <option disabled>Serpent</option>
+    <option>C++</option>
+    <option>C</option>
+  </select>
+  
+  <br>
+  <br>
+  <!-- Radio buttons -->
+  <label>¿Has usado VS Code alguna vez?</label><br>
+  <input type="radio" name="vs-code" value="si"><label>Sí</label><br>
+  <input type="radio" name="vs-code" value="no"><label>No</label><br>
+  <input type="radio" name="vs-code" value="otro"><label>No lo sé</label>
+  
+  <br>
+  <br>
+  <!-- Checkboxes -->
+  <label>¿Estás aprendiendo HTML?</label><br>
+  <input type="checkbox" value="si"><label>Sí<label><br>
+  <input type="checkbox" value="no"><label>No<label><br>
+  <input type="checkbox" value="maybe"><label>Es posible<label>  
+    
+  <br>
+  <br>
+  <label>comments<label><br>
+  <textarea id="w3review" name="w3review" rows="4" cols="50">
+  Déjanos tus comentarios...
+  </textarea>
+  
+  <br>
+  <br>
+  <input type="submit" id="submit" value="Envía tu formulario">
+  </form>
+</div>
 
 <!-- Footer -->
-    <!-- Ej. Expandir footer en lateral y quitamos toggler -->
-<div class="container-fluid bg bg-dark pt-3 pb-5">
-        
+<div class="container-fluid bg bg-dark pt-3 pb-5">    
   <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
       
     <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
-      <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Inicio</a></li>
+      <li class="nav-item rounded py-1 px-1 m-1 small">
+        <a href="./../../portafolio.html" class="nav-link px-4 py-2 border border-secondary rounded text-muted">
+        <i class="fas fa-arrow-left"></i>&nbsp;Portafolio</a>
+      </li>
     </ul>
 
     <a href="#" id="logo" class="nav-link px-5 mx-auto">
@@ -117,5 +116,6 @@ Déjanos tus comentarios...
     <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm mx-auto">Diseño de páginas web a medida con diversos frameworks. Desarrollo Full-stack de platarformas web.</p>
   </footer>
 </div>
+
 <body>
 </html>
