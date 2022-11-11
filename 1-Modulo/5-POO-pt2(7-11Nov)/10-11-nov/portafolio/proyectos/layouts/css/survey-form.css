@@ -5,14 +5,26 @@ body{
   
   /* Colores */
   body{
-    background-color: rgba(81, 90, 160, 0.8);
+    background-color: rgba(81, 90, 160, 0.7);
     color: white;
   }
   
+  /* Navbar */
+  #li-right{
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* Form */
   input, select, textarea {
    background-color: rgba(81, 90, 160, 0.95);
    border: none;
    padding: 0 5px;
+  }
+  #survey-form {
+    border: 3px solid rgba(81, 90, 160, 0.9);
+    border-radius: 20px;
+    padding: 10px 0;
   }
   
   /* Chrome, Opera, Safari */
@@ -93,3 +105,4 @@ body{
     list-style: none;
     padding: 0;
   }
+

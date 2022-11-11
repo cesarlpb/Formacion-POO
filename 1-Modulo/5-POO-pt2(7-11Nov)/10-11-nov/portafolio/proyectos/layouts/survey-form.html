@@ -5,7 +5,6 @@ de (New) Responsive Web Design
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Survey Form</title>
   <link rel="icon" href="../../favicon.png">
@@ -21,13 +20,13 @@ de (New) Responsive Web Design
 <!-- Navbar -->
 <header>
   <!-- Fixed navbar -->
-    <nav class="navbar navbar-dark fixed-top bg-dark py-2">
-      <a class="navbar-brand px-5 col-4"  href="#">
+    <nav class="navbar navbar-dark fixed-top bg-dark py-2 px-5">
+      <a class="navbar-brand px-0 col-4"  href="#">
           <img class="bi me-2" src="./img/logo-white.png" width="40" alt="logo">
           <span>César Patiño</span>
       </a>
-      <ul class="navbar-nav mb-2 mb-md-0 ml-auto mr-0 px-5 col-4">
-        <li class="nav-item mx-5 col-6 text-center" style="min-width: 150px;">
+      <ul class="navbar-nav mb-2 mb-md-0 ml-auto mr-0 px-0 col-4">
+        <li class="nav-item col-4 d-inline-block text-center" id="li-right" style="min-width: 150px;">
           <a href="./../../portafolio.html" class="nav-link px-4 py-2 border border-secondary rounded text-muted">
             <i class="fas fa-arrow-left"></i>&nbsp;Portafolio</a>
         </li>
@@ -35,7 +34,7 @@ de (New) Responsive Web Design
     </nav>
 </header>
 
-<div class="container">
+<div id="form-container" class="container py-5 my-5">
   <h1 id="title">Survey Form</h1>
   <p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
   
@@ -93,7 +92,7 @@ de (New) Responsive Web Design
   
   <br>
   <br>
-  <input type="submit" id="submit" value="Envía tu formulario">
+  <input class="text-white border rounded py-2" type="submit" id="submit" value="Envía tu formulario">
   </form>
 </div>
 
