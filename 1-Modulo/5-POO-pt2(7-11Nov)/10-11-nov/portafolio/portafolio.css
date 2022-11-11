@@ -8,6 +8,10 @@
 #contact > div {
     max-width: 600px;
 }
+/* Slider */
+.carousel-caption {
+    background-color: rgba(50, 50, 50, 0.5);
+}
 
 /* Proyectos */
 .project-btn {
