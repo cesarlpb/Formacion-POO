@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de tres columnas</title>
+    <style>
+        div {
+            border: 1px solid black;
+            display: inline-block;
+            width: 30%;
+            margin: 0;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .grid-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .grid-container > div {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Opción 1: div</h2>
+        <div>col 1</div>
+        <div>col 2</div>
+        <div>col 3</div>
+    
+    <h2>Opción 2: flex</h2>
+        <div class="container">
+            <div>col 1</div>
+            <div>col 2</div>
+            <div>col 3</div>
+        </div>
+    <h2>Opción 3: grid</h2>
+        <div class="grid-container">
+            <div>col 1</div>
+            <div>col 2</div>
+            <div>col 3</div>
+        </div>
+</body>
+</html>
