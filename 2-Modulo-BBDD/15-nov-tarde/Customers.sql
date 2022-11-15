@@ -1,3 +1,5 @@
+/* db -> w3schools-sql */
+/* Tabla -> Customers */
 CREATE TABLE `w3schools-sql`.`Customers` (
   `CustomerID` INT NOT NULL AUTO_INCREMENT,
   `CustomerName` VARCHAR(50) NOT NULL,
