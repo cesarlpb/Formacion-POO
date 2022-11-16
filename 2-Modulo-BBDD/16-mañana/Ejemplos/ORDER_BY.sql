@@ -80,3 +80,8 @@ INSERT INTO `w3schools-sql`.`Customers` (`CustomerName`, `ContactName`, `Address
     WHERE CustomerName LIKE 'a%' AND Country IN ('España', 'Argentina', 'Venezuela', 'Mexico')
     ORDER BY ContactName DESC;
     -- ^^^ ERROR ^^^ 
+
+    -- También se puede ordenar por más de una columna (multisort) -> tiene PRIORIDAD la primera columna
+    SELECT DISTINCT CustomerName, ContactName, Address, PostalCode, Country FROM `w3schools-sql`.Customers 
+    WHERE CustomerName LIKE 'a%' AND Country IN ('España', 'Argentina', 'Venezuela', 'Mexico')
+    ORDER BY PostalCode DESC, ContactName ASC;
