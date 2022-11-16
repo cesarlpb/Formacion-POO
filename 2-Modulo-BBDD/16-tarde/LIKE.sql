@@ -31,3 +31,7 @@ WHERE Nombre LIKE 'a%a';
 SELECT COUNT(Nombre) 
 FROM `w3schools-sql`.Students
 WHERE Nombre LIKE 'a%a';
+
+-- Descartamos un patrón con NOT:
+SELECT * FROM `w3schools-sql`.Students
+WHERE Nombre NOT LIKE 'M%';
