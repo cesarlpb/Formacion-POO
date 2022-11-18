@@ -1,4 +1,4 @@
-CREATE TABLE `w3schools-sql`.`Suppliers` (
+CREATE TABLE `Suppliers` (
   `SupplierId` INT NOT NULL AUTO_INCREMENT,
   `SupplierName` VARCHAR(100) NOT NULL DEFAULT 'Supplier',
   `ContactName` VARCHAR(100) NOT NULL DEFAULT 'Persona de Contacto',

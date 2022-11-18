@@ -1,4 +1,4 @@
-CREATE TABLE `w3schools-sql`.`Employees` (
+CREATE TABLE `Employees` (
   `EmployeeId` INT NOT NULL AUTO_INCREMENT,
   `FirstName` VARCHAR(50) NOT NULL,
   `LastName` VARCHAR(50) NOT NULL,

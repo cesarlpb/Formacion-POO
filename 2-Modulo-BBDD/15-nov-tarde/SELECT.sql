@@ -4,9 +4,9 @@
 /* Tabla -> Customers */
 
 /* General */
-SELECT COUNT(DISTINCT PostalCode) FROM `w3schools-sql`.Customers;
+SELECT COUNT(DISTINCT PostalCode) FROM Customers;
 
 /* Firefox - usa MS Access */
 SELECT COUNT(*)
-FROM (SELECT DISTINCT PostalCode FROM `w3schools-sql`.Customers)
+FROM (SELECT DISTINCT PostalCode FROM Customers)
 AS MiAlias;

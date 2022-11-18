@@ -6,12 +6,12 @@
 /* MySQL */
 -- Limitamos el número de resultados que recibimos
 SELECT *
-FROM `w3schools-sql`.Customers
+FROM Customers
 WHERE CustomerId > 3
 LIMIT 3;
 
 -- Limitamos a 10 (solo tenemos 5 asi que salen esas 5 filas)
 SELECT *
-FROM `w3schools-sql`.Customers
+FROM Customers
 WHERE CustomerId > 3
 LIMIT 10;

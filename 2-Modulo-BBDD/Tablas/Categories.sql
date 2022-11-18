@@ -1,4 +1,4 @@
-CREATE TABLE `w3schools-sql`.`Categories` (
+CREATE TABLE `Categories` (
   `CategoryId` INT NOT NULL AUTO_INCREMENT,
   `CategoryName` VARCHAR(50) NOT NULL,
   `Description` VARCHAR(200) NULL DEFAULT 'Descripción' COMMENT 'Tabla de Categorías de Productos',

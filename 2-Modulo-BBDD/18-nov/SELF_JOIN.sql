@@ -10,7 +10,7 @@ SELECT A.CustomerId AS CustomerId1, B.CustomerId AS CustomerId2,
 CONCAT_WS(" - ", A.CustomerId, A.ContactName) AS Customer1, 
 CONCAT_WS(" - ", B.CustomerId, B.ContactName) AS Customer2,
 A.City
-FROM `w3schools-sql`.Customers A, `w3schools-sql`.Customers B
+FROM Customers A, Customers B
 WHERE A.CustomerId <> B.CustomerId
 AND A.City = B.City 
 ORDER BY A.CustomerId;
@@ -22,7 +22,7 @@ SELECT A.CustomerId AS Id1, B.CustomerId AS Id2,
 CONCAT_WS(" - ", A.CustomerId, A.CustomerName, A.PostalCode) AS Customer1, 
 CONCAT_WS(" - ", B.CustomerId, B.CustomerName, B.PostalCode) AS Customer2,
 A.PostalCode
-FROM `w3schools-sql`.Customers A, `w3schools-sql`.Customers B
+FROM Customers A, Customers B
 WHERE A.CustomerId != B.CustomerId
 AND A.PostalCode = B.PostalCode
 ORDER BY A.PostalCode;
@@ -32,7 +32,7 @@ SELECT A.CustomerId AS Id1, B.CustomerId AS Id2,
 CONCAT_WS(" - ", A.CustomerId, A.ContactName, A.PostalCode, A.City) AS Customer1, 
 CONCAT_WS(" - ", B.CustomerId, B.ContactName, B.PostalCode, B.City) AS Customer2,
 A.PostalCode, A.City
-FROM `w3schools-sql`.Customers A, `w3schools-sql`.Customers B
+FROM Customers A, Customers B
 WHERE 
 	A.CustomerId != B.CustomerId 
 	AND A.PostalCode = B.PostalCode 

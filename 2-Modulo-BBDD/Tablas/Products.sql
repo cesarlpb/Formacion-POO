@@ -1,4 +1,4 @@
-CREATE TABLE `w3schools-sql`.`Products` (
+CREATE TABLE `Products` (
   `ProductId` INT NOT NULL AUTO_INCREMENT,
   `ProductName` VARCHAR(100) NOT NULL,
   `SupplierId` INT NOT NULL,

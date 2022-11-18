@@ -1,11 +1,11 @@
 -- Contamos cuántos usuarios hay de cada país:
 SELECT COUNT(CustomerID), Country
-FROM `w3schools-sql`.Customers
+FROM Customers
 GROUP BY Country;
 
 -- Agrupamos por cuenta de países y ordenamos asc:
 SELECT COUNT(CustomerID), Country
-FROM `w3schools-sql`.Customers
+FROM Customers
 GROUP BY Country
 ORDER BY COUNT(CustomerID) ASC;
 
