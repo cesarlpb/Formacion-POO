@@ -17,3 +17,8 @@ UPDATE `Orders` SET `EmployeeId` = '76', `ShipperId` = '451' WHERE (`OrderId` = 
 INSERT INTO `Orders` (`CustomerId`, `EmployeeId`, `ShipperId`) VALUES ('8', '44', '123');
 INSERT INTO `Orders` (`CustomerId`, `EmployeeId`, `ShipperId`) VALUES ('3', '34', '109');
 INSERT INTO `Orders` (`CustomerId`, `EmployeeId`, `ShipperId`) VALUES ('1', '13', '123');
+
+-- UPDATE / Creamos coincidencia en EmployeeId
+UPDATE `w3schools-sql`.`Orders` SET `EmployeeId` = '10' WHERE (`OrderId` = '1007');
+UPDATE `w3schools-sql`.`Orders` SET `EmployeeId` = '10' WHERE (`OrderId` = '1005');
+UPDATE `w3schools-sql`.`Orders` SET `EmployeeId` = '33' WHERE (`OrderId` = '1004');
