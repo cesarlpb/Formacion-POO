@@ -13,3 +13,9 @@ ORDER BY COUNT(CustomerID) ASC;
 SELECT Shippers.ShipperName,COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
 LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 GROUP BY ShipperName;
+
+-- Ordenamos usando el alias NumberOfOrders:
+SELECT Shippers.ShipperName,COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName
+ORDER BY NumberOfOrders DESC;
