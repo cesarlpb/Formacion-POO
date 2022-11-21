@@ -31,3 +31,11 @@ INNER JOIN Employees ON Orders.EmployeeId = Employees.EmployeeId)
 GROUP BY Orders.EmployeeId
 HAVING COUNT(Orders.OrderId) > 1
 ORDER BY NumberOfOrders DESC;
+
+-- Añadimos un filtro con WHERE para restringir los apellidos que aceptamos:
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+WHERE LastName = 'Smith' OR LastName = 'Thomson'
+GROUP BY LastName
+HAVING COUNT(Orders.OrderID) > 1;
