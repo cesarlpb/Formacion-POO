@@ -19,3 +19,8 @@ UPDATE `Customers` SET `ContactName` = 'María Villa' WHERE (`CustomerId` = '6')
 UPDATE `Customers` SET `PostalCode` = '28001' WHERE (`CustomerId` = '6');
 UPDATE `Customers` SET `PostalCode` = '28002' WHERE (`CustomerId` = '3');
 UPDATE `Customers` SET `PostalCode` = '68138' WHERE (`CustomerId` = '7');
+
+-- Cambiamos estructura de Tabla para poder probar query de INSERT INTO
+ALTER TABLE `w3schools-sql`.`Customers` 
+CHANGE COLUMN `ContactName` `ContactName` VARCHAR(100) NOT NULL DEFAULT 'Default ContactName' ,
+CHANGE COLUMN `PostalCode` `PostalCode` VARCHAR(50) NOT NULL DEFAULT '00000' ;
