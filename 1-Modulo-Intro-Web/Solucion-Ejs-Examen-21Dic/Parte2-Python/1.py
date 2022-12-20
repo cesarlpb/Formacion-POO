@@ -30,3 +30,18 @@ for numero in lista_input:
                 lista_ordenada.append(numero)
                 break
 print(lista_ordenada)
+
+#%% Alternativa para ordenar una lista de números:
+lista_input = [3, 75, 26, 93, 34, 74, 62, 22, 24, 63]
+
+def ordenar(lista=[], orden="asc"):
+    lista_respuesta = []
+    i = 0
+    for i in range(0,len(lista)):
+        # segun orden, elegimos el minimo o el maximo
+        num = max(lista) # min()
+        lista_respuesta.append(num)
+        lista.remove(num)
+    return lista_respuesta
+
+print(ordenar(lista_input))
