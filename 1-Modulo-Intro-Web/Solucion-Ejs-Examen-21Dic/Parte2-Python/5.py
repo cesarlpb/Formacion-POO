@@ -89,19 +89,6 @@ except AttributeError as e:
 # “mas_llaves” : “mas_values”
 # …
 # }
-def buscar_llave(dict_input, llave_objetivo):
-    for llave, valor in dict_input.items():
-        if llave == llave_objetivo:
-            return valor
-        elif isinstance(valor, dict):
-            return buscar_llave(valor, llave_objetivo)
-    return None
-
-# Solo para el test:
-def fn_solo_para_test(dict_input, llave_objetivo):
-    if llave_objetivo == "llave_objetivo":
-        return "valor_objetivo"
-
 dict_input = {
     "llave_1" : "valor_1",
     "diccionario_anidado" : {
@@ -109,8 +96,39 @@ dict_input = {
     },
     "llave_2" : "valor_2"
 }
-# Test:
-# test_buscar_llave(dict_input, "llave_objetivo") -> "valor_objetivo"
-# test_buscar_llave(dict_input, "llave_objetivo") -> str
-# test_buscar_llave(dict_input, "llave_que_no_existe") -> None
-# Alternativa: arrojar Exception // KeyError si no existe la llave
+def buscar_llave(dict_input, llave_objetivo):
+    for llave, valor in dict_input.items():
+        if llave == llave_objetivo:
+            return valor
+        elif isinstance(valor, dict):
+            return buscar_llave(valor, llave_objetivo)
+    return None
+print(buscar_llave(dict_input, "llave_objetivo"))
+#%% Solo para el test:
+def fn_solo_para_test(dict_input, llave_objetivo):
+    if llave_objetivo == "llave_objetivo":
+        return "valor_objetivo"
+    else: 
+        return None
+#%%
+dict_input = {
+    "llave_1" : "valor_1",
+    "diccionario_anidado" : {
+        "llave_objetivo" : "valor_objetivo"
+    },
+    "llave_2" : "valor_2"
+}
+# Tests:
+#%% test_buscar_llave(dict_input, "llave_objetivo") -> "valor_objetivo"
+valor_esperado = "valor_objetivo"
+valor_obtenido = buscar_llave(dict_input, "llave_objetivo")
+print(valor_obtenido, valor_esperado, valor_obtenido == valor_esperado) # True
+#%% test_buscar_llave(dict_input, "llave_objetivo") -> str
+valor_esperado = "valor_objetivo"
+valor_obtenido = buscar_llave(dict_input, "llave_objetivo")
+print(valor_obtenido, valor_esperado, isinstance(valor_obtenido, str)) # True
+#%% test_buscar_llave(dict_input, "llave_que_no_existe") -> None
+valor_esperado = "valor_objetivo_que_no_existe"
+valor_obtenido = buscar_llave(dict_input, "llave_que_no_existe")
+print(valor_obtenido, valor_esperado, valor_obtenido == None) # True
+#%% Alternativa: arrojar Exception // KeyError si no existe la llave
