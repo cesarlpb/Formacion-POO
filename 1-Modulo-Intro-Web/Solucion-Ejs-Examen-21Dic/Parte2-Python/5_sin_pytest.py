@@ -3,6 +3,9 @@
 # con dos decimales.
 def div(a,b):
     return round(a/b,2)
+    # si b es cero -> error
+    # si a o b no son números -> error
+    # si b != 0 y a y b son números -> a/b
 def test_div(a,b):
     try:
         return div(a,b)
@@ -25,9 +28,9 @@ print(f"{numerador} / {denominador} = {valor_obtenido}", valor_obtenido == valor
 #%% Tests de Excepciones, usad Exception como comodín
 # div(1,0) -> ZeroDivisionError
 test_div(1,0)
-# div("1",2.0) -> TypeError
+#%% div("1",2.0) -> TypeError
 test_div("1",2.0)
-# pasamos cualquier otro elemento 
+#%% pasamos cualquier otro elemento 
 test_div(1,[])
 #%% b. Función que recibe el texto de un archivo como lista de strings y 
 # retorna un string de 30 caracteres por línea y centrado.
@@ -40,8 +43,8 @@ lista_input2 = ["hola","como","estas","bien","y","tu", [123]]
 def test_centrar(lista_input):
     try:
         return centrar(lista_input)
-    except AttributeError:
-        print(lista_input, "No se puede centrar")
+    except AttributeError as error:
+        print(lista_input, "No se puede centrar:", error)
         return None
     except:
         print(lista_input, "Ha habido un error desconocido")
@@ -89,6 +92,8 @@ except AttributeError as e:
 # “mas_llaves” : “mas_values”
 # …
 # }
+
+# input para el test:
 dict_input = {
     "llave_1" : "valor_1",
     "diccionario_anidado" : {
@@ -96,6 +101,8 @@ dict_input = {
     },
     "llave_2" : "valor_2"
 }
+
+#%% Definición de la fn para buscar la llave objetivo:
 def buscar_llave(dict_input, llave_objetivo):
     for llave, valor in dict_input.items():
         if llave == llave_objetivo:
@@ -104,13 +111,13 @@ def buscar_llave(dict_input, llave_objetivo):
             return buscar_llave(valor, llave_objetivo)
     return None
 print(buscar_llave(dict_input, "llave_objetivo"))
-#%% Solo para el test:
+#%% Esta fn es solo para el test:
 def fn_solo_para_test(dict_input, llave_objetivo):
     if llave_objetivo == "llave_objetivo":
         return "valor_objetivo"
     else: 
         return None
-#%%
+#%% input para test:
 dict_input = {
     "llave_1" : "valor_1",
     "diccionario_anidado" : {
@@ -128,7 +135,7 @@ valor_esperado = "valor_objetivo"
 valor_obtenido = buscar_llave(dict_input, "llave_objetivo")
 print(valor_obtenido, valor_esperado, isinstance(valor_obtenido, str)) # True
 #%% test_buscar_llave(dict_input, "llave_que_no_existe") -> None
-valor_esperado = "valor_objetivo_que_no_existe"
+valor_esperado = None
 valor_obtenido = buscar_llave(dict_input, "llave_que_no_existe")
-print(valor_obtenido, valor_esperado, valor_obtenido == None) # True
+print(valor_obtenido, valor_esperado, valor_obtenido == valor_esperado) # True
 #%% Alternativa: arrojar Exception // KeyError si no existe la llave
