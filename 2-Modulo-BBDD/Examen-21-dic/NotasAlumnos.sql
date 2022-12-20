@@ -20,8 +20,14 @@ INSERT INTO alumnos.NotasAlumnos (Nombre, Apellido, Asignatura, Examen_1, Examen
     ('Ana', 'Pérez', 'Matemáticas', 4, 6, 6),
     ('Javier', 'De la Fuente', 'Inglés', 8, 5, 8),
     ('Teresa', 'Saavedra', 'Inglés', 9, 5, 9);
-    
+
 -- Para actualizar datos en tabla NotasAlumnos se ejecuta este query:
 UPDATE alumnos.NotasAlumnos SET Asignatura = 'Matemáticas' WHERE Asignatura = 'Matematicas';
 -- Para ver todos los datos insertados:
 SELECT * FROM alumnos.NotasAlumnos;
+-- 4.a Calculamos la NotaFinal de cada alumno:
+UPDATE alumnos.NotasAlumnos SET NotaFinal = 0.4 * Examen_1 + 0.4 * Examen_2 + 0.2 * TrabajoGrupo;
+-- 4.b Determinamos los alumnos que han aprobado la asignatura:
+SELECT Nombre, Apellido, Asignatura FROM alumnos.NotasAlumnos WHERE NotaFinal >= 5;
+-- 4.c Determinamos los alumnos que han aprobado la asignatura de Inglés:
+SELECT Nombre, Apellido, Asignatura FROM alumnos.NotasAlumnos WHERE NotaFinal >= 5 AND Asignatura LIKE "Inglés";
